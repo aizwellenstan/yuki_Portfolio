@@ -115,3 +115,6 @@
     <a title="ログアウト" href="TopPage.php"></a>
   </div>
 </header>
+
+・不要なファイルのgit管理を止める
+・イシューとの連携する
