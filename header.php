@@ -109,7 +109,7 @@
 
   <div class="stauts-user">
     <span><img src="img/user_icon.jpeg" alt=""></span>
-    <p>ユーザー名（仮）</p>
+    <p>ユーザー名（仮</p>
   </div>
   <div stauts-logout>
     <a title="ログアウト" href="TopPage.php"></a>
