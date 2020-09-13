@@ -76,7 +76,7 @@
   }
 </style>
 <header>
-  <div class="site-width">
+  <div >
     <div class="first_header">
       <h1>学習日誌くん</h1>
     </div>
@@ -115,6 +115,3 @@
     <a title="ログアウト" href="TopPage.php"></a>
   </div>
 </header>
-
-・不要なファイルのgit管理を止める
-・イシューとの連携する
