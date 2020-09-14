@@ -34,7 +34,8 @@
 
         <section class="category">
           <div class="selectbox">
-            <h1>カテゴリを選択</h1>
+            <h1>カテゴリを選択　<span class="add_Category"><a href="Edit_Category.php">カテゴリの追加はこちら</a></span></h1>
+
             <select name="category-list">
               <option value="0">選択してください</option>
               <option value="１">うんち</option>
@@ -130,5 +131,9 @@ main{
   width: 980px;
   padding-bottom: 10px;
   padding-top: 10px;
+}
+.add_Category a{
+  font-size: 13px;
+  color: #333;
 }
 </style>
