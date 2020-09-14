@@ -1,0 +1,11 @@
+body{
+  margin: 0;
+  background-color: #fff;
+
+}
+.site-width {
+  margin: 0 auto;
+  width: 980px;
+  padding-bottom: 170px;
+  padding-top: 60px;
+}

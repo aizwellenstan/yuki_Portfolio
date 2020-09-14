@@ -3,21 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ホーム</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <style>
-body{
-    margin: 0;
-    background-color: #fff;
 
-}
-.site-width {
-    margin: 0 auto;
-    width: 980px;
-    padding-bottom: 170px;
-    padding-top: 60px;
-}
-
+main{
+  background-color: #ddd;
+  height: 1200px;
+  }
 .contents_butan{
     float: right;
     width: 436px;
@@ -59,10 +53,7 @@ margin-left: 83px;
 .memo_space h1{
 margin: 0;
 }
-main{
-background-color: #ddd;
-height: 1200px;
-}
+
 </style>
 <body>
 <?php
