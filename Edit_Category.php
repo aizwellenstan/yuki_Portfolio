@@ -56,7 +56,7 @@ main{
     height:250px;
   }
 
-  #i_jump {
+  .i_jump {
     display: block;
     margin: 0 auto;
     padding: 10px;
@@ -111,4 +111,5 @@ main{
   color: #333;
 
 }
+
 </style>

@@ -56,7 +56,7 @@
     <?php
 require('StudyDetail_use.php');
 ?>
- <a id=i_jump href="index.php">HOMEへ戻る</a>
+ <a class="i_jump" href="index.php">HOMEへ戻る</a>
   </main>
 </body>
 <style>
@@ -73,13 +73,7 @@ main{
     height: 550px;
   }
 
-  #i_jump {
-    display: block;
-    margin: 0 auto;
-    padding: 10px;
-    width: 110px;
-  }
-
+  
   textarea[name="study-detail"] {
     font-size: 16px;
   }
