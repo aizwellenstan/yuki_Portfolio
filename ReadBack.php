@@ -75,12 +75,15 @@
               <td class='size_m'>テストテストテスト</td>
               <td class="size_s">テスト</td>
               <td class="size_l">テストテストテストテストテストテストテストテストテスト</td>
+              <td class="size_s"><a href="Edit_study.php">編集する</a></td>
             </tr>
+        
             <tr>
               <td class="size_s">○/○</td>
               <td class='size_m'>テストテストテスト</td>
               <td class="size_s">テスト</td>
               <td class="size_l">テストテストテストテストテストテストテストテストテスト</td>
+              <td class="size_s"><a href="Edit_study.php">編集する</a></td>
             </tr>
           </tbody>
         </table>
@@ -88,6 +91,12 @@
       <a class="i_jump" href="index.php">HOMEへ戻る</a>
     </div>
     <style>
+    .edit{
+   float:right;
+
+
+    }
+
       main {
         background-color: #ddd;
         height: 900px;
