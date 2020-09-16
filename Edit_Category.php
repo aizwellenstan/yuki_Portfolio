@@ -39,7 +39,7 @@
 
     </div>
   
- <a id=i_jump href="FillOut.php">記録ページへ戻る</a>
+ <a class="i_jump" href="FillOut.php">記録ページへ戻る</a>
   </main>
 </body>
 <style>
@@ -60,7 +60,7 @@ main{
     display: block;
     margin: 0 auto;
     padding: 10px;
-    width: 110px;
+    width: 130px;
   }
 
   select {

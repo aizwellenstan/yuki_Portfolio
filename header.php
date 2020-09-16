@@ -51,7 +51,7 @@
     text-decoration: none;
     color: #333;
     display: block;
-    height: 70px;
+    padding: 1px 0px;
     width: 150px;
   }
 
@@ -60,26 +60,39 @@
     background-color: #fff;
   }
 
-  .stauts-user {
-    width: 805px;
-    margin: 0 auto;
-    margin-top: 9px;
-    height: 35px;
-  }
-
-  .stauts-user p {
-    padding-left: 10px;
-   margin: 10px;
-  }
+  .stauts-user {}
 
   .stauts-user span {
     float: left;
   }
 
-  
+  .stauts-user p {
+    margin: 0;
+    float: left;
+    margin-left: 10px;
+  }
+
+  .logout {
+    float: right;
+    display: block;
+    background-color: #555;
+    width: 100px;
+  }
+  .logout a{
+    color: #fff;
+    margin-left: 10px;
+  }
+
+  .stauts {
+    list-style: none;
+    width: 55%;
+    margin: 0 auto;
+    height: 34px;
+    margin-top: 10px;
+  }
 </style>
 <header>
-  <div >
+  <div>
     <div class="first_header">
       <h1>学習日誌くん</h1>
     </div>
@@ -109,12 +122,13 @@
     </div>
     </nav>
   </div>
-
-  <div class="stauts-user">
-    <span><img src="img/user_icon.jpeg" alt=""></span>
-    <p>ユーザー名（仮</p>
-  </div>
-  <div stauts-logout>
-    <a title="ログアウト" href="TopPage.php"></a>
-  </div>
+  <ul class="stauts">
+    <li class="stauts-user">
+      <span><img src="img/user_icon.jpeg" alt=""></span>
+      <p>ユーザー名（仮</p>
+    </li>
+    <li class="logout">
+      <a href="TopPage.php">ログアウト</a>
+    </li>
+  </ul>
 </header>

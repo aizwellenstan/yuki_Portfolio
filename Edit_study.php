@@ -159,5 +159,4 @@
     margin-right: 10px;
     float: left;
   }
-  }
 </style>
