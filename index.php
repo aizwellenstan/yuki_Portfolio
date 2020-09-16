@@ -8,10 +8,6 @@
 </head>
 <style>
 
-main{
-  background-color: #ddd;
-  height: 1200px;
-  }
 .contents_butan{
     float: right;
     width: 436px;

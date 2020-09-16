@@ -15,7 +15,6 @@
     </div>
     </div>
 </header>
-
 <main>
   <div class="site-width">
 
@@ -26,8 +25,12 @@
       <div class="form-container">
 
         <form action="" method="" class="login-form">
-          <h2 class="title">ログイン</h2>
+          <h2 class="title">新規登録</h2>
          
+          <label class="name">
+            アカウント名
+            <input type="text" name="email" value="">
+          </label>
           <label class="maill">
             メールアドレス
             <input type="text" name="email" value="">
@@ -36,12 +39,15 @@
             パスワード
             <input type="password" name="pass" value="">
           </label>
-            <input type="submit" class="btn btn-mid" value="ログイン">
+          <label class="pass_r">
+            パスワード再入力
+            <input type="password" name="pass" value="">
+          </label>
+            <input type="submit" class="btn btn-mid" value="新規登録！">
         </form>
       </div>
     </section>
     <a class="i_jump" href="TopPage.php">トップページへ戻る</a>
-    <a class="i_jump" href="index.php">HOMEへ戻る</a>
 </main>
 
 <style>

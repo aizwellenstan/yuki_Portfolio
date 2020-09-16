@@ -4,17 +4,9 @@
     width: 10px;
   }
 
-  .first_header {
-    width: 100%;
-    height: 52px;
-    font-family: "メイリオ", Meiryo, sans-serif;
-  }
+ 
 
-  .first_header h1 {
-    font-size: 24px;
-    padding: 7px 40px;
-    margin: 0 50px;
-  }
+ 
 
   .second_header {
     width: 100%;
@@ -53,11 +45,6 @@
     display: block;
     padding: 1px 0px;
     width: 150px;
-  }
-
-  header {
-    margin: 0;
-    background-color: #fff;
   }
 
   .stauts-user {}
