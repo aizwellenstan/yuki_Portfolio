@@ -128,7 +128,7 @@
       <p>ユーザー名（仮</p>
     </li>
     <li class="logout">
-      <a href="TopPage.php">ログアウト</a>
+      <a href="login.php">ログアウト</a>
     </li>
   </ul>
 </header>
