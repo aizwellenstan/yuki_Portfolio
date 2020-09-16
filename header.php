@@ -27,7 +27,6 @@
 
   .contents {
     height: 70px;
-    width: 150px;
     float: left;
     text-align: center;
     border-left: 1px solid #ddd;
@@ -51,6 +50,9 @@
   .top-nav a {
     text-decoration: none;
     color: #333;
+    display: block;
+    height: 70px;
+    width: 150px;
   }
 
   header {
@@ -72,8 +74,9 @@
 
   .stauts-user span {
     float: left;
-
   }
+
+  
 </style>
 <header>
   <div >
