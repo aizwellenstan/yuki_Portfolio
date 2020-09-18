@@ -121,7 +121,7 @@ if(!empty($_SESSION['user_id'])){
       <p><?php echo getusername($u_id); ?></p>
     </li>
     <li class="logout">
-      <a href="login.php">ログアウト</a>
+      <a href="logout.php">ログアウト</a>
     </li>
   </ul>
 </header>

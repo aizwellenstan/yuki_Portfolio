@@ -1328,3 +1328,120 @@ Stack trace:
 [18-Sep-2020 15:29:00 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600410540
 [18-Sep-2020 15:29:00 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600414116
 [18-Sep-2020 15:29:00 Asia/Tokyo] デバッグ：クエリ成功
+[18-Sep-2020 15:34:46 Asia/Tokyo] PHP Notice:  Constant MSG06 already defined in /Applications/MAMP/htdocs/Myportfolio/function.php on line 43
+[18-Sep-2020 15:34:46 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[18-Sep-2020 15:34:46 Asia/Tokyo] デバッグ：セッションID：e8or52kke9ksr1ueov55n1co6g
+[18-Sep-2020 15:34:46 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_date] => 1600410516
+    [login_limit] => 3600
+    [user_id] => 2
+    [msg_success] => 
+)
+
+[18-Sep-2020 15:34:46 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600410886
+[18-Sep-2020 15:34:46 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600414116
+[18-Sep-2020 15:34:46 Asia/Tokyo] デバッグ：クエリ成功
+[18-Sep-2020 15:34:48 Asia/Tokyo] PHP Notice:  Constant MSG06 already defined in /Applications/MAMP/htdocs/Myportfolio/function.php on line 43
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：「　ログアウトページ　
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：セッションID：pqt9pl7t1429723b56racfas90
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_date] => 1600410516
+    [login_limit] => 3600
+    [user_id] => 2
+    [msg_success] => 
+)
+
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600410888
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600414116
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：ログアウトします。
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：ログインページへ遷移します。
+[18-Sep-2020 15:34:48 Asia/Tokyo] PHP Notice:  Constant MSG06 already defined in /Applications/MAMP/htdocs/Myportfolio/function.php on line 43
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：「ログインページ　
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：セッションID：633kh08hnbidimhu6tmkefkmp9
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+)
+
+[18-Sep-2020 15:34:48 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600410888
+[18-Sep-2020 15:34:54 Asia/Tokyo] PHP Notice:  Constant MSG06 already defined in /Applications/MAMP/htdocs/Myportfolio/function.php on line 43
+[18-Sep-2020 15:34:54 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[18-Sep-2020 15:34:54 Asia/Tokyo] デバッグ：「ログインページ　
+[18-Sep-2020 15:34:54 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[18-Sep-2020 15:34:54 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[18-Sep-2020 15:34:54 Asia/Tokyo] デバッグ：セッションID：5o5o05n762cdbhhk237fln5lnu
+[18-Sep-2020 15:34:54 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+)
+
+[18-Sep-2020 15:34:54 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600410894
+[18-Sep-2020 15:34:54 Asia/Tokyo] デバッグ：POST送信あり
+[18-Sep-2020 15:34:54 Asia/Tokyo] デバッグ：バリデーションOK
+[18-Sep-2020 15:34:54 Asia/Tokyo] デバッグ：クエリ成功
+[18-Sep-2020 15:34:54 Asia/Tokyo] デバッグ：クエリ結果の中身：Array
+(
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [id] => 2
+)
+
+[18-Sep-2020 15:34:55 Asia/Tokyo] デバッグ：1セッション変数の中身：Array
+(
+    [login_date] => 1600410895
+    [user_id] => 2
+)
+
+[18-Sep-2020 15:34:55 Asia/Tokyo] デバッグ：3マイページへ遷移します。
+[18-Sep-2020 15:34:55 Asia/Tokyo] PHP Notice:  Constant MSG06 already defined in /Applications/MAMP/htdocs/Myportfolio/function.php on line 43
+[18-Sep-2020 15:34:55 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[18-Sep-2020 15:34:55 Asia/Tokyo] デバッグ：セッションID：ff8fv056do0pv3smltim3i28u4
+[18-Sep-2020 15:34:55 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_date] => 1600410895
+    [user_id] => 2
+)
+
+[18-Sep-2020 15:34:55 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600410895
+[18-Sep-2020 15:34:55 Asia/Tokyo] デバッグ：クエリ成功
+[18-Sep-2020 15:34:58 Asia/Tokyo] PHP Notice:  Constant MSG06 already defined in /Applications/MAMP/htdocs/Myportfolio/function.php on line 43
+[18-Sep-2020 15:34:58 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[18-Sep-2020 15:34:58 Asia/Tokyo] デバッグ：「　ログアウトページ　
+[18-Sep-2020 15:34:58 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[18-Sep-2020 15:34:58 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[18-Sep-2020 15:34:58 Asia/Tokyo] デバッグ：セッションID：icbu9j7hat03pdbdtfgqv1ajuc
+[18-Sep-2020 15:34:58 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_date] => 1600410895
+    [user_id] => 2
+)
+
+[18-Sep-2020 15:34:58 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600410898
+[18-Sep-2020 15:34:58 Asia/Tokyo] デバッグ：ログアウトします。
+[18-Sep-2020 15:34:58 Asia/Tokyo] デバッグ：ログインページへ遷移します。
+[18-Sep-2020 15:34:58 Asia/Tokyo] PHP Notice:  Constant MSG06 already defined in /Applications/MAMP/htdocs/Myportfolio/function.php on line 43
+[18-Sep-2020 15:34:58 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[18-Sep-2020 15:34:58 Asia/Tokyo] デバッグ：「ログインページ　
+[18-Sep-2020 15:34:58 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[18-Sep-2020 15:34:58 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[18-Sep-2020 15:34:58 Asia/Tokyo] デバッグ：セッションID：qi2lk00abji4f8fai3pidojtil
+[18-Sep-2020 15:34:58 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+)
+
+[18-Sep-2020 15:34:58 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600410898
+[18-Sep-2020 15:35:02 Asia/Tokyo] PHP Notice:  Constant MSG06 already defined in /Applications/MAMP/htdocs/Myportfolio/function.php on line 43
+[18-Sep-2020 15:35:02 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[18-Sep-2020 15:35:02 Asia/Tokyo] デバッグ：セッションID：62i7pctfmj19k2ll8abd3u1dit
+[18-Sep-2020 15:35:02 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+)
+
+[18-Sep-2020 15:35:02 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600410902
+[18-Sep-2020 15:35:02 Asia/Tokyo] PHP Notice:  Undefined variable: u_id in /Applications/MAMP/htdocs/Myportfolio/header.php on line 121
+[18-Sep-2020 15:35:02 Asia/Tokyo] デバッグ：クエリ成功
