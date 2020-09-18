@@ -1,3 +1,58 @@
+<?php
+require('function.php');
+
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debug('「　ユーザー登録ページ　');
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debugLogStart();
+
+if(!empty($_POST)){
+  $user_name= $_POST['user_name'];
+  $email = $_POST['email'];
+  $pass = $_POST['pass'];
+  $pass_r = $_POST['pass_r'];
+
+  vaildRequired($user_name,'user_name');
+  validMaxLen($user_name,'user_name');
+  vaildRequired($pass ,'pass');
+  vaildRequired($pass_r ,'pass_r');
+  vaildEmail($email,'email');
+  validpass($pass, 'pass');
+  validpass($pass_r,'pass_r');
+  validMatch($pass,$pass_r,'pass_r');
+  // vaiildDup('user_name',$user_name);
+  // vaiildDup('email',$email);
+
+  if(empty($err_msg)){
+
+    try{
+      $dbh = dbConnect();
+      $sql = 'INSERT INTO users(email,password,user_name,login_time,create_date)
+      VALUES(:email,:pass,:user_name,:login_time,:create_date)';
+      $data = array(
+    ':email' => $email,
+    ':pass' => password_hash($pass,PASSWORD_DEFAULT),
+    ':user_name' => $user_name,
+    ':login_time' => date('Y-m-d H:i:s'),
+    ':create_date' => date('Y-m-d H:i:s'));
+    $stmt = queryPost($dbh, $sql, $data);
+    
+    if($stmt){
+      
+      $sesLimit = 60*60;
+      $_SESSION['login_date'] = time();
+      $_SESSION['login_limit'] = $sesLimit;
+      $_SESSION['user_id'] = $dbh->lastInsertId();
+      debug('セッション変数の中身：'.print_r($_SESSION,true));
+      header("Location:index.php"); 
+    }
+    }catch (Exception $e) {
+      error_log('エラー発生:' . $e->getMessage());
+      $err_msg['common'] = MSG07;
+  }
+}}
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -24,24 +79,28 @@
 
       <div class="form-container">
 
-        <form action="" method="" class="login-form">
+        <form action="" method="post" class="login-form">
           <h2 class="title">新規登録</h2>
          
-          <label class="name">
-            アカウント名
-            <input type="text" name="email" value="">
+          <label class="user_name">
+            <p>アカウント名</p>
+            <div class="err_msg"><?php if(!empty($err_msg['user_name'])) echo $err_msg['user_name'] ; ?></div>
+            <input type="text" name="user_name" value="">
           </label>
-          <label class="maill">
-            メールアドレス
+          <label class="email">
+            <p>メールアドレス</p>
+            <div class="err_msg"><?php if(!empty($err_msg['email'])) echo $err_msg['email'] ; ?></div>
             <input type="text" name="email" value="">
           </label>
           <label class="pass">
-            パスワード
+            <p>パスワード</p>
+            <div class="err_msg"><?php if(!empty($err_msg['pass'])) echo $err_msg['pass'] ; ?></div>
             <input type="password" name="pass" value="">
           </label>
           <label class="pass_r">
-            パスワード再入力
-            <input type="password" name="pass" value="">
+            <p>パスワード再入力</p>
+            <div class="err_msg"><?php if(!empty($err_msg['pass_r'])) echo $err_msg['pass_r'] ; ?></div>
+            <input type="password" name="pass_r" value="">
           </label>
             <input type="submit" class="btn btn-mid" value="新規登録！">
         </form>
@@ -97,5 +156,15 @@
 .title {
     margin-bottom: 40px;
     text-align: center;
+}
+.err_msg {
+  color: red;
+  float: left;
+  margin-top: 5px ;
+  margin-left: 10px;
+}
+label p{
+  margin-top: 5px ;
+  float: left;
 }
 </style>
