@@ -50,7 +50,9 @@ if(!empty($_POST)){
       error_log('エラー発生:' . $e->getMessage());
       $err_msg['common'] = MSG07;
   }
-}}
+}
+
+}
 
 ?>
 <!DOCTYPE html>

@@ -1,3 +1,55 @@
+<?php
+require('function.php');
+
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debug('「ログインページ　');
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debugLogStart();
+
+if (!empty($_POST)) {
+  debug('POST送信あり');
+  $email = $_POST['email'];
+  $pass = $_POST['pass'];
+
+  vaildRequired($pass, 'pass');
+  vaildEmail($email, 'email');
+  validpass($pass, 'pass');
+
+  // vaiildDup('user_name',$user_name);
+  // vaiildDup('email',$email);
+
+  if (empty($err_msg)) {
+    debug('バリデーションOK');
+
+    try {
+
+      $dbh = dbConnect();
+      $sql = 'SELECT password , id FROM users WHERE email = :email AND delete_flg=0';
+      $data = array(':email' => $email);
+      $stmt = queryPost($dbh, $sql, $data);
+      $result = $stmt->fetch(PDO::FETCH_ASSOC);
+      debug('クエリ結果の中身：' . print_r($result, true));
+
+      if (!empty($result) && password_verify($pass, array_shift($result))) {
+        $sesLimit = 60 * 60 * 10;
+        $_SESSION['login_date'] = time();
+        $_SESSION['user_id'] = $result['id'];
+        debug('1セッション変数の中身：' . print_r($_SESSION, true));
+        debug('3マイページへ遷移します。');
+        header("Location:index.php");
+      } else {
+        debug('パスワードが間違っています');
+        $err_msg['common'] = MSG10;
+      }
+    } catch (Exception $e) {
+      error_log('エラー発生:' . $e->getMessage());
+      $err_msg['common'] = MSG07;
+    }
+  }
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -13,7 +65,7 @@
     <div class="first_header">
       <h1>学習日誌くん</h1>
     </div>
-    </div>
+  </div>
 </header>
 
 <main>
@@ -25,18 +77,19 @@
 
       <div class="form-container">
 
-        <form action="" method="" class="login-form">
+        <form action="" method="post" class="login-form">
           <h2 class="title">ログイン</h2>
-         
-          <label class="maill">
-            メールアドレス
-            <input type="text" name="email" value="">
+
+          <p>メールアドレス</p>
+          <div class="err_msg"><?php if (!empty($err_msg['email'])) echo $err_msg['email']; ?></div>
+          <input type="text" name="email" value="">
           </label>
           <label class="pass">
-            パスワード
+            <p>パスワード</p>
+            <div class="err_msg"><?php if (!empty($err_msg['pass'])) echo $err_msg['pass']; ?></div>
             <input type="password" name="pass" value="">
           </label>
-            <input type="submit" class="btn btn-mid" value="ログイン">
+          <input type="submit" class="btn btn-mid" value="ログイン">
         </form>
       </div>
     </section>
@@ -88,8 +141,8 @@
     margin: 0;
   }
 
-.title {
+  .title {
     margin-bottom: 40px;
     text-align: center;
-}
+  }
 </style>

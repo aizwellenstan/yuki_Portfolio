@@ -44,6 +44,7 @@ define('MSG06', '');
 define('MSG07', 'エラーが発生しました。');
 define('MSG08', 'そのEmailは既に登録されています');
 define('MSG09', '文字で入力してください');
+define('MSG10', 'パスワードが間違っています');
 
 $err_msg = array();
 
@@ -69,7 +70,7 @@ function dbConnect()
   $dsn = 'mysql:dbname=studydiary;host=localhost;charset=utf8';
   $user = 'root';
   $password = 'root';
-  $options = array(
+  $option = array(
 
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
@@ -81,14 +82,14 @@ function dbConnect()
 }
 
 // email重複チェック
-function vaiildDup($field,$str)
+function vaiildDup($field, $str)
 {
   global $err_msg;
   //例外処理
   try {
     $dbh  = dbConnect();
     $sql = 'SELECT * FROM users WHERE :field = :st AND delete_flg = 0';
-    $data = array(':st' => $str,':field' => $field);
+    $data = array(':st' => $str, ':field' => $field);
     $stmt = queryPost($dbh, $sql, $data);
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -159,18 +160,39 @@ function getErrMsg($key)
   if (!empty($_POST[$key])) {
     return $_POST[$key];
   }
-}  
+}
 
-function queryPost($dbh,$sql,$data){
+function queryPost($dbh, $sql, $data)
+{
   $stmt = $dbh->prepare($sql);
 
-  if(!$stmt->execute($data)){
+  if (!$stmt->execute($data)) {
     debug('クエリに失敗しました。');
-            debug('失敗したSQL：'.print_r($stmt,true));
-            $err_msg['common'] = MSG07;
-            return 0;
+    debug('失敗したSQL：' . print_r($stmt, true));
+    $err_msg['common'] = MSG07;
+    return 0;
   }
-  debug ('クエリ成功');
+  debug('クエリ成功');
   return $stmt;
 }
-  // DBへの接続
+function getusername($u_id)
+{
+  global $err_msg;
+  //例外処理
+  try {
+    $dbh  = dbConnect();
+    $sql = 'SELECT user_name FROM users WHERE id = :u_id AND delete_flg = 0';
+    $data = array(':u_id' => $u_id);
+    $stmt = queryPost($dbh, $sql, $data);
+
+    
+    if ($stmt) {
+      return  $stmt->fetch(PDO::FETCH_COLUMN);
+    } else {
+      return false;
+    }
+  } catch (Exception $e) {
+    error_log('エラー発生:' . $e->getMessage());
+    $err_msg['common'] = MSG07;
+  }
+}

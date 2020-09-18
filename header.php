@@ -1,13 +1,18 @@
+<?php
+require('function.php');
+debugLogStart();
+
+if(!empty($_SESSION['user_id'])){
+  $u_id = $_SESSION['user_id'];
+  
+ }
+
+?>
 <style>
   img {
     height: 10px;
     width: 10px;
   }
-
- 
-
- 
-
   .second_header {
     width: 100%;
     border-top: 1px solid #ddd;
@@ -65,7 +70,8 @@
     background-color: #555;
     width: 100px;
   }
-  .logout a{
+
+  .logout a {
     color: #fff;
     margin-left: 10px;
   }
@@ -112,7 +118,7 @@
   <ul class="stauts">
     <li class="stauts-user">
       <span><img src="img/user_icon.jpeg" alt=""></span>
-      <p>ユーザー名（仮</p>
+      <p><?php echo getusername($u_id); ?></p>
     </li>
     <li class="logout">
       <a href="login.php">ログアウト</a>
