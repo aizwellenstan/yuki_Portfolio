@@ -1469,3 +1469,43 @@ Stack trace:
 )
 
 [19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600509222
+[19-Sep-2020 18:59:54 Asia/Tokyo] PHP Notice:  Constant MSG06 already defined in /Applications/MAMP/htdocs/Myportfolio/function.php on line 43
+[19-Sep-2020 18:59:54 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Sep-2020 18:59:54 Asia/Tokyo] デバッグ：セッションID：jc68lfj7edsmo5ptg9b9r2vhju
+[19-Sep-2020 18:59:54 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+)
+
+[19-Sep-2020 18:59:54 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600509594
+[19-Sep-2020 18:59:54 Asia/Tokyo] PHP Notice:  Undefined variable: u_id in /Applications/MAMP/htdocs/Myportfolio/header.php on line 121
+[19-Sep-2020 18:59:54 Asia/Tokyo] デバッグ：クエリ成功
+[19-Sep-2020 18:59:56 Asia/Tokyo] PHP Notice:  Constant MSG06 already defined in /Applications/MAMP/htdocs/Myportfolio/function.php on line 43
+[19-Sep-2020 18:59:56 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Sep-2020 18:59:56 Asia/Tokyo] デバッグ：セッションID：f85bd98n7331qtcaedc2e4ohtd
+[19-Sep-2020 18:59:56 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+)
+
+[19-Sep-2020 18:59:56 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600509596
+[19-Sep-2020 18:59:56 Asia/Tokyo] PHP Notice:  Undefined variable: u_id in /Applications/MAMP/htdocs/Myportfolio/header.php on line 121
+[19-Sep-2020 18:59:56 Asia/Tokyo] デバッグ：クエリ成功
+[19-Sep-2020 19:24:18 Asia/Tokyo] PHP Notice:  Constant MSG06 already defined in /Applications/MAMP/htdocs/Myportfolio/function.php on line 43
+[19-Sep-2020 19:24:18 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Sep-2020 19:24:18 Asia/Tokyo] デバッグ：セッションID：r8f4b0nbqfc0jhegu3afv6qd5s
+[19-Sep-2020 19:24:18 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+)
+
+[19-Sep-2020 19:24:19 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600511059
+[19-Sep-2020 19:24:19 Asia/Tokyo] PHP Notice:  Undefined variable: u_id in /Applications/MAMP/htdocs/Myportfolio/header.php on line 121
+[19-Sep-2020 19:24:19 Asia/Tokyo] デバッグ：クエリ成功
+[19-Sep-2020 19:33:38 Asia/Tokyo] PHP Notice:  Constant MSG06 already defined in /Applications/MAMP/htdocs/Myportfolio/function.php on line 43
+[19-Sep-2020 19:33:38 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Sep-2020 19:33:38 Asia/Tokyo] デバッグ：セッションID：tkeat4bokfgjtlmq3kp6to6t1l
+[19-Sep-2020 19:33:38 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+)
+
+[19-Sep-2020 19:33:38 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600511618
+[19-Sep-2020 19:33:38 Asia/Tokyo] PHP Notice:  Undefined variable: u_id in /Applications/MAMP/htdocs/Myportfolio/header.php on line 121
+[19-Sep-2020 19:33:38 Asia/Tokyo] デバッグ：クエリ成功
