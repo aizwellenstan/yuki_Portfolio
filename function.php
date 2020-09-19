@@ -195,3 +195,6 @@ function getusername($u_id)
     $err_msg['common'] = MSG07;
   }
 }
+
+//入力保持
+//
