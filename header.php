@@ -52,8 +52,6 @@ if(!empty($_SESSION['user_id'])){
     width: 150px;
   }
 
-  .stauts-user {}
-
   .stauts-user span {
     float: left;
   }

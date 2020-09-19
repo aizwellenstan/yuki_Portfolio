@@ -6,6 +6,8 @@ debug('「ログインページ　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 
+require('auth.php');
+
 if (!empty($_POST)) {
   debug('POST送信あり');
   $email = $_POST['email'];
@@ -32,10 +34,11 @@ if (!empty($_POST)) {
 
       if (!empty($result) && password_verify($pass, array_shift($result))) {
         $sesLimit = 60 * 60 * 10;
+        $_SESSION['login_limit'] = $sesLimit;
         $_SESSION['login_date'] = time();
         $_SESSION['user_id'] = $result['id'];
-        debug('1セッション変数の中身：' . print_r($_SESSION, true));
-        debug('3マイページへ遷移します。');
+        debug('セッション変数の中身：' . print_r($_SESSION, true));
+        debug('マイページへ遷移します。');
         header("Location:index.php");
       } else {
         debug('パスワードが間違っています');
@@ -70,8 +73,6 @@ if (!empty($_POST)) {
 
 <main>
   <div class="site-width">
-
-
     <!-- Main -->
     <section>
 

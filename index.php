@@ -6,6 +6,7 @@
     <title>ホーム</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <style>
 
 .contents_butan{
@@ -54,6 +55,8 @@ margin: 0;
 <body>
 <?php
 require('header.php');
+require('auth.php');
+
 ?>
 <main>
 <div class="site-width">
