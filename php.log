@@ -1445,3 +1445,27 @@ Stack trace:
 [18-Sep-2020 15:35:02 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600410902
 [18-Sep-2020 15:35:02 Asia/Tokyo] PHP Notice:  Undefined variable: u_id in /Applications/MAMP/htdocs/Myportfolio/header.php on line 121
 [18-Sep-2020 15:35:02 Asia/Tokyo] デバッグ：クエリ成功
+[19-Sep-2020 18:53:42 Asia/Tokyo] PHP Notice:  Constant MSG06 already defined in /Applications/MAMP/htdocs/Myportfolio/function.php on line 43
+[19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：「　ログアウトページ　
+[19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：セッションID：2uhpb565d8j1uhdf5budbm7vpb
+[19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+)
+
+[19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600509222
+[19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：ログアウト
+[19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：ログインページへ遷移
+[19-Sep-2020 18:53:42 Asia/Tokyo] PHP Notice:  Constant MSG06 already defined in /Applications/MAMP/htdocs/Myportfolio/function.php on line 43
+[19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：「ログインページ　
+[19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：セッションID：jakee0jfro7fjhljckridmgn49
+[19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+)
+
+[19-Sep-2020 18:53:42 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600509222
