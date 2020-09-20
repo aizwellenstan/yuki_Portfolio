@@ -1,3 +1,11 @@
+<?php
+require('function.php');
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debug('「学習内容編集ページ　');
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debugLogStart();
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 

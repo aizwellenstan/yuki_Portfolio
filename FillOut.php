@@ -1,3 +1,50 @@
+<?php
+require('function.php');
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debug('「ログインページ　');
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debugLogStart();
+$study_time = (!empty($_POST['time-list'])) ? $_POST['time-list'] : '';
+$study_category = (!empty($_POST['category-list'])) ? $_POST['category-list'] : '';
+$study_detail = (!empty($_POST['study-detail'])) ? $_POST['study-detail'] : '';
+
+if (!empty($_POST)) {
+  debug('POST送信があります');
+  vaildRequired($study_time, 'time');
+  vaildRequired($study_category, 'category');
+
+  if (empty($err_msg)) {
+    debug('バリデーションOK');
+  try {
+
+    $dbh = dbConnect();
+    $sql = 'INSERT INTO `study_detail`(user_id,study_time,study_category,study_detail,study_year,study_month,study_date,create_date) 
+      VALUES(:user_id,:study_time,:study_category,:study_detail,:study_year,:study_month,:study_date,:create_date)';
+
+    $data = array(
+      ':user_id' => $_SESSION['user_id'],
+      ':study_time' => $study_time,
+      ':study_category' => $study_category,
+      ':study_detail' => $study_detail,
+      ':study_year' => date('Y'),
+      ':study_month' => date('m'),
+      ':study_date' => date('Y-m-d'),
+      ':create_date' => date('Y-m-d-H-i')
+    );
+    $stmt = queryPost($dbh, $sql, $data);
+
+    if ($stmt) {
+      $_SESSION['msg-succces'] = MSG11;
+      debug('マイページへ遷移します。');
+      header("Location:index.php");
+    } else {
+      return false;
+    }
+  } catch (Exception $e) {
+    error_log('エラー発生:' . $e->getMessage());
+  }
+}}
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -11,20 +58,21 @@
 <body>
 
   <?php
-  require('header.php');
+  require('header.php'); ?>
+  <?php
   require('auth.php');
   ?>
 
   <main>
-  
     <div class="site-width2">
-    <div class="page-title">
-<h1 class="page-title">学習を記録する</h1>
-</div>
-      <form action="" method="">
+      <div class="page-title">
+        <p class="page-title">学習を記録する</p>
+      </div>
+      <form action="" method="post">
         <section class="time">
           <div class="selectbox">
-            <h1>時間を選択</h1>
+            <p>時間を選択</p>
+            <div class="err_msg"><?php if (!empty($err_msg['time'])) echo $err_msg['time']; ?></div>
             <select name="time-list">
               <option value="0">選択してください</option>
               <option value="15">15分</option>
@@ -35,8 +83,8 @@
 
         <section class="category">
           <div class="selectbox">
-            <h1>カテゴリを選択　<span class="add_Category"><a href="Edit_Category.php">カテゴリの追加はこちら</a></span></h1>
-
+            <p>カテゴリを選択　<span class="add_Category"><a href="Edit_Category.php">カテゴリの追加はこちら</a></span></p>
+            <div class="err_msg"><?php if (!empty($err_msg['category'])) echo $err_msg['category']; ?></div>
             <select name="category-list">
               <option value="0">選択してください</option>
               <option value="１">うんち</option>
@@ -45,8 +93,9 @@
         </section>
 
         <section class="detail">
-          　　　<h1>内容を記入</h1>
-          <textarea name="study-detail" id="" cols="40" rows="8" placeholder="内容"></textarea>
+          　　　<p>内容を記入</p>
+          <div class="err_msg"><?php if (!empty($err_msg['detail'])) echo $err_msg['detail']; ?></div>
+          <textarea name="study-detail" id="" cols="40" rows="7" placeholder="内容"></textarea>
         </section>
         <div class='btn-container'>
           <input type="submit" value="登録">
@@ -55,16 +104,18 @@
 
     </div>
     <?php
-require('StudyDetail_use.php');
-?>
- <a class="i_jump" href="index.php">HOMEへ戻る</a>
+    require('StudyDetail_use.php');
+    ?>
+    <a class="i_jump" href="index.php">HOMEへ戻る</a>
   </main>
 </body>
+</html>
 <style>
-main{
-  background-color: #ddd;
-  height: 1400px;
+  main {
+    background-color: #ddd;
+    height: 1400px;
   }
+
   form {
     margin: 0 auto;
     padding: 5px;
@@ -74,14 +125,14 @@ main{
     height: 550px;
   }
 
-  
+
   textarea[name="study-detail"] {
     font-size: 16px;
   }
 
   .detail {
     position: absolute;
-    top: 464px;
+    top: 516px;
   }
 
   select {
@@ -100,6 +151,7 @@ main{
     margin-bottom: 10px;
     letter-spacing: 3px;
   }
+
   input[type="submit"] {
     margin: 15px 125px;
     padding: 15px 30px;
@@ -110,25 +162,45 @@ main{
     font-size: 14px;
     cursor: pointer;
     position: absolute;
-    top: 740px;}
+    top: 740px;
+  }
 
-    .page-title{
-      margin-bottom: 10px;
+  .page-title {
+    margin-bottom: 10px;
 
-      text-align: center;
-      font-size: 35px;
-      font-weight: bold;
-      letter-spacing: 5px;
-    }
-    
-    .site-width2 {
-  margin: 0 auto;
-  width: 980px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 5px;
+  }
+
+  .site-width2 {
+    margin: 0 auto;
+    width: 980px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .add_Category a {
+    font-size: 13px;
+    color: #333;
+  }
+  .err_msg{
+  color: red;
+  float: left;
+  margin-top: 5px ;
+  margin-left: 10px;
 }
-.add_Category a{
-  font-size: 13px;
-  color: #333;
+section p{
+
+  margin-top: 5px ;
+  float: left;
 }
+.detail p{
+
+margin-top: 5px ;
+float: left;
+width:540px;
+}
+
 </style>

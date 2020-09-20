@@ -36,3 +36,9 @@ main{
   height: 52px;
   font-family: "メイリオ", Meiryo, sans-serif;
 }
+.err_msg{
+  color: red;
+  float: left;
+  margin-top: 5px ;
+  margin-left: 10px;
+}

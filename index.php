@@ -1,3 +1,11 @@
+<?php
+require('function.php');
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debug('「マイページ　');
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debugLogStart();
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>

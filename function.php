@@ -5,14 +5,12 @@ ini_set('error_log', 'php.log');
 
 $debug_flg = true;
 
-function debug($str)
-{
+function debug($str){
   global $debug_flg;
-  if (!empty($debug_flg)) {
-    error_log('デバッグ：' . $str);
+  if(!empty($debug_flg)){
+      error_log('デバッグ：'.$str);
   }
 }
-
 session_save_path("/var/tmp/");
 //ガーベージコレクションが削除するセッションの有効期限を設定（30日以上経っているものに対してだけ１００分の１の確率で削除）
 ini_set('session.gc_maxlifetime', 60 * 60 * 24 * 30);
@@ -44,6 +42,7 @@ define('MSG07', 'エラーが発生しました。');
 define('MSG08', 'そのEmailは既に登録されています');
 define('MSG09', '文字で入力してください');
 define('MSG10', 'パスワードが間違っています');
+define('MSG11', '記録が完了しました');
 
 $err_msg = array();
 
@@ -195,6 +194,3 @@ function getusername($u_id)
     $err_msg['common'] = MSG07;
   }
 }
-
-//入力保持
-//

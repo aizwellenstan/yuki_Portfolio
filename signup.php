@@ -159,12 +159,7 @@ if(!empty($_POST)){
     margin-bottom: 40px;
     text-align: center;
 }
-.err_msg {
-  color: red;
-  float: left;
-  margin-top: 5px ;
-  margin-left: 10px;
-}
+
 label p{
   margin-top: 5px ;
   float: left;
