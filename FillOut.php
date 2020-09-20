@@ -8,24 +8,9 @@ $study_time = (!empty($_POST['time-list'])) ? $_POST['time-list'] : '';
 $study_category = (!empty($_POST['category-list'])) ? $_POST['category-list'] : '';
 $study_detail = (!empty($_POST['study-detail'])) ? $_POST['study-detail'] : '';
 
-function getcategory(){
-  debug('カテゴリを取得します');
-  try{
-    $dbh = dbConnect();
-    $sql = 'SELECT category_name FROM category WHERE user_id = :user_id';
-    $data= array( ':user_id' => $_SESSION['user_id']);
-    $stmt = queryPost($dbh, $sql, $data);
-    if($stmt){
-      return $stmt->fetchAll();
-    }else{
-      return false;
-    }
-  }catch (Exception $e){
-    error_log('エラー発生:' . $e->getMessage());
-  }
-}
+
 $getcategory = getcategory();
-debug('$getcategory'. print_r($getcategory,true));
+
 
 if (!empty($_POST)) {
   debug('POST送信があります');

@@ -194,3 +194,19 @@ function getusername($u_id)
     $err_msg['common'] = MSG07;
   }
 }
+function getcategory(){
+  debug('カテゴリを取得します');
+  try{
+    $dbh = dbConnect();
+    $sql = 'SELECT category_name FROM category WHERE user_id = :user_id';
+    $data= array( ':user_id' => $_SESSION['user_id']);
+    $stmt = queryPost($dbh, $sql, $data);
+    if($stmt){
+      return $stmt->fetchAll();
+    }else{
+      return false;
+    }
+  }catch (Exception $e){
+    error_log('エラー発生:' . $e->getMessage());
+  }
+}

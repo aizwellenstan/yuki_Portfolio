@@ -4,7 +4,7 @@ debug('「「「「「「「「「「「「「「「「「「「「「「「「�
 debug('「カテゴリ編集ページ　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
-
+$getcategory = getcategory();
 // INSERT INTO category(category_name,createdate)VALUES('テスト','2020-09-09 00:00:00')
 
 ?>
@@ -37,8 +37,10 @@ debugLogStart();
             <h1>編集したいカテゴリ、または新規作成を選択</span></h1>
             <select name="category-list">
               <option value="0">選択してください</option>
-              <option value="0">新規作成</option>
-              <option value="１">うんち</option>
+              <?php
+              foreach($getcategory as $key => $val){
+              ?>
+              <option value="<?php echo $val['category_name']?>"><?php echo $val['category_name']?></option><?php  } ?>
             </select>
           </div>
         </section>
