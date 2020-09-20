@@ -4,6 +4,7 @@ debug('「「「「「「「「「「「「「「「「「「「「「「「「�
 debug('「ログインページ　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
+$_SESSION['file'] =  basename(__FILE__);
 $study_time = (!empty($_POST['time-list'])) ? $_POST['time-list'] : '';
 $study_category = (!empty($_POST['category-list'])) ? $_POST['category-list'] : '';
 $study_detail = (!empty($_POST['study-detail'])) ? $_POST['study-detail'] : '';

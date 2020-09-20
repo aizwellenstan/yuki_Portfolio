@@ -1,17 +1,17 @@
 <?php
 
-
-if(!empty($_SESSION['user_id'])){
+if (!empty($_SESSION['user_id'])) {
   $u_id = $_SESSION['user_id'];
-  
- }
+}
 
+debug('ファイル名' . print_r($_SESSION, true));
 ?>
 <style>
   img {
     height: 10px;
     width: 10px;
   }
+
   .second_header {
     width: 100%;
     border-top: 1px solid #ddd;
@@ -80,6 +80,19 @@ if(!empty($_SESSION['user_id'])){
     height: 34px;
     margin-top: 10px;
   }
+
+  .contentsmark {
+    height: 70px;
+    float: left;
+    text-align: center;
+    border-left: 1px solid #ddd;
+    background-color: #333;
+  }
+
+  .contentsmark p {
+    color: #fff;
+    margin: 23px 0;
+  }
 </style>
 <header>
   <div>
@@ -88,17 +101,29 @@ if(!empty($_SESSION['user_id'])){
     </div>
     <div class="second_header">
       <nav class="top-nav">
-        <div class="contents">
+      <div class="<?php if ($_SESSION['file'] === 'index.php') {
+                      echo 'contentsmark';
+                    } else {
+                      echo 'contents';
+                    } ?>">
           <a href="index.php">
             <p>HOME</p>
           </a>
         </div>
-        <div class="contents">
+        <div class="<?php if ($_SESSION['file'] === 'FillOut.php') {
+                      echo 'contentsmark';
+                    } else {
+                      echo 'contents';
+                    } ?>">
           <a href="FillOut.php">
             <p>学習を記録する</p>
           </a>
         </div>
-        <div class="contents">
+        <div class="<?php if ($_SESSION['file'] === 'ReadBack.php') {
+                      echo 'contentsmark';
+                    } else {
+                      echo 'contents';
+                    } ?>">
           <a href="ReadBack.php">
             <p>学習を振り返る</p>
           </a>
