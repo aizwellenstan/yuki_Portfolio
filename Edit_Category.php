@@ -5,6 +5,8 @@ debug('「カテゴリ編集ページ　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 
+// INSERT INTO category(category_name,createdate)VALUES('テスト','2020-09-09 00:00:00')
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">

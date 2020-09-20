@@ -8,6 +8,25 @@ $study_time = (!empty($_POST['time-list'])) ? $_POST['time-list'] : '';
 $study_category = (!empty($_POST['category-list'])) ? $_POST['category-list'] : '';
 $study_detail = (!empty($_POST['study-detail'])) ? $_POST['study-detail'] : '';
 
+function getcategory(){
+  debug('カテゴリを取得します');
+  try{
+    $dbh = dbConnect();
+    $sql = 'SELECT category_name FROM category WHERE user_id = :user_id';
+    $data= array( ':user_id' => $_SESSION['user_id']);
+    $stmt = queryPost($dbh, $sql, $data);
+    if($stmt){
+      return $stmt->fetchAll();
+    }else{
+      return false;
+    }
+  }catch (Exception $e){
+    error_log('エラー発生:' . $e->getMessage());
+  }
+}
+$getcategory = getcategory();
+debug('$getcategory'. print_r($getcategory,true));
+
 if (!empty($_POST)) {
   debug('POST送信があります');
   vaildRequired($study_time, 'time');
@@ -75,8 +94,13 @@ if (!empty($_POST)) {
             <div class="err_msg"><?php if (!empty($err_msg['time'])) echo $err_msg['time']; ?></div>
             <select name="time-list">
               <option value="0">選択してください</option>
-              <option value="15">15分</option>
-              <option value="15">30分</option>
+               <?php for($i=15; $i <= 90 ; $i+=15)  {?>
+              <option value="<?php echo $i;?>">
+               <?php echo $i.'分';?>
+               <?php } ?>
+               </option>
+
+
             </select>
           </div>
         </section>
@@ -87,7 +111,10 @@ if (!empty($_POST)) {
             <div class="err_msg"><?php if (!empty($err_msg['category'])) echo $err_msg['category']; ?></div>
             <select name="category-list">
               <option value="0">選択してください</option>
-              <option value="１">うんち</option>
+              <?php
+              foreach($getcategory as $key => $val){
+              ?>
+              <option value="<?php echo $val['category_name']?>"><?php echo $val['category_name']?></option><?php  } ?>
             </select>
           </div>
         </section>
