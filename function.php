@@ -5,10 +5,11 @@ ini_set('error_log', 'php.log');
 
 $debug_flg = true;
 
-function debug($str){
+function debug($str)
+{
   global $debug_flg;
-  if(!empty($debug_flg)){
-      error_log('デバッグ：'.$str);
+  if (!empty($debug_flg)) {
+    error_log('デバッグ：' . $str);
   }
 }
 session_save_path("/var/tmp/");
@@ -173,20 +174,21 @@ function queryPost($dbh, $sql, $data)
   debug('クエリ成功');
   return $stmt;
 }
-function getuser($u_id){
+function getuser($u_id)
+{
   debug('ユーザー情報を取得します。');
-  try{
+  try {
     $dbh = dbConnect();
     $sql = 'SELECT * FROM users WHERE id = :u_id AND delete_flg=0';
-    $data = array(':u_id'=>$u_id);
-    $stmt = queryPost($dbh,$sql,$data);
+    $data = array(':u_id' => $u_id);
+    $stmt = queryPost($dbh, $sql, $data);
 
-    if($stmt){
+    if ($stmt) {
       return $stmt->fetch(PDO::FETCH_ASSOC);
-    }else{
+    } else {
       return false;
     }
-  }catch (Exception $e) {
+  } catch (Exception $e) {
     error_log('エラー発生:' . $e->getMessage());
   }
 }
@@ -201,7 +203,7 @@ function getusername($u_id)
     $data = array(':u_id' => $u_id);
     $stmt = queryPost($dbh, $sql, $data);
 
-    
+
     if ($stmt) {
       return  $stmt->fetch(PDO::FETCH_COLUMN);
     } else {
@@ -212,46 +214,67 @@ function getusername($u_id)
     $err_msg['common'] = MSG07;
   }
 }
-function getcategory(){
+function getcategory()
+{
   debug('カテゴリを取得します');
-  try{
+  try {
     $dbh = dbConnect();
     $sql = 'SELECT category_name FROM category WHERE user_id = :user_id';
-    $data= array( ':user_id' => $_SESSION['user_id']);
+    $data = array(':user_id' => $_SESSION['user_id']);
     $stmt = queryPost($dbh, $sql, $data);
-    if($stmt){
+    if ($stmt) {
       return $stmt->fetchAll();
-    }else{
+    } else {
       return false;
     }
-  }catch (Exception $e){
+  } catch (Exception $e) {
     error_log('エラー発生:' . $e->getMessage());
   }
 }
-function sanitize($str){
-  return htmlspecialchars($str,ENT_QUOTES);
+function sanitize($str)
+{
+  return htmlspecialchars($str, ENT_QUOTES);
 }
 
-function getformdata($str,$method){
-  debug('getformdataします');
-  $dbFormData = getUser($_SESSION['user_id']);
+// function getformdata($str,$method){
+//   debug('getformdataします');
+//   $dbFormData = getUser($_SESSION['user_id']);
 
-if($method ==='post'){
-  debug('ポスト');
-$method=$_POST;
-}else if($method === 'get'){
-  debug('ゲット');
-  $method=$_GET;
-}else {
-  debug('エラー');
-}
+// if($method ==='post'){
+//   debug('ポスト');
+// $method=$_POST;
+// }else if($method === 'get'){
+//   debug('ゲット');
+//   $method=$_GET;
+// }else {
+//   debug('エラー');
+// }
 
-if($dbFormData){
-  if(!empty($err_msg[$str])){
-    if(isset($method[$str])){
-      return sanitize($method[$str]);
-    }else{return sanitize($dbFormData[$str]);
+// if($dbFormData){
+//   if(!empty($err_msg[$str])){
+//     if(isset($method[$str])){
+//       return sanitize($method[$str]);
+//     }else{return sanitize($dbFormData[$str]);
+//   }
+//   }
+// }
+// }
+
+function getstudy($u_id)
+{
+  debug('学習内容の取得');
+  try {
+    $dbh = dbConnect();
+    $sql = 'SELECT * FROM study_detail WHERE user_id = :u_id';
+    $data = array(':u_id' => $u_id);
+    $stmt = queryPost($dbh, $sql, $data);
+
+    if ($stmt) {
+      return $stmt->fetchall();
+    } else {
+      return false;
+    }
+  } catch (Exception $e) {
+    error_log('エラー発生:' . $e->getMessage());
   }
-  }
-}
 }
