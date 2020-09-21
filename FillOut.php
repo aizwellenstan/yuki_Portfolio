@@ -8,8 +8,11 @@ $_SESSION['file'] =  basename(__FILE__);
 $study_time = (!empty($_POST['time-list'])) ? $_POST['time-list'] : '';
 $study_category = (!empty($_POST['category-list'])) ? $_POST['category-list'] : '';
 $study_detail = (!empty($_POST['study-detail'])) ? $_POST['study-detail'] : '';
+$_SESSION['study_time'] = $study_time;
+$_SESSION['study_category'] = $study_category;
+$_SESSION['study_detail'] = $study_detail;
 
-
+$user= getuser($_SESSION['user_id']);
 $getcategory = getcategory();
 
 
@@ -85,8 +88,10 @@ if (!empty($_POST)) {
                <?php echo $i.'分';?>
                <?php } ?>
                </option>
-
-
+               <?php if(!empty($_SESSION['study_time'])) {?>
+              <option value="<?php echo $_SESSION['study_time']?>" <?php if(!empty($_SESSION['study_time']))echo 'selected';?>><?php echo $_SESSION['study_time']?>
+              </option>
+               <?php } ?>
             </select>
           </div>
         </section>
@@ -101,6 +106,9 @@ if (!empty($_POST)) {
               foreach($getcategory as $key => $val){
               ?>
               <option value="<?php echo $val['category_name']?>"><?php echo $val['category_name']?></option><?php  } ?>
+              <?php if(!empty($_SESSION['study_category'])) {?>
+              <option value="<?php echo $_SESSION['study_category']?>" <?php if(!empty($_SESSION['study_category']))echo 'selected';?>><?php echo $_SESSION['study_category']?></option>
+              <?php } ?>
             </select>
           </div>
         </section>
@@ -108,7 +116,7 @@ if (!empty($_POST)) {
         <section class="detail">
           　　　<p>内容を記入</p>
           <div class="err_msg"><?php if (!empty($err_msg['detail'])) echo $err_msg['detail']; ?></div>
-          <textarea name="study-detail" id="" cols="40" rows="7" placeholder="内容"></textarea>
+          <textarea name="study-detail" id="" cols="40" rows="7" placeholder="内容"><?php if(!empty($_SESSION['study_detail'])) echo $_SESSION['study_detail']?></textarea>
         </section>
         <div class='btn-container'>
           <input type="submit" value="登録">

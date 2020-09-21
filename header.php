@@ -4,7 +4,6 @@ if (!empty($_SESSION['user_id'])) {
   $u_id = $_SESSION['user_id'];
 }
 
-debug('ファイル名' . print_r($_SESSION, true));
 ?>
 <style>
   img {

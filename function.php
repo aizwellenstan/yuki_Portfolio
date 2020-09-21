@@ -173,6 +173,24 @@ function queryPost($dbh, $sql, $data)
   debug('クエリ成功');
   return $stmt;
 }
+function getuser($u_id){
+  debug('ユーザー情報を取得します。');
+  try{
+    $dbh = dbConnect();
+    $sql = 'SELECT * FROM users WHERE id = :u_id AND delete_flg=0';
+    $data = array(':u_id'=>$u_id);
+    $stmt = queryPost($dbh,$sql,$data);
+
+    if($stmt){
+      return $stmt->fetch(PDO::FETCH_ASSOC);
+    }else{
+      return false;
+    }
+  }catch (Exception $e) {
+    error_log('エラー発生:' . $e->getMessage());
+  }
+}
+
 function getusername($u_id)
 {
   global $err_msg;
@@ -209,4 +227,31 @@ function getcategory(){
   }catch (Exception $e){
     error_log('エラー発生:' . $e->getMessage());
   }
+}
+function sanitize($str){
+  return htmlspecialchars($str,ENT_QUOTES);
+}
+
+function getformdata($str,$method){
+  debug('getformdataします');
+  $dbFormData = getUser($_SESSION['user_id']);
+
+if($method ==='post'){
+  debug('ポスト');
+$method=$_POST;
+}else if($method === 'get'){
+  debug('ゲット');
+  $method=$_GET;
+}else {
+  debug('エラー');
+}
+
+if($dbFormData){
+  if(!empty($err_msg[$str])){
+    if(isset($method[$str])){
+      return sanitize($method[$str]);
+    }else{return sanitize($dbFormData[$str]);
+  }
+  }
+}
 }
