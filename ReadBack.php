@@ -11,7 +11,10 @@ $_SESSION['study_category'] = $study_category;
 
 
 $serchyear = (!empty($_GET['year'])) ? $_GET['year'] : '';
+debug('$serchyear ' . print_r($serchyear, true));
+
 $serchyear2 = (!empty($_GET['year2'])) ? $_GET['year2'] : '';
+
 $serchmonth = (!empty($_GET['month'])) ? $_GET['month'] : '';
 $serchmonth2 = (!empty($_GET['month2'])) ? $_GET['month2'] : '';
 $serchday = (!empty($_GET['day'])) ? $_GET['day'] : '';
@@ -24,14 +27,19 @@ $_SESSION['$serchmonth'] = $serchmonth;
 $_SESSION['$serchmonth2'] = $serchmonth2;
 $_SESSION['$serchday'] = $serchday;
 $_SESSION['$serchday2'] = $serchday2;
+$_SESSION['category'] = $serchcategory;
 
-$from_date = (!empty($_GET['year'])) ? $serchyear . '-' . $serchmonth . '-' . $serchday:'2010-01-01';
-$to_date = (!empty($_GET['year2'])) ? $serchyear2 . '-' . $serchmonth2 . '-' . $serchday:date('Y-m-d');
+$from_date = (!empty($_GET['year'])) ? $serchyear . '-' . $serchmonth . '-' . $serchday : '2010-01-01';
 
-$getstudy = getstudy($u_id, $from_date, $to_date);
+
+$to_date = (!empty($_GET['year2'])) ? $serchyear2 . '-' . $serchmonth2 . '-' . $serchday2 : date('Y-m-d');
+debug('$to_date ' . print_r($to_date, true));
+$includecategory = (!empty($_GET['category'])) ? "'" . $serchcategory . "'" : '';;
+$getstudy = getstudy($u_id, $from_date, $to_date, $includecategory);
 debug('$getstudy' . print_r($getstudy, true));
 
 $getcategory = getcategory();
+
 
 $t_name = "'" . '2020-' . $serchmonth . '-' . $serchday . "'";
 debug('$t_name' . print_r($t_name, true));
@@ -41,7 +49,7 @@ function getstudytime($u_id)
 
   try {
     $dbh = dbConnect();
-    $sql = 'select sum(study_time) from study_detail WHERE user_id= :u_id ';
+    $sql = 'SELECT sum(study_time) from study_detail WHERE user_id= :u_id ';
     $data = array('u_id' => $u_id);
     $stmt = queryPost($dbh, $sql, $data);
 
@@ -67,7 +75,7 @@ debug('getstudytime:' . print_r($getstudytime, true));
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <title>学習記録ページ</title>
+  <title>学習確認ページ</title>
 </head>
 
 <body>
@@ -80,11 +88,10 @@ debug('getstudytime:' . print_r($getstudytime, true));
   <main>
     <div class="site-width">
       <div class="page-title">
+        <p>学習の振り返り</p>
       </div>
       <section>
-        <div class="table-title">
-          <h1>学習の振り返り</h2>
-        </div>
+
         <div>
           <div class="search-msg">
             【<?php if ($t_name != "'" . "2020--" . "'") {
@@ -103,8 +110,8 @@ debug('getstudytime:' . print_r($getstudytime, true));
           <div class='keyword-box'>
             <div class="from">
               <select class="year-list" name="year" id="">
-                <option value="select">【年】</option>
-                <?php for ($i = date('Y'); $i >= 2010; $i--) { ?>
+                <option value="<?php echo date('Y');?>"><?php echo date('Y').'年'; ?></option>
+                <?php for ($i = date('Y')-1; $i >= 2010; $i--) { ?>
                   <option value="<?php echo $i; ?>"><?php echo $i . '年'; ?></option><?php } ?>
                 <?php if (!empty($_SESSION['$serchyear'])) { ?>
                   <option value="<?php echo $_SESSION['$serchyear'] ?>" <?php if (!empty($_SESSION['$serchyear'])) echo 'selected'; ?>>
@@ -113,10 +120,10 @@ debug('getstudytime:' . print_r($getstudytime, true));
 
               </select>
               <select class="month-list" name="month">
-                <option value="select">【月】</option>
+                <option value="<?php echo date('n');?>"><?php echo date('n').'月'; ?></option>
                 <?php for ($i = 1; $i <= 12; $i++) { ?>
                   <option value="<?php echo $i; ?>"><?php echo $i . '月'; ?></option><?php } ?>
-                  <?php if (!empty($_SESSION['$serchmonth'])) { ?>
+                <?php if (!empty($_SESSION['$serchmonth'])) { ?>
                   <option value="<?php echo $_SESSION['$serchmonth'] ?>" <?php if (!empty($_SESSION['$serchmonth'])) echo 'selected'; ?>>
                     <?php echo $_SESSION['$serchmonth'] ?></option>
                 <?php } ?>
@@ -125,42 +132,45 @@ debug('getstudytime:' . print_r($getstudytime, true));
 
 
               <select class="day-list" name="day" id="">
-                <option value="select">【日】</option>
+              <option value="<?php echo date('d');?>"><?php echo date('d').'日'; ?></option>
                 <?php for ($i = 1; $i <= 31; $i++) { ?>
                   <option value="<?php echo $i ?>"><?php echo $i . '日' ?></option><?php } ?>
-                  <?php if (!empty($_SESSION['$serchday'])) { ?>
+
+                <?php if (!empty($_SESSION['$serchday'])) { ?>
                   <option value="<?php echo $_SESSION['$serchday'] ?>" <?php if (!empty($_SESSION['$serchday'])) echo 'selected'; ?>>
                     <?php echo $_SESSION['$serchday'] ?></option>
                 <?php } ?>
+
+
               </select>
             </div>
             <span class='while'>~</span>
             <select class="year-list" name="year2" id="">
-              <option value="select">【年】</option>
-              <?php for ($i = date('Y'); $i >= 2010; $i--) { ?>
+              <option value="<?php echo date('Y');?>"><?php echo date('Y').'年'; ?></option>
+              <?php for ($i = date('Y')-1; $i >= 2010; $i--) { ?>
                 <option value="<?php echo $i; ?>"><?php echo $i . '年'; ?></option><?php } ?>
-                <?php if (!empty($_SESSION['$serchyear2'])) { ?>
-                  <option value="<?php echo $_SESSION['$serchyear2'] ?>" <?php if (!empty($_SESSION['$serchyear2'])) echo 'selected'; ?>>
-                    <?php echo $_SESSION['$serchyear2'] ?></option>
-                <?php } ?>
+              <?php if (!empty($_SESSION['$serchyear2'])) { ?>
+                <option value="<?php echo $_SESSION['$serchyear2'] ?>" <?php if (!empty($_SESSION['$serchyear2'])) echo 'selected'; ?>>
+                  <?php echo $_SESSION['$serchyear2'] ?></option>
+              <?php } ?>
             </select>
             <select class="month-list" name="month2">
-              <option value="select">【月】</option>
+              <option value="<?php echo date('n');?>"><?php echo date('n').'月'; ?></option>
               <?php for ($i = 1; $i <= 12; $i++) { ?>
                 <option value="<?php echo $i; ?>"><?php echo $i . '月'; ?></option><?php } ?>
-                <?php if (!empty($_SESSION['$serchmonth2'])) { ?>
-                  <option value="<?php echo $_SESSION['$serchmonth2'] ?>" <?php if (!empty($_SESSION['$serchmonth2'])) echo 'selected'; ?>>
-                    <?php echo $_SESSION['$serchmonth2'] ?></option>
-                <?php } ?>
+              <?php if (!empty($_SESSION['$serchmonth2'])) { ?>
+                <option value="<?php echo $_SESSION['$serchmonth2'] ?>" <?php if (!empty($_SESSION['$serchmonth2'])) echo 'selected'; ?>>
+                  <?php echo $_SESSION['$serchmonth2'] ?></option>
+              <?php } ?>
             </select>
             <select class="day-list" name="day2" id="">
-              <option value="select">【日】</option>
+              <option value="<?php echo date('d');?>"><?php echo date('d').'日'; ?></option>
               <?php for ($i = 1; $i <= 31; $i++) { ?>
                 <option value="<?php echo $i ?>"><?php echo $i . '日' ?></option><?php } ?>
-                <?php if (!empty($_SESSION['$serchday2'])) { ?>
-                  <option value="<?php echo $_SESSION['$serchday2'] ?>" <?php if (!empty($_SESSION['$serchday2'])) echo 'selected'; ?>>
-                    <?php echo $_SESSION['$serchday2'] ?></option>
-                <?php } ?>
+              <?php if (!empty($_SESSION['$serchday2'])) { ?>
+                <option value="<?php echo $_SESSION['$serchday2'] ?>" <?php if (!empty($_SESSION['$serchday2'])) echo 'selected'; ?>>
+                  <?php echo $_SESSION['$serchday2'] ?></option>
+              <?php } ?>
             </select>
             <select class="category-list" name="category" id="">
               <option value="0">カテゴリで絞る</option>
@@ -271,10 +281,13 @@ debug('getstudytime:' . print_r($getstudytime, true));
         font-size: 31px;
       }
 
-      .year-list,
+      .year-list {
+        width: 62px;
+      }
+
       .month-list,
       .day-list {
-        width: 40px;
+        width: 45px;
       }
 
       form h1 {
@@ -295,14 +308,13 @@ debug('getstudytime:' . print_r($getstudytime, true));
 
       input[type="submit"] {
         height: 35px;
-        margin-left: 14px;
-        width: 84px;
+        margin-left: 3px;
+        width: 59px;
         border: none;
         background: #FF773E;
         color: white;
         font-size: 14px;
         cursor: pointer;
-
       }
 
       .keyword-box {

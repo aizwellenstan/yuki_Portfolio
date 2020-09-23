@@ -260,7 +260,7 @@ function sanitize($str)
 // }
 // }
 
-function getstudy($u_id,$from_date,$to_date)
+function getstudy($u_id,$from_date,$to_date,$includecategory)
 {
   debug('学習内容の取得');
   $from_date = date('Y-m-d',strtotime($from_date));
@@ -268,22 +268,19 @@ function getstudy($u_id,$from_date,$to_date)
 
   try {
     $dbh = dbConnect();
-    $sql = 'SELECT * FROM study_detail WHERE user_id = :u_id AND study_date  BETWEEN :from_date and :to_date';
+    $sql = 'SELECT * FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date';
+    
+    if(!empty($includecategory)) $sql .= ' AND study_category  = '.$includecategory ;
     $data = array(':u_id' => $u_id,':from_date' => $from_date,':to_date' => $to_date);
-
-
   
+
     debug('$sql:'.print_r($sql,true));
     debug('$from:'.print_r($from_date,true));
- 
     debug('$date:'.print_r($data,true));
     $stmt = queryPost($dbh, $sql, $data);
     debug('$stmt:'.print_r($stmt,true));
 if($stmt){
   debug('成功');
-  $fetcha = $stmt->fetch();
-  debug('$fetch:'.print_r($fetcha,true));
-  // クエリ結果の全データを返却
   return $stmt->fetchAll();
 }else{
   return false;

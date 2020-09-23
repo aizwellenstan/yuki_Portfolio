@@ -2,11 +2,12 @@ body{
   margin: 0;
   background-color: #fff;
 }
-.site-width {
+
+.site-width{
   margin: 0 auto;
   width: 980px;
-  padding-bottom: 170px;
-  padding-top: 60px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .i_jump {
@@ -41,4 +42,13 @@ main{
   float: left;
   margin-top: 5px ;
   margin-left: 10px;
+}
+
+.page-title {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: red;
 }

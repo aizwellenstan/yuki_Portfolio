@@ -58,6 +58,12 @@ margin-left: 83px;
 .memo_space h1{
 margin: 0;
 }
+.site-width2{
+  margin: 0 auto;
+  width: 980px;
+  padding-bottom: 170px;
+  padding-top: 60px;
+}
 
 </style>
 <body>
@@ -67,7 +73,7 @@ require('auth.php');
 
 ?>
 <main>
-<div class="site-width">
+<div class="site-width2">
 <section class="contents_butan">
 <div class="contents1">
           <a href="FillOut.php">

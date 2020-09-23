@@ -73,7 +73,7 @@ if (!empty($_POST)) {
   ?>
 
   <main>
-    <div class="site-width2">
+    <div class="site-width">
       <div class="page-title">
         <p class="page-title">学習を記録する</p>
       </div>
@@ -196,7 +196,7 @@ if (!empty($_POST)) {
     letter-spacing: 5px;
   }
 
-  .site-width2 {
+  .site-width{
     margin: 0 auto;
     width: 980px;
     padding-bottom: 10px;
