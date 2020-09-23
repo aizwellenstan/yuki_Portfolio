@@ -11,7 +11,7 @@ $_SESSION['study_category'] = $study_category;
 
 
 $serchyear = (!empty($_GET['year'])) ? $_GET['year'] : '';
-
+debug('$serchyear ' . print_r($serchyear, true));
 
 $serchyear2 = (!empty($_GET['year2'])) ? $_GET['year2'] : '';
 
@@ -44,8 +44,25 @@ $getcategory = getcategory();
 $t_name = "'" . '2020-' . $serchmonth . '-' . $serchday . "'";
 debug('$t_name' . print_r($t_name, true));
 
+function getstudytime($u_id)
+{
 
-$getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
+  try {
+    $dbh = dbConnect();
+    $sql = 'SELECT sum(study_time) from study_detail WHERE user_id= :u_id ';
+    $data = array('u_id' => $u_id);
+    $stmt = queryPost($dbh, $sql, $data);
+
+    if ($stmt) {
+      return $stmt->fetch();
+    } else {
+      return false;
+    }
+  } catch (Exception $e) {
+    error_log('エラー発生:' . $e->getMessage());
+  }
+}
+$getstudytime = getstudytime($u_id);
 debug('getstudytime:' . print_r($getstudytime, true));
 
 
@@ -77,15 +94,16 @@ debug('getstudytime:' . print_r($getstudytime, true));
 
         <div>
           <div class="search-msg">
-
-
-            【<?php if (!empty($from_date) & $from_date != '2010-01-01' or !empty($to_date) & $to_date != date('Y-m-d')) {
-                echo $from_date . '~' . $to_date . 'の検索結果';
+            【<?php if ($t_name != "'" . "2020--" . "'") {
+                echo $t_name;
               } else {
-                echo '全ての期間の学習内容を表示中';
-              }
-              ?>】 <h2>学習時間合計　<span class='time'><?php echo $getstudytime['sum(study_time)']; ?></span>h</h2>
+                echo '全ての学習時間を表示中';
+              } ?>
+            <?php if ($t_name != "'" . "2020--" . "'") {
+              echo 'の検索結果';
+            }  ?>】
           </div>
+          <h2><?php echo $getstudytime['sum(study_time)']; ?></span>h</h2>
         </div>
         <form method="get">
           <h1>◉検索する</h1>
@@ -113,6 +131,8 @@ debug('getstudytime:' . print_r($getstudytime, true));
                 <?php } ?>
               </select>
 
+
+
               <select class="day-list" name="day" id="">
                 <option value="<?php echo date('d'); ?>"><?php echo date('d') . '日'; ?></option>
                 <?php for ($i = 1; $i <= 31; $i++) { ?>
@@ -122,6 +142,8 @@ debug('getstudytime:' . print_r($getstudytime, true));
                   <option value="<?php echo $_SESSION['$serchday'] ?>" <?php if (!empty($_SESSION['$serchday'])) echo 'selected'; ?>>
                     <?php echo $_SESSION['$serchday'] ?></option>
                 <?php } ?>
+
+
               </select>
             </div>
             <span class='while'>~</span>
@@ -164,8 +186,8 @@ debug('getstudytime:' . print_r($getstudytime, true));
                   <option value="<?php echo $val['category_name'] ?>">
                     <?php echo $val['category_name'] ?>
                   </option><?php  } ?>
-                <?php if (!empty($_SESSION['category'])) { ?>
-                  <option value="<?php echo $_SESSION['category'] ?>" <?php if (!empty($_SESSION['category'])) echo 'selected'; ?>><?php echo $_SESSION['category'] ?></option>
+                <?php if (!empty($_SESSION['study_category'])) { ?>
+                  <option value="<?php echo $_SESSION['study_category'] ?>" <?php if (!empty($_SESSION['study_category'])) echo 'selected'; ?>><?php echo $_SESSION['study_category'] ?></option>
                 <?php } ?>
               </select>
 
@@ -173,7 +195,7 @@ debug('getstudytime:' . print_r($getstudytime, true));
           </div>
           <input type="submit" value="検索">
         </form>
-        <table>
+        <!-- <table>
           <thead>
             <tr>
               <th class="size_s">日付</th>
@@ -195,28 +217,15 @@ debug('getstudytime:' . print_r($getstudytime, true));
 
 
           </tbody>
-        </table>
+        </table> -->
       </section>
       <a class="i_jump" href="index.php">HOMEへ戻る</a>
     </div>
     <style>
-      .search-msg {
-        margin: 0 auto;
-        width: 70%;
-        font-size: 30px;
-      }
-
-      .search-msg h2 {
-        margin: 0 auto;
-        width: 400px;
-        font-size: 30px;
-        display: block;
-      }
-
-      .time {
-        font-size: 50px;
-      }
-
+    .search-msg{
+      margin: 0 auto;
+      font-size: 20px;
+    }
       .edit {
         float: right;
       }
@@ -270,8 +279,7 @@ debug('getstudytime:' . print_r($getstudytime, true));
         width: 100px;
         margin: 5px;
       }
-
-      .category p {
+      .category p{
         margin-left: 23px;
       }
 

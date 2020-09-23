@@ -274,11 +274,9 @@ function getstudy($u_id,$from_date,$to_date,$includecategory)
     $data = array(':u_id' => $u_id,':from_date' => $from_date,':to_date' => $to_date);
   
 
-    debug('$sql:'.print_r($sql,true));
-    debug('$from:'.print_r($from_date,true));
-    debug('$date:'.print_r($data,true));
+   
     $stmt = queryPost($dbh, $sql, $data);
-    debug('$stmt:'.print_r($stmt,true));
+ 
 if($stmt){
   debug('成功');
   return $stmt->fetchAll();
@@ -289,4 +287,27 @@ if($stmt){
 } catch (Exception $e) {
 error_log('エラー発生:' . $e->getMessage());
 }
+}
+
+function getstudytime($u_id,$from_date,$to_date,$includecategory)
+{
+  try {
+    $dbh = dbConnect();
+    $sql = 'SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date';
+    
+    if(!empty($includecategory)) $sql .= ' AND study_category  = '.$includecategory ;
+    $data = array(':u_id' => $u_id,':from_date' => $from_date,':to_date' => $to_date);
+    debug('$sql:'.print_r($sql,true));
+    debug('$from:'.print_r($from_date,true));
+    debug('$date:'.print_r($data,true));
+    $stmt = queryPost($dbh, $sql, $data);
+    debug('$stmt:'.print_r($stmt,true));
+    if ($stmt) {
+      return $stmt->fetch();
+    } else {
+      return false;
+    }
+  } catch (Exception $e) {
+    error_log('エラー発生:' . $e->getMessage());
+  }
 }
