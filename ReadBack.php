@@ -91,25 +91,14 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
 
               </select>
               <select class="month-list" name="month">
-                
+            
                 <?php for ($i = 1; $i <= 12; $i++) { ?>
-                  <option value="
-                  <?php  
-                   if($i = date('')){
-                     debug('今月');
-                    echo $i.'selected'; 
-                  }else{
-                    debug('むり');
-                    debug($i.'='.date('n'));
-                    
-                      echo $i;
-                    } ?>">
-                  <?php 
-                  echo $i . '月';
-                  
-                 ?></option>
-                  
-                  <?php } ?>
+                  <option value="<?php echo $i; ?>"  
+                  <?php if($i === (int)date('n')){ echo'selected' ;}?>>
+                  <?php echo $i . '月';?>
+                  </option>
+                     <?php } ?>
+               
                 <?php if (!empty($_SESSION['$serchmonth'])) { ?>
                   <option value="<?php echo $_SESSION['$serchmonth'] ?>" <?php if (!empty($_SESSION['$serchmonth'])) echo 'selected'; ?>>
                     <?php echo $_SESSION['$serchmonth'] ?></option>
@@ -117,9 +106,12 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
               </select>
 
               <select class="day-list" name="day" id="">
-                <option value="<?php echo date('d'); ?>"><?php echo date('d') . '日'; ?></option>
                 <?php for ($i = 1; $i <= 31; $i++) { ?>
-                  <option value="<?php echo $i ?>"><?php echo $i . '日' ?></option><?php } ?>
+                  <option value="<?php echo $i; ?>"  
+                  <?php if($i === (int)date('d')){ echo'selected';}?>>
+                  <?php echo $i . '日';?>
+                  </option>
+                     <?php } ?>
 
                 <?php if (!empty($_SESSION['$serchday'])) { ?>
                   <option value="<?php echo $_SESSION['$serchday'] ?>" <?php if (!empty($_SESSION['$serchday'])) echo 'selected'; ?>>
@@ -140,18 +132,24 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
                 <?php } ?>
               </select>
               <select class="month-list" name="month2">
-                <option value="<?php echo date('n'); ?>"><?php echo date('n') . '月'; ?></option>
-                <?php for ($i = 1; $i <= 12; $i++) { ?>
-                  <option value="<?php echo $i; ?>"><?php echo $i . '月'; ?></option><?php } ?>
+              <?php for ($i = 1; $i <= 12; $i++) { ?>
+                  <option value="<?php echo $i; ?>"  
+                  <?php if($i === (int)date('n')){ echo'selected';}?>>
+                  <?php echo $i . '月';?>
+                  </option>
+                     <?php } ?>
                 <?php if (!empty($_SESSION['$serchmonth2'])) { ?>
                   <option value="<?php echo $_SESSION['$serchmonth2'] ?>" <?php if (!empty($_SESSION['$serchmonth2'])) echo 'selected'; ?>>
                     <?php echo $_SESSION['$serchmonth2'] ?></option>
                 <?php } ?>
               </select>
               <select class="day-list" name="day2" id="">
-                <option value="<?php echo date('d'); ?>"><?php echo date('d') . '日'; ?></option>
-                <?php for ($i = 1; $i <= 31; $i++) { ?>
-                  <option value="<?php echo $i ?>"><?php echo $i . '日' ?></option><?php } ?>
+              <?php for ($i = 1; $i <= 31; $i++) { ?>
+                  <option value="<?php echo $i; ?>"  
+                  <?php if($i === (int)date('d')){ echo'selected';}?>>
+                  <?php echo $i . '日';?>
+                  </option>
+                     <?php } ?>
                 <?php if (!empty($_SESSION['$serchday2'])) { ?>
                   <option value="<?php echo $_SESSION['$serchday2'] ?>" <?php if (!empty($_SESSION['$serchday2'])) echo 'selected'; ?>>
                     <?php echo $_SESSION['$serchday2'] ?></option>
