@@ -7,14 +7,8 @@ debugLogStart();
 $_SESSION['file'] =  basename(__FILE__);
 $u_id = $_SESSION['user_id'];
 
-$_SESSION['study_category'] = $study_category;
-
-
 $serchyear = (!empty($_GET['year'])) ? $_GET['year'] : '';
-
-
 $serchyear2 = (!empty($_GET['year2'])) ? $_GET['year2'] : '';
-
 $serchmonth = (!empty($_GET['month'])) ? $_GET['month'] : '';
 $serchmonth2 = (!empty($_GET['month2'])) ? $_GET['month2'] : '';
 $serchday = (!empty($_GET['day'])) ? $_GET['day'] : '';
@@ -33,27 +27,20 @@ $from_date = (!empty($_GET['year'])) ? $serchyear . '-' . $serchmonth . '-' . $s
 
 
 $to_date = (!empty($_GET['year2'])) ? $serchyear2 . '-' . $serchmonth2 . '-' . $serchday2 : date('Y-m-d');
-debug('$to_date ' . print_r($to_date, true));
 $includecategory = (!empty($_GET['category'])) ? "'" . $serchcategory . "'" : '';;
 $getstudy = getstudy($u_id, $from_date, $to_date, $includecategory);
-debug('$getstudy' . print_r($getstudy, true));
+
 
 $getcategory = getcategory();
 
-
-$t_name = "'" . '2020-' . $serchmonth . '-' . $serchday . "'";
-debug('$t_name' . print_r($t_name, true));
-
-
 $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
-debug('getstudytime:' . print_r($getstudytime, true));
+
 
 
 
 ?>
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,9 +91,25 @@ debug('getstudytime:' . print_r($getstudytime, true));
 
               </select>
               <select class="month-list" name="month">
-                <option value="<?php echo date('n'); ?>"><?php echo date('n') . '月'; ?></option>
+                
                 <?php for ($i = 1; $i <= 12; $i++) { ?>
-                  <option value="<?php echo $i; ?>"><?php echo $i . '月'; ?></option><?php } ?>
+                  <option value="
+                  <?php  
+                   if($i = date('')){
+                     debug('今月');
+                    echo $i.'selected'; 
+                  }else{
+                    debug('むり');
+                    debug($i.'='.date('n'));
+                    
+                      echo $i;
+                    } ?>">
+                  <?php 
+                  echo $i . '月';
+                  
+                 ?></option>
+                  
+                  <?php } ?>
                 <?php if (!empty($_SESSION['$serchmonth'])) { ?>
                   <option value="<?php echo $_SESSION['$serchmonth'] ?>" <?php if (!empty($_SESSION['$serchmonth'])) echo 'selected'; ?>>
                     <?php echo $_SESSION['$serchmonth'] ?></option>
@@ -174,6 +177,16 @@ debug('getstudytime:' . print_r($getstudytime, true));
           <input type="submit" value="検索">
         </form>
         <table>
+        <?php if(empty($getstudy)){
+          ?>
+          <div class="err_msg">
+          データがありません
+          <?php if( $from_date>$to_date){?>
+            <p>検索日付を確認してください</p>
+            <?php }?>
+          </div>
+         
+        <?php }else{?>
           <thead>
             <tr>
               <th class="size_s">日付</th>
@@ -195,11 +208,19 @@ debug('getstudytime:' . print_r($getstudytime, true));
 
 
           </tbody>
+          <?php }?>
         </table>
       </section>
       <a class="i_jump" href="index.php">HOMEへ戻る</a>
     </div>
     <style>
+  .err_msg{
+    margin: 80px 0;
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    display: block;
+    }
       .search-msg {
         margin: 0 auto;
         width: 70%;
@@ -301,12 +322,12 @@ debug('getstudytime:' . print_r($getstudytime, true));
       }
 
       .year-list {
-        width: 62px;
+        width: 75px;
       }
 
       .month-list,
       .day-list {
-        width: 45px;
+        width: 56px;
       }
 
       form h1 {
@@ -321,16 +342,17 @@ debug('getstudytime:' . print_r($getstudytime, true));
         margin-left: 23px;
       }
 
-      input[type="submit"] {
-        height: 35px;
-        margin-left: 31px;
-        margin-top: 32px;
-        width: 86px;
-        border: none;
-        background: #FF773E;
-        color: white;
-        font-size: 14px;
-        cursor: pointer;
+ 
+input[type="submit"] {
+    height: 35px;
+    margin-left: 15px;
+    margin-top: 33px;
+    width: 73px;
+    border: none;
+    background: #FF773E;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
       }
 
       .keyword-box {

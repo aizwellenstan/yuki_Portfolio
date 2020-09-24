@@ -7,10 +7,6 @@ $login_date = $_SESSION['login_date'];
 $login_limit = $_SESSION['login_limit'];
 $time = time();
 
-debug('$login_date：' . print_r($login_date, true));
-debug('$login_limit：' . print_r($login_limit, true));
-debug('$time：' . print_r($time, true));
-
 if (!empty($_SESSION['login_date'])) {
   debug('ログイン済みユーザーです。');
 
