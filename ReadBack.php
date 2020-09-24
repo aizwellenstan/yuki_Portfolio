@@ -69,7 +69,7 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
               } else {
                 echo '全ての期間の学習内容を表示中';
               }
-              ?>】 <h2>学習時間合計　<span class='time'><?php echo $getstudytime['sum(study_time)']; ?></span>h</h2>
+              ?>】 <h2>学習時間合計　<span class='time'><?php echo round($getstudytime['sum(study_time)']/60,1); ?></span>h</h2>
           </div>
         </div>
         <form method="get">
@@ -197,7 +197,7 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
                 <td class='size_m'><?php echo $val['study_category']; ?></td>
                 <td class="size_s"><?php echo $val['study_time']; ?></td>
                 <td class="size_l"><?php echo $val['study_detail']; ?></td>
-                <td class="size_s"><a href="Edit_study.php">編集する</a></td>
+                <td class="size_s"><a href="Edit_study.php">編集</a></td>
               </tr>
             <?php } ?>
 
@@ -209,6 +209,17 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
       <a class="i_jump" href="index.php">HOMEへ戻る</a>
     </div>
     <style>
+    thead{
+      display: block;
+    }
+    tbody {
+    overflow-y: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    width: 1080px;
+    height: 270px;
+  }
   .err_msg{
     margin: 80px 0;
     text-align: center;
@@ -259,7 +270,7 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
       }
 
       .size_m {
-        width: 170px;
+        width: 130px;
       }
 
       .size_l {

@@ -13,105 +13,115 @@ $sutdy_period = ((strtotime(date('Y-m-d')) - strtotime($startdate)) / 86400);
 $getstudy = getstudy($u_id, date('Y-m-d'), date('Y-m-d'), $includecategory);
 ?>
 <div class="study_detail">
-<div class="site-width">
-  <div class="page-title">
-  </div>
-  <section class="today_list">
-    <div class="table-title">
-      <h2><span>本日<span><?php echo date('m/d');?></span>の学習履歴　(計<span class="today_time"><?php echo array_shift(getstudytime($u_id, date('Y-m-d'), date('Y-m-d'), $includecategory)); ?></span>h)</span>
-
+  <div class="site-width">
+    <div class="page-title">
     </div>
-    <table>
-      <thead>
-        <tr>
-          <th class="size_s">日付</th>
-          <th class='size_m'>カテゴリ</th>
-          <th class="size_s">時間(分)</th>
-          <th class="size_l">内容</th>
-        </tr>
-      </thead>
-      <tbody class="alltbody">
-        <?php foreach ($getstudy as $key => $val) { ?>
+    <section class="today_list">
+      <div class="table-title">
+        <h2><span>本日<span><?php echo date('m/d'); ?></span>の学習履歴　(計<span class="today_time"><?php echo round(array_shift(getstudytime($u_id, date('Y-m-d'), date('Y-m-d'), $includecategory))/60,1); ?></span>h)</span>
+
+      </div>
+      <table>
+        <thead>
           <tr>
-            <td class="size_s"><?php echo $val['study_date']; ?></td>
-            <td class='size_m'><?php echo $val['study_category']; ?></td>
-            <td class="size_s"><?php echo $val['study_time']; ?></td>
-            <td class="size_l"><?php echo $val['study_detail']; ?></td>
-            <td class="size_s"><a href="Edit_study.php">編集する</a></td>
+            <th class="size_s">日付</th>
+            <th class='size_m'>カテゴリ</th>
+            <th class="size_s">時間(分)</th>
+            <th class="size_l">内容</th>
           </tr>
-        <?php } ?>
+        </thead>
+        <tbody class="alltbody">
+          <?php foreach ($getstudy as $key => $val) { ?>
+            <tr>
+              <td class="size_s"><?php echo $val['study_date']; ?></td>
+              <td class='size_m'><?php echo $val['study_category']; ?></td>
+              <td class="size_s"><?php echo $val['study_time']; ?></td>
+              <td class="size_l"><?php echo $val['study_detail']; ?></td>
+              <td class="size_s"><a href="Edit_study.php">編集</a></td>
+            </tr>
+          <?php } ?>
 
 
-      </tbody>
+        </tbody>
 
-    </table>
-  </section>
-</div>
+      </table>
+    </section>
+  </div>
   <div class="total-study">
-  <div class="table-title">
+    <div class="table-title">
       <h2>累計学習時間</h2>
     </div>
-  <section class="data-list">
-    <div class="data">
-      <ul class="data-ul">
-        <?php foreach ($getagtstudy as $key => $val) { ?>
-          <li class="data_month">
-            <div>
-              <h1 class="data-title"><?php echo (int)$val['study_month']; ?>月</h1>
-              <p class="data-title2">合計学習時間</p>
-              <p class="study-time"><span class="sum"><?php echo $val['sum_time']; ?></span>h (平均<span class="avg"><?php echo $val['avg_time']; ?></span>h)</p>
-            </div>
-          </li>
-        <?php } ?>
-      </ul>
+    <section class="data-list">
+      <div class="data">
+        <ul class="data-ul">
+          <?php foreach ($getagtstudy as $key => $val) { ?>
+            <li class="data_month">
+              <div>
+                <h1 class="data-title"><?php echo (int)$val['study_month']; ?>月</h1>
+                <p class="data-title2">合計学習時間</p>
+                <p class="study-time"><span class="sum"><?php echo $val['sum_time']; ?></span>h (平均<span class="avg"><?php echo $val['avg_time']; ?></span>h)</p>
+              </div>
+            </li>
+          <?php } ?>
+        </ul>
 
-    </div>
-    <div class="data_space">
-      <p>学習開始日：<span class="startdate"><?php echo date('Y-m-d', strtotime($user['create_date'])); ?></span></p>
-      <p>開始から　：<span><?php echo $sutdy_period; ?></span>日</p>
+      </div>
+      <div class="data_space">
+        <p>学習開始日：<span class="startdate"><?php echo date('Y-m-d', strtotime($user['create_date'])); ?></span></p>
+        <p>開始から　：<span><?php echo $sutdy_period; ?></span>日</p>
 
-      <p>総学習時間：<span><?php echo $getstudytime['sum(study_time)']; ?></span>h</p>
-      <p>平均　　　：<span><?php echo $getstudytime['sum(study_time)'] / $sutdy_period; ?>h</p>
-    </div>
-  </section>
-</div>
+        <p>総学習時間：<span><?php echo $getstudytime['sum(study_time)']; ?></span>h</p>
+        <p>平均　　　：<span><?php echo round(($getstudytime['sum(study_time)'] / $sutdy_period)/60,1); ?>h</p>
+      </div>
+    </section>
+  </div>
 </div>
 <style>
-
-.data-list{
-  margin-top: -30px;
+td a{
+  font-size: 15px;
 }
-.today_list{
-height: 450px;
+  .data-list {
+    margin-top: -30px;
+  }
 
+  .today_list {
+    height: 450px;
+
+  }
+
+  .table-title h1 {
+    font-size: 40px;
+
+  }
+
+  .total-study {
+    background-color: #ddd;
+    height: 553px;
+    margin: 0 auto;
+    width: 980px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+  }
+thead{
+  display: block;
 }
-.table-title h1{
-  font-size: 40px;
+  .study_detail {
+    height: 471px;
+    background-color: #fff;
+  }
+
+  .alltbody {
+    overflow-y: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    width: 1080px;
+    height: 270px;
+  }
+
   
-}
-.total-study{
-  background-color: #ddd;
-  height: 553px;
-  margin: 0 auto;
-  width: 980px;
-  padding-bottom: 10px;
-  padding-top: 10px;
 
-}
-.study_detail{
-  height: 471px;
-  background-color: #fff;
- }
- .alltbody{
-  overflow-x: hidden;
-    
- }
- tbody{
-  overflow-y: scroll;
-  background-color: #DDDDDD;
-
-    height: 400px;
- }
   .startdate {
     font-size: 21px;
     width: 95px;
@@ -135,8 +145,9 @@ height: 450px;
   }
 
   td {
-  color: #333;
+    color: #333;
     height: 40px;
+    background-color: #DDDDDD;
   }
 
   .size_s {
@@ -145,7 +156,7 @@ height: 450px;
   }
 
   .size_m {
-    width: 170px;
+    width: 130px;
   }
 
   .size_l {

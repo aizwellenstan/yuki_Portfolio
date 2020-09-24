@@ -12688,3 +12688,4660 @@
 )
 
 [24-Sep-2020 20:59:43 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:45:54 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:45:54 Asia/Tokyo] デバッグ：「ログインページ　
+[24-Sep-2020 21:45:54 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:45:54 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:45:54 Asia/Tokyo] デバッグ：セッションID：b7jsumtp3gbuvgr5nn7tdmm0s2
+[24-Sep-2020 21:45:54 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_date] => 1600951532
+    [login_limit] => 36000
+    [user_id] => 1
+    [msg_success] => 
+)
+
+[24-Sep-2020 21:45:54 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951554
+[24-Sep-2020 21:45:54 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987532
+[24-Sep-2020 21:45:54 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:45:54 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:45:54 Asia/Tokyo] デバッグ：カテゴリを取得します
+[24-Sep-2020 21:45:54 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:45:54 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:45:54 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:45:54 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：セッションID：5mrvhq81i8ndua1q8ruo6s25tn
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_date] => 1600951554
+    [login_limit] => 36000
+    [user_id] => 1
+    [msg_success] => 
+    [file] => FillOut.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+)
+
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951555
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987554
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：カテゴリを取得します
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：$from:2010-01-01
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 1
+    [:from_date] => 2010-01-01
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:45:55 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：「　ログアウトページ　
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：セッションID：78icta550m6c5upp1rll66ffum
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_date] => 1600951555
+    [login_limit] => 36000
+    [user_id] => 1
+    [msg_success] => 
+    [file] => ReadBack.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [$serchyear] => 
+    [$serchyear2] => 
+    [$serchmonth] => 
+    [$serchmonth2] => 
+    [$serchday] => 
+    [$serchday2] => 
+    [category] => 
+)
+
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951579
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987555
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：ログアウト
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：ログインページへ遷移
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：「ログインページ　
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：セッションID：5hd42srmsqvqb0ql1vncth6e55
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+)
+
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951579
+[24-Sep-2020 21:46:19 Asia/Tokyo] PHP Notice:  Undefined index: login_date in /Applications/MAMP/htdocs/Myportfolio/auth.php on line 6
+[24-Sep-2020 21:46:19 Asia/Tokyo] PHP Notice:  Undefined index: login_limit in /Applications/MAMP/htdocs/Myportfolio/auth.php on line 7
+[24-Sep-2020 21:46:19 Asia/Tokyo] デバッグ：未ログインユーザーです。
+[24-Sep-2020 21:46:29 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:46:29 Asia/Tokyo] デバッグ：「ログインページ　
+[24-Sep-2020 21:46:29 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:46:29 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:46:29 Asia/Tokyo] デバッグ：セッションID：e03rf5t85l7rq4lqp09nrlpn25
+[24-Sep-2020 21:46:29 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+)
+
+[24-Sep-2020 21:46:29 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951589
+[24-Sep-2020 21:46:29 Asia/Tokyo] PHP Notice:  Undefined index: login_date in /Applications/MAMP/htdocs/Myportfolio/auth.php on line 6
+[24-Sep-2020 21:46:29 Asia/Tokyo] PHP Notice:  Undefined index: login_limit in /Applications/MAMP/htdocs/Myportfolio/auth.php on line 7
+[24-Sep-2020 21:46:29 Asia/Tokyo] デバッグ：未ログインユーザーです。
+[24-Sep-2020 21:46:29 Asia/Tokyo] デバッグ：POST送信あり
+[24-Sep-2020 21:46:29 Asia/Tokyo] デバッグ：バリデーションOK
+[24-Sep-2020 21:46:29 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:46:29 Asia/Tokyo] デバッグ：クエリ結果の中身：Array
+(
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [id] => 2
+)
+
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951590
+    [user_id] => 2
+)
+
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：マイページへ遷移します。
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：セッションID：2gn3tkk6ec5eno60dr3cpudrv0
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951590
+    [user_id] => 2
+)
+
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951590
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987590
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:46:30 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:46:30 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:46:46 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:46:46 Asia/Tokyo] デバッグ：「ログインページ　
+[24-Sep-2020 21:46:46 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:46:46 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:46:46 Asia/Tokyo] デバッグ：セッションID：57g5amkkjsd4ehmbravtbqifqr
+[24-Sep-2020 21:46:46 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951590
+    [user_id] => 2
+    [file] => index.php
+)
+
+[24-Sep-2020 21:46:46 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951606
+[24-Sep-2020 21:46:46 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987590
+[24-Sep-2020 21:46:46 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:46:46 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:46:46 Asia/Tokyo] デバッグ：カテゴリを取得します
+[24-Sep-2020 21:46:46 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:46:46 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:46:46 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:46:46 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：セッションID：7va6gssuikqfpu0ihgcnk1n43q
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951606
+    [user_id] => 2
+    [file] => FillOut.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+)
+
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951612
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987606
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:46:52 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:46:52 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：セッションID：mc4cbknenr75suii8i0tcdvpe6
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951612
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+)
+
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951714
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987612
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:34 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:48:34 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：セッションID：78l6jnvrm5nbo17rgsj64nfdo5
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951714
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+)
+
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951715
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987714
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:35 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:48:35 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：セッションID：cjali4dhts175r0hpvv3gvac9j
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951715
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+)
+
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951724
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987715
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:44 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:48:44 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：セッションID：shuqlh1hui7aor18r4p936tb39
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951724
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+)
+
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951725
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987724
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:45 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:48:45 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：セッションID：kncpo7lulfun2rt75g9c3lhgr9
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951725
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+)
+
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951738
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987725
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:58 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:48:58 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：セッションID：8031n7n41t77i0oanl09fq2cg4
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951738
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+)
+
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951739
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987738
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:48:59 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:48:59 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：セッションID：2j21or65e6h4vurnc3dr0kmrqi
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951739
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+)
+
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951809
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987739
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:09 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:50:09 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：セッションID：p0edj0bga48p710k8qmbamagdp
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951809
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+)
+
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951810
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987809
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:10 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:50:10 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：セッションID：nanqai9t1bc409uhbjghfpjf5m
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951810
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+)
+
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951811
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987810
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:11 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:50:11 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：セッションID：7shp00f23djdlf2vg7q1qnb497
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951811
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+)
+
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951819
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987811
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:19 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:50:19 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：セッションID：mh1ieup8mim24fuj55u56rpcrd
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951819
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+)
+
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951828
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987819
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:28 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:50:28 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:50:41 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:41 Asia/Tokyo] デバッグ：「ログインページ　
+[24-Sep-2020 21:50:41 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:41 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:50:41 Asia/Tokyo] デバッグ：セッションID：q5udaf63hp7nnmtvr4isn8g1ar
+[24-Sep-2020 21:50:41 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951828
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+)
+
+[24-Sep-2020 21:50:41 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951841
+[24-Sep-2020 21:50:41 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987828
+[24-Sep-2020 21:50:41 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:50:41 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:41 Asia/Tokyo] デバッグ：カテゴリを取得します
+[24-Sep-2020 21:50:41 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:41 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:41 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:50:41 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：「ログインページ　
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：セッションID：u02poiopeljnb8k57h9pa893so
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951841
+    [user_id] => 2
+    [file] => FillOut.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+)
+
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951848
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987841
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：カテゴリを取得します
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：POST送信があります
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：バリデーションOK
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：マイページへ遷移します。
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：セッションID：u1hd3r7irpb6usgcj4fu42uppi
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951848
+    [user_id] => 2
+    [file] => FillOut.php
+    [study_time] => 60
+    [study_category] => テスト
+    [study_detail] => bsdbsfgbs
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951848
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987848
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:50:48 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:50:48 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：セッションID：42fou3gvfts4trkt3lfqn1p7jn
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951848
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 60
+    [study_category] => テスト
+    [study_detail] => bsdbsfgbs
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951907
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987848
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:51:47 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:51:47 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：セッションID：i0lgp787dgehbpsodp0siijes7
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951907
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 60
+    [study_category] => テスト
+    [study_detail] => bsdbsfgbs
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951958
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987907
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:52:38 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:52:38 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:52:40 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:52:40 Asia/Tokyo] デバッグ：「ログインページ　
+[24-Sep-2020 21:52:40 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:52:40 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:52:40 Asia/Tokyo] デバッグ：セッションID：7rgnh7ii6ehl4rch49hto6nifq
+[24-Sep-2020 21:52:40 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951958
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 60
+    [study_category] => テスト
+    [study_detail] => bsdbsfgbs
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:52:40 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951960
+[24-Sep-2020 21:52:40 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987958
+[24-Sep-2020 21:52:40 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:52:40 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:52:40 Asia/Tokyo] デバッグ：カテゴリを取得します
+[24-Sep-2020 21:52:40 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:52:40 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:52:40 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:52:40 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：セッションID：gcfaecu8dfl2n3iu5ckplsshsh
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951960
+    [user_id] => 2
+    [file] => FillOut.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600951962
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987960
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:52:42 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:52:42 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：セッションID：mrc5jmc6inuej8ngsjg528da33
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600951962
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952004
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600987962
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:53:24 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:53:24 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：セッションID：4nnf6u4g1rppnfbc8di4hfngr9
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952004
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952028
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988004
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:53:48 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:53:48 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：セッションID：b829re5t788bdck5fatvohcgv4
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952028
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952054
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988028
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:14 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:54:14 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：セッションID：k93bdb5ot4qi8t03pp5edav6ue
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952054
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952079
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988054
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:54:39 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：セッションID：8cmk9d84ttbfa8fi7jia68abgt
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952079
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952079
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988079
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:39 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:54:39 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：セッションID：2vu7d8hg3b4hk71snujm410qei
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952079
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952090
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988079
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:54:50 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:54:50 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：セッションID：tp2u7nedemm3ps9envr9cmfdtc
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952090
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952103
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988090
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:03 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:55:03 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：セッションID：9450o52fe19df3lr4amp9dn3e8
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952103
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952142
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988103
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:55:42 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：セッションID：go1q23ebg5jl6oqn38qs0smf77
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952142
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952142
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988142
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:55:42 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:55:42 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：セッションID：ehmu3321e32oqhqi0m8bl4oroh
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952142
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952234
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988142
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:14 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:57:14 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：セッションID：s8cva04kljfurj5394d9ste16p
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952234
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952235
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988234
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:15 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:57:15 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：セッションID：l7mpi8nuq1lvrdhipjvvh5t438
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952235
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952269
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988235
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:49 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:57:49 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：セッションID：g30c8o8j68mn54novii51ql4ml
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952269
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952274
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988269
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:57:54 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:57:54 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：セッションID：s8dubq14mhqs34960cm2ff9unt
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952274
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952309
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988274
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:58:29 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:58:29 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：セッションID：o7us5t44r2mdgp24gu2p16nit8
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952309
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952310
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988309
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:58:30 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:58:30 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：セッションID：kng0upv72gaeqruqiuuqeif4o5
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952310
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952363
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988310
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 21:59:23 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 21:59:23 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：セッションID：88e907fcj2a8blpqiolar6gjpu
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952363
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952421
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988363
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:21 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:00:21 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：セッションID：skibsjd45is9264c9ikug6r5o9
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952421
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952422
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988421
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:00:22 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:00:23 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:23 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:00:23 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：セッションID：73lb8v0hmiqmaj5gp0thu2j2m7
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952422
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952424
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988422
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:00:24 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:00:24 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：セッションID：i9h294pnh2n64f7ivkcgi8oqsm
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952424
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952463
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988424
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:03 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:01:03 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：セッションID：084tig8oq7irjffbuv9uoam973
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952463
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952464
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988463
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:04 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:01:04 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：セッションID：d5qmfa3bruiq69lqms588mauiu
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952464
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952465
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988464
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:05 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:01:05 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：セッションID：oph1ulhg29d98429rdmd270rmf
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952465
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952480
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988465
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:01:20 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:01:20 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：セッションID：oinsp2mej4sblus6dqr5r17atg
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952480
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952522
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988480
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:02:02 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:02:02 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：セッションID：s1bsti84mcag77d6r0npbhmshh
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952522
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952632
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988522
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:03:52 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:03:52 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：セッションID：3p9rs63ij7l4h41llhkhrh35nd
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952632
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952803
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988632
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:06:43 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:06:43 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：セッションID：r3ksk9nlf0dlm279tgk828e2pn
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952803
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952824
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988803
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:07:04 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:07:04 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：セッションID：dmqtnaqt5h3qhctrd5urd8fvaq
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952824
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952864
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988824
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:07:44 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:07:44 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：セッションID：7opcm1mb7fl630ni8emn7v4ov6
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952864
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952881
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988864
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:01 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:08:01 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：セッションID：hf8cot62mo4mcmnoe3gidplied
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952881
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952890
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988881
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:10 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:08:10 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：セッションID：696mesaut5923qa8pibsqp3hds
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952890
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952891
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988890
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:11 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:08:11 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：セッションID：im8vvoil45rgrnv2r659fh8itd
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952891
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952919
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988891
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:39 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:08:39 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：セッションID：97kp5slmgl53a8ddec9utjlq0r
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952919
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600952935
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988919
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:08:55 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:08:55 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：セッションID：qg2b5je8u4u6fvuoh9udn88dlp
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600952935
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600953168
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600988935
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:12:48 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:12:48 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：セッションID：ciccq3bjcpkf49c4bi6o4lkidd
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600953168
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600953218
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600989168
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:13:38 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:13:38 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：セッションID：4el990dkrh5viocgnpf92brrag
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600953218
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+)
+
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600953224
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600989218
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：カテゴリを取得します
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：$from:2010-01-01
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2010-01-01
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:13:44 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：セッションID：ftfcu5e6dsnosavl6j9h2skt3n
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600953224
+    [user_id] => 2
+    [file] => ReadBack.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+    [$serchyear] => 
+    [$serchyear2] => 
+    [$serchmonth] => 
+    [$serchmonth2] => 
+    [$serchday] => 
+    [$serchday2] => 
+    [category] => 
+)
+
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600953285
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600989224
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：カテゴリを取得します
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：$from:2010-01-01
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2010-01-01
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:14:45 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：セッションID：3c9r98v6brgj3ircnu62gietlm
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600953285
+    [user_id] => 2
+    [file] => ReadBack.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+    [$serchyear] => 
+    [$serchyear2] => 
+    [$serchmonth] => 
+    [$serchmonth2] => 
+    [$serchday] => 
+    [$serchday2] => 
+    [category] => 
+)
+
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600953341
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600989285
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：カテゴリを取得します
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：$from:2010-01-01
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2010-01-01
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:15:41 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：セッションID：7esl190aursutj69evegp6eugp
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600953341
+    [user_id] => 2
+    [file] => ReadBack.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+    [$serchyear] => 
+    [$serchyear2] => 
+    [$serchmonth] => 
+    [$serchmonth2] => 
+    [$serchday] => 
+    [$serchday2] => 
+    [category] => 
+)
+
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600953366
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600989341
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：カテゴリを取得します
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：$from:2010-01-01
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2010-01-01
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:16:06 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：セッションID：5a09ce78k05760omqf2us1icfa
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600953366
+    [user_id] => 2
+    [file] => ReadBack.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+    [$serchyear] => 
+    [$serchyear2] => 
+    [$serchmonth] => 
+    [$serchmonth2] => 
+    [$serchday] => 
+    [$serchday2] => 
+    [category] => 
+)
+
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600953386
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600989366
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：カテゴリを取得します
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：$from:2010-01-01
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2010-01-01
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:16:26 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：セッションID：7u7eh6u05lpj2ej6eorrs167e4
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600953386
+    [user_id] => 2
+    [file] => ReadBack.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+    [$serchyear] => 
+    [$serchyear2] => 
+    [$serchmonth] => 
+    [$serchmonth2] => 
+    [$serchday] => 
+    [$serchday2] => 
+    [category] => 
+)
+
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600953400
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600989386
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：カテゴリを取得します
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：$from:2010-01-01
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2010-01-01
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:16:40 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：「マイページ　
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：セッションID：lqrvb2n25pl0veh0qe6cqkq4i0
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600953400
+    [user_id] => 2
+    [file] => ReadBack.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+    [$serchyear] => 
+    [$serchyear2] => 
+    [$serchmonth] => 
+    [$serchmonth2] => 
+    [$serchday] => 
+    [$serchday2] => 
+    [category] => 
+)
+
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600953404
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600989400
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：全ての学習内容の取得
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：user:Array
+(
+    [id] => 2
+    [email] => test@icloud.com
+    [password] => $2y$10$Wy6x8YflCGz2u192ExPhZullSjibS20OOLUvh4ignHVuyl47q1Ax6
+    [user_name] => test
+    [login_time] => 2020-09-18
+    [delete_flg] => 0
+    [create_date] => 2020-09-18 13:53:05
+    [update_date] => 2020-09-18 13:53:05
+)
+
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：$from:2020-09-18
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-18
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：$from:2020-09-24
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2020-09-24
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:44 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:16:44 Asia/Tokyo] PHP Notice:  Only variables should be passed by reference in /Applications/MAMP/htdocs/Myportfolio/StudyDetail.php on line 21
+[24-Sep-2020 22:16:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:16:45 Asia/Tokyo] デバッグ：「ログインページ　
+[24-Sep-2020 22:16:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:16:45 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:16:45 Asia/Tokyo] デバッグ：セッションID：vrhc0j2tfv395ttpk36d5lc3p5
+[24-Sep-2020 22:16:45 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600953404
+    [user_id] => 2
+    [file] => index.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+    [$serchyear] => 
+    [$serchyear2] => 
+    [$serchmonth] => 
+    [$serchmonth2] => 
+    [$serchday] => 
+    [$serchday2] => 
+    [category] => 
+)
+
+[24-Sep-2020 22:16:45 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600953405
+[24-Sep-2020 22:16:45 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600989404
+[24-Sep-2020 22:16:45 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:16:45 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:45 Asia/Tokyo] デバッグ：カテゴリを取得します
+[24-Sep-2020 22:16:45 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:45 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:45 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:16:45 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：「学習振り返りページ　
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：セッションID：c4hf4maans3uaad6sclqg84mnc
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600953405
+    [user_id] => 2
+    [file] => FillOut.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+    [$serchyear] => 
+    [$serchyear2] => 
+    [$serchmonth] => 
+    [$serchmonth2] => 
+    [$serchday] => 
+    [$serchday2] => 
+    [category] => 
+)
+
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600953406
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600989405
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：学習内容の取得
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：成功
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：カテゴリを取得します
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：$sql:SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：$from:2010-01-01
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：$date:Array
+(
+    [:u_id] => 2
+    [:from_date] => 2010-01-01
+    [:to_date] => 2020-09-24
+)
+
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：$stmt:PDOStatement Object
+(
+    [queryString] => SELECT sum(study_time) FROM study_detail WHERE user_id = :u_id  AND study_date  BETWEEN :from_date and :to_date
+)
+
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:16:46 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
+[24-Sep-2020 22:16:50 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:16:50 Asia/Tokyo] デバッグ：「ログインページ　
+[24-Sep-2020 22:16:50 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[24-Sep-2020 22:16:50 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[24-Sep-2020 22:16:50 Asia/Tokyo] デバッグ：セッションID：3tkkplsr0mls3bp1vhi3h4sun0
+[24-Sep-2020 22:16:50 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_limit] => 36000
+    [login_date] => 1600953406
+    [user_id] => 2
+    [file] => ReadBack.php
+    [study_time] => 
+    [study_category] => 
+    [study_detail] => 
+    [msg-succces] => 記録が完了しました
+    [$serchyear] => 
+    [$serchyear2] => 
+    [$serchmonth] => 
+    [$serchmonth2] => 
+    [$serchday] => 
+    [$serchday2] => 
+    [category] => 
+)
+
+[24-Sep-2020 22:16:50 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1600953410
+[24-Sep-2020 22:16:50 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1600989406
+[24-Sep-2020 22:16:50 Asia/Tokyo] デバッグ：ユーザー情報を取得します。
+[24-Sep-2020 22:16:50 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:50 Asia/Tokyo] デバッグ：カテゴリを取得します
+[24-Sep-2020 22:16:50 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:50 Asia/Tokyo] デバッグ：クエリ成功
+[24-Sep-2020 22:16:50 Asia/Tokyo] デバッグ：ログイン済みユーザーです。
+[24-Sep-2020 22:16:50 Asia/Tokyo] デバッグ：ログイン有効期限以内です。
