@@ -5,6 +5,8 @@ debug('「マイページ　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 $_SESSION['file'] =  basename(__FILE__);
+$u_id = $_SESSION['user_id'];
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">

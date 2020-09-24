@@ -64,8 +64,6 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
 
         <div>
           <div class="search-msg">
-
-
             【<?php if (!empty($from_date) & $from_date != '2010-01-01' or !empty($to_date) & $to_date != date('Y-m-d')) {
                 echo $from_date . '~' . $to_date . 'の検索結果';
               } else {
@@ -169,7 +167,6 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
                   <option value="<?php echo $_SESSION['category'] ?>" <?php if (!empty($_SESSION['category'])) echo 'selected'; ?>><?php echo $_SESSION['category'] ?></option>
                 <?php } ?>
               </select>
-
             </div>
           </div>
           <input type="submit" value="検索">

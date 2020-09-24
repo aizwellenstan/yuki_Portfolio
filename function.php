@@ -311,3 +311,27 @@ function getstudytime($u_id,$from_date,$to_date,$includecategory)
     error_log('エラー発生:' . $e->getMessage());
   }
 }
+
+function getagtstudy($u_id)
+{
+  debug('全ての学習内容の取得');
+ 
+  try {
+    $dbh = dbConnect();
+    $sql = 'SELECT study_month , sum(study_time)as sum_time  , round(AVG(study_time),1)as avg_time  FROM study_detail WHERE user_id = :u_id  GROUP BY study_month desc';
+    
+    
+    $data = array(':u_id' => $u_id);
+    $stmt = queryPost($dbh, $sql, $data);
+ 
+if($stmt){
+  debug('成功');
+  return $stmt->fetchall();
+}else{
+  return false;
+}
+
+} catch (Exception $e) {
+error_log('エラー発生:' . $e->getMessage());
+}
+}
