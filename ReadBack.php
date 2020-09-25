@@ -209,6 +209,10 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
       <a class="i_jump" href="index.php">HOMEへ戻る</a>
     </div>
     <style>
+    table{
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
     thead{
       display: block;
     }
@@ -218,7 +222,8 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
     -webkit-overflow-scrolling: touch;
     display: block;
     width: 1080px;
-    height: 270px;
+    height: 400px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .5);
   }
   .err_msg{
     margin: 80px 0;
@@ -250,7 +255,7 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
 
       main {
         background-color: #ddd;
-        height: 900px;
+        height: 1100px;
       }
 
       .table-title {
@@ -288,6 +293,7 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
         margin-top: 20px;
         margin-bottom: 20px;
         background: #333;
+        box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .5);
       }
 
       .from p,

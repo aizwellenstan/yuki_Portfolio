@@ -79,6 +79,7 @@ thead{
   .study_detail {
     height: 471px;
     background-color: #fff;
+    margin-bottom: 80px;
   }
 
   .alltbody {
@@ -88,6 +89,7 @@ thead{
     display: block;
     width: 1080px;
     height: 270px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .5);
   }
 
   

@@ -3,7 +3,7 @@
 if (!empty($_SESSION['user_id'])) {
   $u_id = $_SESSION['user_id'];
 }
-
+require('auth.php');
 ?>
 <style>
   img {

@@ -22,7 +22,7 @@ $getcategory = getcategory();
 
   <?php
   require('header.php');
-  require('auth.php');
+
   ?>
 
   <main>

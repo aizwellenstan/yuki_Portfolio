@@ -135,7 +135,7 @@ if (!empty($_POST)) {
 <style>
   main {
     background-color: #ddd;
-    height: 1400px;
+    height: 1100px;
   }
 
   form {
@@ -145,6 +145,7 @@ if (!empty($_POST)) {
     border: 5px solid rgb(0, 0, 0, 0);
     display: block;
     height: 550px;
+
   }
 
 

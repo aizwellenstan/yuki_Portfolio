@@ -118,6 +118,7 @@ thead{
     display: block;
     width: 1080px;
     height: 270px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .5);
   }
 
   
@@ -177,6 +178,7 @@ thead{
     float: right;
     margin-top: 56px;
     font-size: 30px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .5);
   }
 
   .data_space p {
@@ -193,7 +195,7 @@ thead{
   }
 
   .data_month {
-    height: 300px;
+    height: 270px;
     width: 300px;
     margin-top: 55px;
     background-color: #fff;
@@ -201,6 +203,7 @@ thead{
     display: inline-block;
     margin-top: 30px;
     margin-right: 30px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .5);
   }
 
 
@@ -212,6 +215,7 @@ thead{
     width: 600px;
     padding: 0;
     text-align: center;
+    height: 330px;
   }
 
   .data-title {

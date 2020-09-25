@@ -33,7 +33,7 @@ if (!empty($_POST)) {
       debug('クエリ結果の中身：' . print_r($result, true));
 
       if (!empty($result) && password_verify($pass, array_shift($result))) {
-        $sesLimit = 60*60*10;
+        $sesLimit = 60*600;
         $_SESSION['login_limit'] = $sesLimit;
         $_SESSION['login_date'] = time();
         $_SESSION['user_id'] = $result['id'];
@@ -95,7 +95,7 @@ if (!empty($_POST)) {
       </div>
     </section>
     <a class="i_jump" href="TopPage.php">トップページへ戻る</a>
-    <a class="i_jump" href="index.php">HOMEへ戻る</a>
+ 
 </main>
 
 <style>

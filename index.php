@@ -42,6 +42,7 @@ width: 300px;
 margin-bottom: 42px;
 margin-top: 15px;
 background-color: #F0FFFF;
+box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .5);
 }
 
 
@@ -49,6 +50,7 @@ background-color: #F0FFFF;
 border: 1px solid #333;
 width: 300px;
 background-color: #F0FFFF;
+box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .5);
 }
 
 
@@ -56,6 +58,10 @@ background-color: #F0FFFF;
 height: 200px;
 width: 350px;
 margin-left: 83px;
+
+}
+textarea{
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .5);
 }
 .memo_space h1{
 margin: 0;
