@@ -6,41 +6,61 @@ debug('「「「「「「「「「「「「「「「「「「「「「「「「�
 debugLogStart();
 $getcategory = getcategory();
 // INSERT INTO category(category_name,createdate)VALUES('テスト','2020-09-09 00:00:00')
+
+
 $u_id = $_SESSION['user_id'];
-$postcateogry = (!empty($_POST['category-list'])) ? $_POST['category-list'] : '';
-debug('編集したいカテゴリ:' . $postcateogry);
-(!empty($_POST['time-list'])) ? $_POST['time-list'] : '';
+
 $recategorylist = (!empty($_POST['recategorylist'])) ? $_POST['recategorylist'] : '';
 debug('変更したいカテゴリ:' . $recategorylist);
 $postrecateogry =  (!empty($_POST['rename_category'])) ? $_POST['rename_category'] : '';
 debug('変更後のカテゴリ:' . $postrecateogry);
-
-if ($postcateogry === 'new') {
-  debug('カテゴリ作成ページへ遷移します。');
-  header("Location:new_category.php");
-} else {
-  $_SESSION['category'] = $postcateogry;
+if(!empty($_POST['category-list'])){
+  $postcateogry = $_POST['category-list'] ;
+}else if(empty($_POST['category-list'])){
+  $postcateogry =  $recategorylist;
+}else if(empty($recategorylist)){
+  $postcateogry = '';
 }
-if (!empty($postrecateogry)) {
-  debug('カテゴリ名を変更します');
-  try {
-    $dbh = dbConnect();
-    $sql = 'UPDATE category set category_name= :recateogry WHERE user_id= :u_id and category_name=:category_name ';
-    $data = array(':recateogry' => $postrecateogry, 'u_id' => $u_id, ':category_name' => $recategorylist);
-    $stmt = queryPost($dbh, $sql, $data);
 
-    if ($stmt) {
-      
-      debug('カテゴリ編集ページへ遷移します。');
-      header("Location:Edit_category.php");
-    } else {
-      return false;
+if (!empty($_POST)) {
+  debug('POST送信があります');
+  debug('$postcateogry'.$postcateogry);
+  vaildRequired($postcateogry, 'postcategory');
+
+  if (empty($err_msg)) {
+    debug('バリデーションOK');
+   
+    if ($postcateogry === 'new') {
+      debug('カテゴリ作成ページへ遷移します。');
+      header("Location:new_category.php");
+     } else {
+      $_SESSION['category'] = $postcateogry;
     }
-  } catch (Exception $e) {
-    error_log('エラー発生:' . $e->getMessage());
+
+
+    if(!empty($_POST['recategorylist'])){
+      debug('カテゴリ名を変更します');
+      try {
+        $dbh = dbConnect();
+        $sql = 'UPDATE category set category_name= :recateogry WHERE user_id= :u_id and category_name=:category_name ';
+        
+        $data = array(':recateogry' => $postrecateogry, 'u_id' => $u_id, ':category_name' => $recategorylist);
+        $stmt = queryPost($dbh, $sql, $data);
+        
+        if ($stmt) {
+          debug('カテゴリ編集ページへ遷移します。');
+          header("Location:fillout.php");
+        } else {
+          return false;
+        }
+      } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+      }
+    }
   }
 }
-?>
+    
+    ?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -68,7 +88,8 @@ if (!empty($postrecateogry)) {
         <form method="post">
           <section class="category">
             <div class="selectbox">
-              <h1>編集したいカテゴリ、または新規作成を選択</span></h1>
+              <p>編集したいカテゴリ、または新規作成を選択</span></p>
+              <div class="err_msg"><?php if (!empty($err_msg['postcategory'])) echo $err_msg['postcategory']; ?></div>
               <select name="category-list">
                 <option value="0">選択してください</option>
                 <option value="new">※新規作成※</option>
@@ -76,7 +97,7 @@ if (!empty($postrecateogry)) {
                 foreach ($getcategory as $key => $val) {
                 ?>
                   <option value="<?php echo $val['category_name'] ?>"><?php echo $val['category_name'] ?></option><?php  } ?>
-                
+
               </select>
             </div>
           </section>
@@ -85,7 +106,7 @@ if (!empty($postrecateogry)) {
             <input type="submit" value="次へ">
           </div>
         </form>
-      <?php } else { ?>
+      <?php } else {   debug('postcategory:' . $postcateogry); ?>
         <div class="page-title">
           <h1 class="page-title">カテゴリを変更する</h1>
         </div>
@@ -95,14 +116,13 @@ if (!empty($postrecateogry)) {
               <h1>カテゴリを再登録してください</span></h1>
               <p>変更したいカテゴリ</p>
               <select name="recategorylist">
-
                 <?php
                 foreach ($getcategory as $key => $val) {
                 ?>
-                  <option value="<?php echo $val['category_name']; ?>">
-                    <!-- <?php if ($val['category_name'] === $_SESSION['category']) {
+                  <option value="<?php echo $val['category_name']; ?>"
+                    <?php if ($val['category_name'] === $_SESSION['category']) {
                             echo 'selected';
-                          } ?> -->
+                          } ?>>
                     <?php echo $val['category_name'] ?></option>
 
                 <?php  } ?>

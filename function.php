@@ -52,6 +52,7 @@ function vaildRequired($str, $key)
   if ($str === '') {
     global $err_msg;
     $err_msg[$key] = MSG01;
+    debug('入力されていません');
   }
 }
 
