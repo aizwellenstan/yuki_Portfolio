@@ -171,7 +171,7 @@ if (!empty($_GET['study_id'])) {
               </select>
             </div>
           </div>
-          <input type="submit" value="検索">
+          <input id='searchbtn' type="submit" value="検索">
         </form>
         <table>
           <?php if (empty($getstudy)) {
@@ -202,7 +202,7 @@ if (!empty($_GET['study_id'])) {
                   <form method="get">
                     <td class="size_s">
                       <textarea name="study_id" id="study_id"><?php echo $val['id']; ?></textarea>
-                      <input type="submit" value="編集">
+                      <input class='editbtn' type="submit" value="編集">
                   </form>
                   </td>
 
@@ -371,7 +371,7 @@ if (!empty($_GET['study_id'])) {
       }
 
 
-      input[type="submit"] {
+      #searchbtn {
         height: 35px;
         margin-left: 15px;
         margin-top: 33px;

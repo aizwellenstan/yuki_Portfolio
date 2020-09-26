@@ -4,6 +4,11 @@ if (!empty($_SESSION['user_id'])) {
   $u_id = $_SESSION['user_id'];
 }
 require('auth.php');
+$edit_study = (!empty($_GET['study_id'])) ? $_GET['study_id'] : 'データなし';
+if (!empty($_GET['study_id'])) {
+  header('Location:Edit_study.php');
+  $_SESSION['Edit_study_id'] = $edit_study;
+}
 ?>
 <style>
   img {

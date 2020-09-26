@@ -37,7 +37,11 @@ $getstudy = getstudy($u_id, date('Y-m-d'), date('Y-m-d'), $includecategory);
               <td class='size_m'><?php echo $val['study_category']; ?></td>
               <td class="size_s"><?php echo $val['study_time']; ?></td>
               <td class="size_l"><?php echo $val['study_detail']; ?></td>
-              <td class="size_s"><a href="Edit_study.php">編集</a></td>
+              <form method="get" >
+                    <td class="size_s">
+                      <textarea name="study_id" id="study_id"><?php echo $val['id']; ?></textarea>
+                      <input class='editbtn' type="submit" value="編集">
+                  </form>
             </tr>
           <?php } ?>
 
@@ -49,10 +53,14 @@ $getstudy = getstudy($u_id, date('Y-m-d'), date('Y-m-d'), $includecategory);
   </div>
 </div>
 <style>
+
 td a{
   font-size: 15px;
 }
 
+#study_id{
+  display: none;
+}
 
   .today_list {
     height: 450px;

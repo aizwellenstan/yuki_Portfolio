@@ -8,12 +8,50 @@ $getcategory = getcategory();
 $study_id = $_SESSION['Edit_study_id'];
 $u_id = $_SESSION['user_id'];
 $geteditstudy = geteditstudy($u_id, $study_id);
-debug('kk' . print_r($geteditstudy, true));
+debug('編集する学習内容'.print_r($geteditstudy,true));
+debug('POSTの中身：'.print_r($_POST,true));
+$study_time = (!empty($_POST['time-list'])) ? $_POST['time-list'] : '';
+$study_month = (!empty($_POST['month'])) ? sprintf('%02d',$_POST['month']) : '';
+$study_year = (!empty($_POST['year'])) ? $_POST['year'] : '';
+$study_date = (!empty($_POST['day'])) ? $study_year.'-'.$study_month.'-'.$_POST['day']: '';
+$study_category = (!empty($_POST['category-list'])) ? $_POST['category-list'] : '';
+$study_detail = (!empty($_POST['study-detail'])) ? $_POST['study-detail'] : '';
 
-if($_POST){
 
-  try{
-    
+if (!empty($_POST)) {
+  debug('学習内容を編集します');
+  try {
+    $dbh = dbConnect();
+    $sql = 'UPDATE study_detail
+    set 
+    study_time=:study_time,
+    study_category=:study_category,
+    study_detail=:study_detail,
+    study_year=:study_year,
+    study_month	=:study_month	,
+    study_date=:study_date,
+    update_date=:update_date
+    WHERE id= :study_id ';
+    $data = array(
+      ':study_time' => (int)$study_time,
+      ':study_category' => $study_category,
+      ':study_detail' => $study_detail,
+      ':study_year' => $study_year,
+      ':study_month' =>  $study_month,
+      ':study_date' => $study_date,
+      ':update_date' => date('Y-m-d-H-i'), ':study_id' => $study_id
+    );
+    debug('変更予定の中身：'.print_r($data,true));
+    $stmt = queryPost($dbh, $sql, $data);
+
+    if ($stmt) {
+      debug('学習内容を変更しました。');
+      header('location:Readback.php');
+    } else {
+      return false;
+    }
+  } catch (Exception $e) {
+    error_log('エラー発生:' . $e->getMessage());
   }
 }
 ?>
@@ -62,57 +100,53 @@ if($_POST){
                                                   } ?>>
                   <?php echo $i . '月'; ?></option><?php } ?>
               <?php if (!empty($geteditstudy['$study_month'])) { ?>
-                <option value="<?php echo $geteditstudy['$study_month'] ?>" <?php if (!empty($geteditstudy['$study_month'])) echo 'selected'; ?>>
+                <option value="<?php echo $geteditstudy['$study_month'] ?>" <?php if ($i == $geteditstudy['$study_month']) {
+                                                                              echo 'selected';
+                                                                            } ?>>
                   <?php echo $geteditstudy['$study_month'] ?></option>
               <?php } ?>
             </select>
             <select class="day-list" name="day" id="">
               <?php for ($i = 1; $i <= 31; $i++) { ?>
-                <option value="<?php echo $i; ?>" <?php if ($i === (int)date('d')) {
+                <option value="<?php echo $i; ?>" <?php if ($i == substr($geteditstudy['study_date'], -2)) {
                                                     echo 'selected';
                                                   } ?>>
                   <?php echo $i . '日'; ?>
                 </option>
               <?php } ?>
-
-              <?php if (!empty($$geteditstudy['$study_day'])) { ?>
-                <option value="<?php echo $$geteditstudy['$study_day'] ?>" <?php if (!empty($geteditstudy['$study_day'])) echo 'selected'; ?>>
-                  <?php echo $$geteditstudy['$study_day'] ?></option>
-              <?php } ?>
             </select>
           </div>
         </section>
-         <section class="time">
+        <section class="time">
           <div class="selectbox">
-          <h1> 時間を選択</h1>
+            <h1> 時間を選択</h1>
             <div class="err_msg"><?php if (!empty($err_msg['time'])) echo $err_msg['time']; ?></div>
             <select name="time-list">
               <option value="0">選択してください</option>
-               <?php for($i=15; $i <= 90 ; $i+=15)  {?>
-              <option value="<?php echo $i;?>">
-               <?php echo $i.'分';?>
-               <?php } ?>
-               </option>
-               <?php if(!empty($geteditstudy['study_time'])) {?>
-              <option value="<?php echo $geteditstudy['study_time']?>" <?php if(!empty($geteditstudy['study_time']))echo 'selected';?>><?php echo $geteditstudy['study_time']?>
-              </option>
-               <?php } ?>
+              <?php for ($i = 15; $i <= 90; $i += 15) { ?>
+                <option value="<?php echo $i; ?>" <?php if ($i == $geteditstudy['study_time']) {
+                                                    echo 'selected';
+                                                  } ?>>
+                  <?php echo $i . '分'; ?>
+                <?php } ?>
+                </option>
+
             </select>
           </div>
         </section>
 
-               <section class="category">
+        <section class="category">
           <div class="selectbox">
             <p>カテゴリを選択　<span class="add_Category"><a href="Edit_Category.php">カテゴリの追加はこちら</a></span></p>
             <div class="err_msg"><?php if (!empty($err_msg['category'])) echo $err_msg['category']; ?></div>
             <select name="category-list">
               <option value="0">選択してください</option>
               <?php
-              foreach($getcategory as $key => $val){
+              foreach ($getcategory as $key => $val) {
               ?>
-              <option value="<?php echo $val['category_name']?>"><?php echo $val['category_name']?></option><?php  } ?>
-              <?php if(!empty($geteditstudy['study_category'])) {?>
-              <option value="<?php echo $geteditstudy['study_category']?>" <?php if(!empty($geteditstudy['study_category']))echo 'selected';?>><?php echo $geteditstudy['study_category']?></option>
+                <option value="<?php echo $val['category_name'] ?>"><?php echo $val['category_name'] ?></option><?php } ?>
+              <?php if (!empty($geteditstudy['study_category'])) { ?>
+                <option value="<?php echo $geteditstudy['study_category'] ?>" <?php if (!empty($geteditstudy['study_category'])) echo 'selected'; ?>><?php echo $geteditstudy['study_category'] ?></option>
               <?php } ?>
             </select>
           </div>
@@ -121,7 +155,7 @@ if($_POST){
         <section class="detail">
           　　　<p>内容を記入</p>
           <div class="err_msg"><?php if (!empty($err_msg['detail'])) echo $err_msg['detail']; ?></div>
-          <textarea name="study-detail" id="" cols="40" rows="7" placeholder="内容"><?php if(!empty($geteditstudy['study_detail'])) echo $geteditstudy['study_detail']?></textarea>
+          <textarea name="study-detail" id="" cols="40" rows="7" placeholder="内容"><?php if (!empty($geteditstudy['study_detail'])) echo $geteditstudy['study_detail'] ?></textarea>
         </section>
         <div class='btn-container'>
           <input type="submit" value="再登録">
@@ -188,7 +222,7 @@ if($_POST){
     position: absolute;
     top: 910px;
   }
-
+ 
   .page-title {
     margin-bottom: 50px;
 

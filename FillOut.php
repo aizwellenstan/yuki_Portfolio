@@ -120,7 +120,7 @@ if (!empty($_POST)) {
           <textarea name="study-detail" id="" cols="40" rows="7" placeholder="内容"><?php if(!empty($_SESSION['study_detail'])) echo $_SESSION['study_detail']?></textarea>
         </section>
         <div class='btn-container'>
-          <input type="submit" value="登録">
+          <input  id='Registration'  type="submit" value="登録">
         </div>
       </form>
 
@@ -175,7 +175,7 @@ if (!empty($_POST)) {
     letter-spacing: 3px;
   }
 
-  input[type="submit"] {
+  #Registration {
     margin: 15px 125px;
     padding: 15px 30px;
     width: 150px;
@@ -187,7 +187,7 @@ if (!empty($_POST)) {
     position: absolute;
     top: 740px;
   }
-
+ 
   .page-title {
     margin-bottom: 10px;
 
