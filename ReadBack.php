@@ -33,14 +33,17 @@ $getstudy = getstudy($u_id, $from_date, $to_date, $includecategory);
 
 $getcategory = getcategory();
 
-$getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
+$getstudytime = getstudytime($u_id, $from_date, $to_date, $includecategory);
 
-
-
-
+$edit_study = (!empty($_GET['study_id'])) ? $_GET['study_id'] : 'データなし';
+if (!empty($_GET['study_id'])) {
+  header('Location:Edit_study.php');
+  $_SESSION['Edit_study_id'] = $edit_study;
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,10 +72,10 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
               } else {
                 echo '全ての期間の学習内容を表示中';
               }
-              ?>】 <h2>学習時間合計　<span class='time'><?php echo round($getstudytime['sum(study_time)']/60,1); ?></span>h</h2>
+              ?>】 <h2>学習時間合計　<span class='time'><?php echo round($getstudytime['sum(study_time)'] / 60, 1); ?></span>h</h2>
           </div>
         </div>
-        <form method="get">
+        <form class='search' method="get">
           <h1>◉検索する</h1>
 
           <div class='keyword-box'>
@@ -89,14 +92,10 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
 
               </select>
               <select class="month-list" name="month">
-            
+
                 <?php for ($i = 1; $i <= 12; $i++) { ?>
-                  <option value="<?php echo $i; ?>"  
-                  <?php if($i === (int)date('n')){ echo'selected' ;}?>>
-                  <?php echo $i . '月';?>
-                  </option>
-                     <?php } ?>
-               
+                  <option value="<?php echo $i; ?>" <?php if ($i === (int)date('n')) {echo 'selected';} ?>>
+                    <?php echo $i . '月'; ?></option><?php } ?>
                 <?php if (!empty($_SESSION['$serchmonth'])) { ?>
                   <option value="<?php echo $_SESSION['$serchmonth'] ?>" <?php if (!empty($_SESSION['$serchmonth'])) echo 'selected'; ?>>
                     <?php echo $_SESSION['$serchmonth'] ?></option>
@@ -105,11 +104,12 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
 
               <select class="day-list" name="day" id="">
                 <?php for ($i = 1; $i <= 31; $i++) { ?>
-                  <option value="<?php echo $i; ?>"  
-                  <?php if($i === (int)date('d')){ echo'selected';}?>>
-                  <?php echo $i . '日';?>
+                  <option value="<?php echo $i; ?>" <?php if ($i === (int)date('d')) {
+                                                      echo 'selected';
+                                                    } ?>>
+                    <?php echo $i . '日'; ?>
                   </option>
-                     <?php } ?>
+                <?php } ?>
 
                 <?php if (!empty($_SESSION['$serchday'])) { ?>
                   <option value="<?php echo $_SESSION['$serchday'] ?>" <?php if (!empty($_SESSION['$serchday'])) echo 'selected'; ?>>
@@ -130,24 +130,26 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
                 <?php } ?>
               </select>
               <select class="month-list" name="month2">
-              <?php for ($i = 1; $i <= 12; $i++) { ?>
-                  <option value="<?php echo $i; ?>"  
-                  <?php if($i === (int)date('n')){ echo'selected';}?>>
-                  <?php echo $i . '月';?>
+                <?php for ($i = 1; $i <= 12; $i++) { ?>
+                  <option value="<?php echo $i; ?>" <?php if ($i === (int)date('n')) {
+                                                      echo 'selected';
+                                                    } ?>>
+                    <?php echo $i . '月'; ?>
                   </option>
-                     <?php } ?>
+                <?php } ?>
                 <?php if (!empty($_SESSION['$serchmonth2'])) { ?>
                   <option value="<?php echo $_SESSION['$serchmonth2'] ?>" <?php if (!empty($_SESSION['$serchmonth2'])) echo 'selected'; ?>>
                     <?php echo $_SESSION['$serchmonth2'] ?></option>
                 <?php } ?>
               </select>
               <select class="day-list" name="day2" id="">
-              <?php for ($i = 1; $i <= 31; $i++) { ?>
-                  <option value="<?php echo $i; ?>"  
-                  <?php if($i === (int)date('d')){ echo'selected';}?>>
-                  <?php echo $i . '日';?>
+                <?php for ($i = 1; $i <= 31; $i++) { ?>
+                  <option value="<?php echo $i; ?>" <?php if ($i === (int)date('d')) {
+                                                      echo 'selected';
+                                                    } ?>>
+                    <?php echo $i . '日'; ?>
                   </option>
-                     <?php } ?>
+                <?php } ?>
                 <?php if (!empty($_SESSION['$serchday2'])) { ?>
                   <option value="<?php echo $_SESSION['$serchday2'] ?>" <?php if (!empty($_SESSION['$serchday2'])) echo 'selected'; ?>>
                     <?php echo $_SESSION['$serchday2'] ?></option>
@@ -172,66 +174,80 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
           <input type="submit" value="検索">
         </form>
         <table>
-        <?php if(empty($getstudy)){
+          <?php if (empty($getstudy)) {
           ?>
-          <div class="err_msg">
-          データがありません
-          <?php if( $from_date>$to_date){?>
-            <p>検索日付を確認してください</p>
-            <?php }?>
-          </div>
-         
-        <?php }else{?>
-          <thead>
-            <tr>
-              <th class="size_s">日付</th>
-              <th class='size_m'>カテゴリ</th>
-              <th class="size_s">時間(分)</th>
-              <th class="size_l">内容</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php foreach ($getstudy as $key => $val) { ?>
+            <div class="err_msg">
+              データがありません
+              <?php if ($from_date > $to_date) { ?>
+                <p>検索日付を確認してください</p>
+              <?php } ?>
+            </div>
+
+          <?php } else { ?>
+            <thead>
               <tr>
-                <td class="size_s"><?php echo $val['study_date']; ?></td>
-                <td class='size_m'><?php echo $val['study_category']; ?></td>
-                <td class="size_s"><?php echo $val['study_time']; ?></td>
-                <td class="size_l"><?php echo $val['study_detail']; ?></td>
-                <td class="size_s"><a href="Edit_study.php">編集</a></td>
+                <th class="size_s">日付</th>
+                <th class='size_m'>カテゴリ</th>
+                <th class="size_s">時間(分)</th>
+                <th class="size_l">内容</th>
               </tr>
-            <?php } ?>
+            </thead>
+            <tbody>
+              <?php foreach ($getstudy as $key => $val) { ?>
+                <tr>
+                  <td class="size_s"><?php echo $val['study_date']; ?></td>
+                  <td class='size_m'><?php echo $val['study_category']; ?></td>
+                  <td class="size_s"><?php echo $val['study_time']; ?></td>
+                  <td class="size_l"><?php echo $val['study_detail']; ?></td>
+                  <form method="get">
+                    <td class="size_s">
+                      <textarea name="study_id" id="study_id"><?php echo $val['id']; ?></textarea>
+                      <input type="submit" value="編集">
+                  </form>
+                  </td>
+
+                </tr>
+              <?php } ?>
 
 
-          </tbody>
-          <?php }?>
+            </tbody>
+          <?php } ?>
         </table>
       </section>
       <a class="i_jump" href="index.php">HOMEへ戻る</a>
     </div>
     <style>
-    table{
-      margin-top: 50px;
-      margin-bottom: 50px;
-    }
-    thead{
-      display: block;
-    }
-    tbody {
-    overflow-y: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    display: block;
-    width: 1080px;
-    height: 400px;
-    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .5);
-  }
-  .err_msg{
-    margin: 80px 0;
-    text-align: center;
-    width: 100%;
-    font-size: 30px;
-    display: block;
-    }
+      #study_id {
+        display: none;
+      }
+
+      table {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
+      thead {
+        display: block;
+      }
+
+      tbody {
+        overflow-y: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        display: block;
+        width: 1080px;
+        height: 400px;
+        box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .5);
+      }
+
+      .err_msg {
+        margin: 80px 0;
+        text-align: center;
+        width: 100%;
+        font-size: 30px;
+        display: block;
+      }
+
       .search-msg {
         margin: 0 auto;
         width: 70%;
@@ -282,7 +298,7 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
         width: 700px;
       }
 
-      form {
+      .search {
         margin: 0 auto;
         padding: 15px;
         width: 800px;
@@ -354,17 +370,17 @@ $getstudytime = getstudytime($u_id,$from_date,$to_date,$includecategory);
         margin-left: 23px;
       }
 
- 
-input[type="submit"] {
-    height: 35px;
-    margin-left: 15px;
-    margin-top: 33px;
-    width: 73px;
-    border: none;
-    background: #FF773E;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
+
+      input[type="submit"] {
+        height: 35px;
+        margin-left: 15px;
+        margin-top: 33px;
+        width: 73px;
+        border: none;
+        background: #FF773E;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
       }
 
       .keyword-box {

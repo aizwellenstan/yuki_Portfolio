@@ -289,6 +289,29 @@ error_log('エラー発生:' . $e->getMessage());
 }
 }
 
+function geteditstudy($u_id,$study_id)
+{
+  debug('編集する学習内容の取得');
+
+  try {
+    $dbh = dbConnect();
+    $sql = 'SELECT * FROM study_detail WHERE user_id = :u_id  AND id=:study_id' ;
+    
+    $data = array(':u_id' => $u_id,':study_id' => $study_id);
+    $stmt = queryPost($dbh, $sql, $data);
+ 
+if($stmt){
+  debug('成功');
+  return $stmt->fetch();
+}else{
+  return false;
+}
+
+} catch (Exception $e) {
+error_log('エラー発生:' . $e->getMessage());
+}
+}
+
 function getstudytime($u_id,$from_date,$to_date,$includecategory)
 {
   try {
