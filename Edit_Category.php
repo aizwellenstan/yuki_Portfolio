@@ -7,7 +7,60 @@ debugLogStart();
 $getcategory = getcategory();
 // INSERT INTO category(category_name,createdate)VALUES('テスト','2020-09-09 00:00:00')
 
-?>
+
+$u_id = $_SESSION['user_id'];
+
+$recategorylist = (!empty($_POST['recategorylist'])) ? $_POST['recategorylist'] : '';
+debug('変更したいカテゴリ:' . $recategorylist);
+$postrecateogry =  (!empty($_POST['rename_category'])) ? $_POST['rename_category'] : '';
+debug('変更後のカテゴリ:' . $postrecateogry);
+if(!empty($_POST['category-list'])){
+  $postcateogry = $_POST['category-list'] ;
+}else if(empty($_POST['category-list'])){
+  $postcateogry =  $recategorylist;
+}else if(empty($recategorylist)){
+  $postcateogry = '';
+}
+
+if (!empty($_POST)) {
+  debug('POST送信があります');
+  debug('$postcateogry'.$postcateogry);
+  vaildRequired($postcateogry, 'postcategory');
+
+  if (empty($err_msg)) {
+    debug('バリデーションOK');
+   
+    if ($postcateogry === 'new') {
+      debug('カテゴリ作成ページへ遷移します。');
+      header("Location:new_category.php");
+     } else {
+      $_SESSION['category'] = $postcateogry;
+    }
+
+
+    if(!empty($_POST['recategorylist'])){
+      debug('カテゴリ名を変更します');
+      try {
+        $dbh = dbConnect();
+        $sql = 'UPDATE category set category_name= :recateogry WHERE user_id= :u_id and category_name=:category_name ';
+        
+        $data = array(':recateogry' => $postrecateogry, 'u_id' => $u_id, ':category_name' => $recategorylist);
+        $stmt = queryPost($dbh, $sql, $data);
+        
+        if ($stmt) {
+          debug('カテゴリ編集ページへ遷移します。');
+          header("Location:fillout.php");
+        } else {
+          return false;
+        }
+      } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+      }
+    }
+  }
+}
+    
+    ?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -26,47 +79,84 @@ $getcategory = getcategory();
   ?>
 
   <main>
-  
+
     <div class="site-width2">
-    <div class="page-title">
-<h1 class="page-title">カテゴリを編集する</h1>
-</div>
-<form action="">
-        <section class="category">
-          <div class="selectbox">
-            <h1>編集したいカテゴリ、または新規作成を選択</span></h1>
-            <select name="category-list">
-              <option value="0">選択してください</option>
-              <?php
-              foreach($getcategory as $key => $val){
-              ?>
-              <option value="<?php echo $val['category_name']?>"><?php echo $val['category_name']?></option><?php  } ?>
-            </select>
-          </div>
-        </section>
-
-        <div class='btn-container'>
-          <input type="submit" value="次へ">
+      <?php if (empty($_SESSION['category'])) { ?>
+        <div class="page-title">
+          <h1 class="page-title">カテゴリを編集する</h1>
         </div>
-      </form>
+        <form method="post">
+          <section class="category">
+            <div class="selectbox">
+              <p>編集したいカテゴリ、または新規作成を選択</span></p>
+              <div class="err_msg"><?php if (!empty($err_msg['postcategory'])) echo $err_msg['postcategory']; ?></div>
+              <select name="category-list">
+                <option value="0">選択してください</option>
+                <option value="new">※新規作成※</option>
+                <?php
+                foreach ($getcategory as $key => $val) {
+                ?>
+                  <option value="<?php echo $val['category_name'] ?>"><?php echo $val['category_name'] ?></option><?php  } ?>
 
+              </select>
+            </div>
+          </section>
+
+          <div class='btn-container'>
+            <input type="submit" value="次へ">
+          </div>
+        </form>
+      <?php } else {   debug('postcategory:' . $postcateogry); ?>
+        <div class="page-title">
+          <h1 class="page-title">カテゴリを変更する</h1>
+        </div>
+        <form method="post">
+          <section class="category">
+            <div class="selectbox">
+              <h1>カテゴリを再登録してください</span></h1>
+              <p>変更したいカテゴリ</p>
+              <select name="recategorylist">
+                <?php
+                foreach ($getcategory as $key => $val) {
+                ?>
+                  <option value="<?php echo $val['category_name']; ?>"
+                    <?php if ($val['category_name'] === $_SESSION['category']) {
+                            echo 'selected';
+                          } ?>>
+                    <?php echo $val['category_name'] ?></option>
+
+                <?php  } ?>
+
+              </select>
+            </div>
+            <p>変更後のカテゴリ</p>
+            <input type="text" name="rename_category">
+          </section>
+
+          <div class='btn-container'>
+            <input type="submit" value="再登録">
+          </div>
+        </form>
+
+      <?php } ?>
     </div>
-  
- <a class="i_jump" href="FillOut.php">記録ページへ戻る</a>
+
+    <a class="i_jump" href="FillOut.php">記録ページへ戻る</a>
   </main>
 </body>
 <style>
-main{
-  background-color: #ddd;
-  height: 900px;
+  main {
+    background-color: #ddd;
+    height: 900px;
   }
+
   form {
     margin: 0 auto;
     padding: 5px;
     width: 400px;
     border: 5px solid rgb(0, 0, 0, 0);
     display: block;
-    height:250px;
+    height: 250px;
   }
 
   .i_jump {
@@ -92,6 +182,7 @@ main{
     margin-bottom: 10px;
     letter-spacing: 3px;
   }
+
   input[type="submit"] {
     margin: 15px 125px;
     padding: 15px 30px;
@@ -102,27 +193,39 @@ main{
     font-size: 14px;
     cursor: pointer;
     position: absolute;
-    top: 440px;}
+    top: 440px;
+  }
 
-    .page-title{
-      margin-bottom: 10px;
+  input[type="text"],
+  input[type="password"] {
+    display: block;
+    box-sizing: border-box;
+    margin: 10px 1px;
+    padding: 5px;
+    width: 380px;
+    height: 60px;
+    font-size: 18px;
+  }
 
-      text-align: center;
-      font-size: 35px;
-      font-weight: bold;
-      letter-spacing: 5px;
-    }
-    
-    .site-width2 {
-  margin: 0 auto;
-  width: 980px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
-.add_Category a{
-  font-size: 13px;
-  color: #333;
+  .page-title {
+    margin-bottom: 10px;
 
-}
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 5px;
+  }
 
+  .site-width2 {
+    margin: 0 auto;
+    width: 980px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .add_Category a {
+    font-size: 13px;
+    color: #333;
+
+  }
 </style>
