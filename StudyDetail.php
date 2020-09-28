@@ -5,12 +5,16 @@ debug('「「「「「「「「「「「「「「「「「「「「「「「「�
 
 $getagtstudy = getagtstudy($u_id);
 $user = getuser($u_id);
-debug('user:' . print_r($user, true));
+
 $includecategory = '';
 $startdate = date('Y-m-d', strtotime($user['create_date']));
 $getstudytime = getstudytime($u_id, $startdate, date('Y-m-d'), $includecategory);
 $sutdy_period = ((strtotime(date('Y-m-d')) - strtotime($startdate)) / 86400);
 $getstudy = getstudy($u_id, date('Y-m-d'), date('Y-m-d'), $includecategory);
+
+$gettime1 = getstudytime($u_id, date('Y-m-d'), date('Y-m-d'), $includecategory);
+$gettime2 = array_shift($gettime1);
+$todaystudytime = round($gettime2/60,1);
 ?>
 <div class="study_detail">
   <div class="site-width">
@@ -18,7 +22,7 @@ $getstudy = getstudy($u_id, date('Y-m-d'), date('Y-m-d'), $includecategory);
     </div>
     <section class="today_list">
       <div class="table-title">
-        <h2><span>本日<span><?php echo date('m/d'); ?></span>の学習履歴　(計<span class="today_time"><?php echo round(array_shift(getstudytime($u_id, date('Y-m-d'), date('Y-m-d'), $includecategory))/60,1); ?></span>h)</span>
+        <h2><span>本日<span><?php echo date('m/d'); ?></span>の学習履歴　(計<span class="today_time"><?php echo $todaystudytime; ?></span>h)</span>
 
       </div>
       <table>

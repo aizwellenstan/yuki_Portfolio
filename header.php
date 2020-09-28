@@ -97,6 +97,22 @@ if (!empty($_GET['study_id'])) {
     color: #fff;
     margin: 23px 0;
   }
+
+
+  .msg-slide {
+    position: absolute;
+    top: 200px;
+    text-align: center;
+    background: rgba(22, 96, 330, 0.9);
+    width: 100%;
+    height: 100px;
+    padding: 60px;
+    text-align: center;
+    font-size: 54px;
+    line-height: 40px;
+    color: #fff;
+    margin-top: 20px;
+  }
 </style>
 <header>
   <div>
@@ -105,7 +121,7 @@ if (!empty($_GET['study_id'])) {
     </div>
     <div class="second_header">
       <nav class="top-nav">
-      <div class="<?php if ($_SESSION['file'] === 'index.php') {
+        <div class="<?php if ($_SESSION['file'] === 'index.php') {
                       echo 'contentsmark';
                     } else {
                       echo 'contents';
@@ -151,3 +167,6 @@ if (!empty($_GET['study_id'])) {
     </li>
   </ul>
 </header>
+<div class='animate_msg'>
+  <p id="js-show-msg" style="display:none;" class="msg-slide"><?php echo getSessionFlash('msg_succes'); ?></p>
+</div>

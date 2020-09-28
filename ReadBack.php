@@ -216,6 +216,7 @@ if (!empty($_GET['study_id'])) {
       </section>
       <a class="i_jump" href="index.php">HOMEへ戻る</a>
     </div>
+    <?php require('footer.php'); ?>
     <style>
       #study_id {
         display: none;

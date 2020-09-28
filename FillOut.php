@@ -44,8 +44,10 @@ if (!empty($_POST)) {
     $stmt = queryPost($dbh, $sql, $data);
 
     if ($stmt) {
-      $_SESSION['msg-succces'] = MSG11;
+      debug('{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{[');
+      $_SESSION['msg_succes'] = MSG11;
       debug('マイページへ遷移します。');
+      session_write_close();
       header("Location:index.php");
     } else {
       return false;
@@ -131,6 +133,7 @@ if (!empty($_POST)) {
     ?>
     <a class="i_jump" href="index.php">HOMEへ戻る</a>
   </main>
+  <?php require('footer.php'); ?>
 </body>
 </html>
 <style>

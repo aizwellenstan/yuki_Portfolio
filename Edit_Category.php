@@ -30,9 +30,10 @@ if (!empty($postrecateogry)) {
     $stmt = queryPost($dbh, $sql, $data);
 
     if ($stmt) {
-      
+      $_SESSION['msg_succes'] = MSG12;
       debug('カテゴリ編集ページへ遷移します。');
-      header("Location:Edit_category.php");
+      session_write_close();
+      header("Location:FillOut.php");
     } else {
       return false;
     }
@@ -68,7 +69,7 @@ if (!empty($postrecateogry)) {
         <form method="post">
           <section class="category">
             <div class="selectbox">
-              <h1>編集したいカテゴリ、または新規作成を選択</span></h1>
+              <h1>編集したいカテゴリ、<br>または新規作成を選択</span></h1>
               <select name="category-list">
                 <option value="0">選択してください</option>
                 <option value="new">※新規作成※</option>
@@ -93,7 +94,7 @@ if (!empty($postrecateogry)) {
           <section class="category">
             <div class="selectbox">
               <h1>カテゴリを再登録してください</span></h1>
-              <p>変更したいカテゴリ</p>
+              <p>1.変更したいカテゴリ</p>
               <select name="recategorylist">
 
                 <?php
@@ -104,16 +105,13 @@ if (!empty($postrecateogry)) {
                             echo 'selected';
                           } ?> -->
                     <?php echo $val['category_name'] ?></option>
-
                 <?php  } ?>
-
               </select>
             </div>
-            <p>変更後のカテゴリ</p>
+            <p>2.変更後のカテゴリ</p>
             <input type="text" name="rename_category">
           </section>
-
-          <div class='btn-container'>
+            <div class='btn-container'>
             <input type="submit" value="再登録">
           </div>
         </form>
@@ -128,6 +126,7 @@ if (!empty($postrecateogry)) {
   main {
     background-color: #ddd;
     height: 900px;
+    width: 100%;
   }
 
   form {
@@ -136,7 +135,7 @@ if (!empty($postrecateogry)) {
     width: 400px;
     border: 5px solid rgb(0, 0, 0, 0);
     display: block;
-    height: 250px;
+    height: 400px;
   }
 
   .i_jump {
@@ -156,10 +155,11 @@ if (!empty($postrecateogry)) {
     font-size: 18px;
   }
 
-  h1 {
-    font-size: 16px;
+  .selectbox h1 {
+    font-size: 24px;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    border-bottom:2px solid ;
     letter-spacing: 3px;
   }
 
@@ -172,8 +172,7 @@ if (!empty($postrecateogry)) {
     color: white;
     font-size: 14px;
     cursor: pointer;
-    position: absolute;
-    top: 440px;
+    
   }
 
   input[type="text"],
@@ -207,5 +206,8 @@ if (!empty($postrecateogry)) {
     font-size: 13px;
     color: #333;
 
+  }
+  .category p{
+font-size: 18px;
   }
 </style>

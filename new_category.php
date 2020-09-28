@@ -18,8 +18,12 @@ if (!empty($new_category)) {
     $stmt = queryPost($dbh, $sql, $data);
 
     if ($stmt) {
+
+      $_SESSION['msg_succes'] = MSG12;
       debug('カテゴリ編集ページへ遷移します。');
-      header("Location:Edit_category.php");
+      session_write_close();
+      header("Location:FillOut.php");
+  
     } else {
       return false;
     }

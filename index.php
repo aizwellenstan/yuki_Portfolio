@@ -9,10 +9,11 @@ $u_id = $_SESSION['user_id'];
 
 
 
-if (!empty($_POST)){
+if (!empty($_POST['memo'])){
   $_SESSION['memo']=$_POST['memo'];
  
-  }
+}
+$memo='';
   $memo = $_SESSION['memo'];
 
 ?>
@@ -61,6 +62,7 @@ require('StudyDetail.php');
 ?>
 
 </main>
+<?php require('footer.php'); ?>
 </body>
   <style>
   

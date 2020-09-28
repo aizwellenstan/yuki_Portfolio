@@ -44,6 +44,9 @@ define('MSG08', 'そのEmailは既に登録されています');
 define('MSG09', '文字で入力してください');
 define('MSG10', 'パスワードが間違っています');
 define('MSG11', '記録が完了しました');
+define('MSG12', 'カテゴリを編集しました');
+define('MSG13', '学習内容を変更しました');
+
 
 $err_msg = array();
 
@@ -321,11 +324,9 @@ function getstudytime($u_id,$from_date,$to_date,$includecategory)
     
     if(!empty($includecategory)) $sql .= ' AND study_category  = '.$includecategory ;
     $data = array(':u_id' => $u_id,':from_date' => $from_date,':to_date' => $to_date);
-    debug('$sql:'.print_r($sql,true));
-    debug('$from:'.print_r($from_date,true));
-    debug('$date:'.print_r($data,true));
+    
     $stmt = queryPost($dbh, $sql, $data);
-    debug('$stmt:'.print_r($stmt,true));
+
     if ($stmt) {
       return $stmt->fetch();
     } else {
@@ -358,4 +359,18 @@ if($stmt){
 } catch (Exception $e) {
 error_log('エラー発生:' . $e->getMessage());
 }
+}
+
+function getSessionFlash($keyword){
+  debug('flashスタート：'.print_r($keyword,true));
+  debug('セッション変数の：' . print_r($_SESSION, true));
+  if(!empty($_SESSION[$keyword])){
+    debug('flashスタート：'.print_r($keyword,true));
+    $flash = $_SESSION[$keyword];
+    debug('$flash'.print_r($flash,true));
+    $_SESSION[$keyword] = '';
+    debug('$flash2'.print_r($flash,true));
+    return $flash;
+   
+  }
 }

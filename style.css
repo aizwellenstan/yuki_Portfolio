@@ -1,6 +1,7 @@
 body{
   margin: 0;
   background-color: #fff;
+  width: 100%;
 }
 
 .site-width{
@@ -22,6 +23,7 @@ body{
 main{
   background-color: #ddd;
   height: 1800px;
+  width: 100%;
   }
 
   .first_header h1 {
@@ -32,6 +34,7 @@ main{
   header {
     margin: 0;
     background-color: #fff;
+    width: 100%;
 }
 .first_header {
   width: 100%;

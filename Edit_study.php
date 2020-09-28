@@ -45,7 +45,9 @@ if (!empty($_POST)) {
     $stmt = queryPost($dbh, $sql, $data);
 
     if ($stmt) {
+      $_SESSION['msg_succes'] = MSG13;
       debug('学習内容を変更しました。');
+      session_write_close();
       header('location:Readback.php');
     } else {
       return false;
@@ -137,7 +139,7 @@ if (!empty($_POST)) {
 
         <section class="category">
           <div class="selectbox">
-            <p>カテゴリを選択　<span class="add_Category"><a href="Edit_Category.php">カテゴリの追加はこちら</a></span></p>
+            <h1>カテゴリを選択　<span class="add_Category"><a href="Edit_Category.php">カテゴリの追加はこちら</a></span></h1>
             <div class="err_msg"><?php if (!empty($err_msg['category'])) echo $err_msg['category']; ?></div>
             <select name="category-list">
               <option value="0">選択してください</option>
@@ -153,7 +155,7 @@ if (!empty($_POST)) {
         </section>
 
         <section class="detail">
-          　　　<p>内容を記入</p>
+          　　　<h1>内容を記入</h1>
           <div class="err_msg"><?php if (!empty($err_msg['detail'])) echo $err_msg['detail']; ?></div>
           <textarea name="study-detail" id="" cols="40" rows="7" placeholder="内容"><?php if (!empty($geteditstudy['study_detail'])) echo $geteditstudy['study_detail'] ?></textarea>
         </section>
@@ -171,6 +173,7 @@ if (!empty($_POST)) {
   main {
     background-color: #ddd;
     height: 1400px;
+    width: 100%;
   }
 
   form {
@@ -188,9 +191,9 @@ if (!empty($_POST)) {
     margin: 10px 1px;
   }
 
-  .detail {
-    position: absolute;
-    top: 611px;
+  
+  .detail p{
+   margin: 0;
   }
 
   select {
@@ -219,8 +222,8 @@ if (!empty($_POST)) {
     color: white;
     font-size: 14px;
     cursor: pointer;
-    position: absolute;
-    top: 910px;
+ 
+
   }
  
   .page-title {
