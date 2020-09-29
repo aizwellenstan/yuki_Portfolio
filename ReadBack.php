@@ -61,7 +61,7 @@ if (!empty($_GET['study_id'])) {
   <main>
     <div class="site-width">
       <div class="page-title">
-        <p>学習の振り返り</p>
+        <p><img class ='icon' src="img/book.png" alt="">学習の振り返り</p>
       </div>
       <section>
 

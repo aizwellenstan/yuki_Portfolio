@@ -37,12 +37,13 @@ require('auth.php');
 <section class="contents_butan">
 <div class="contents1">
           <a href="FillOut.php">
-            <p>学習を記録する</p>
+            <p><img class ='icon' src="img/pen.png" alt="">学習を記録する </p>
+
           </a>
         </div>
         <div class="contents2">
           <a href="ReadBack.php">
-            <p>学習を振り返る</p>
+            <p><img class ='icon' src="img/book.png" alt=""> 学習を振り返る </p>
           </a>
         </div>
 </section>
@@ -82,8 +83,9 @@ require('StudyDetail.php');
       text-decoration: none;
       text-align: center;
       color: #333;
-  }
-  .contents1{
+    }
+    .contents1{
+      border-radius:  20px;
   border: 1px solid #333;
   width: 300px;
   margin-bottom: 42px;
@@ -94,6 +96,7 @@ require('StudyDetail.php');
   
   
   .contents2{
+    border-radius:  20px;
   border: 1px solid #333;
   width: 300px;
   background-color: #F0FFFF;

@@ -49,7 +49,7 @@ if (!empty($postrecateogry)) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <title>学習記録ページ</title>
+  <title>カテゴリ編集ページ</title>
 </head>
 
 <body>
@@ -64,7 +64,7 @@ if (!empty($postrecateogry)) {
     <div class="site-width2">
       <?php if (empty($_SESSION['category'])) { ?>
         <div class="page-title">
-          <h1 class="page-title">カテゴリを編集する</h1>
+          <h1 class="page-title"><img class ='icon' src="img/setting.png" alt="">カテゴリを編集する</h1>
         </div>
         <form method="post">
           <section class="category">

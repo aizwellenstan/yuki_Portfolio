@@ -37,7 +37,7 @@ if (!empty($_GET['study_id'])) {
   }
 
   .contents p {
-    margin: 23px 0;
+    margin: 0;
   }
 
   .top-nav {
@@ -95,9 +95,9 @@ if (!empty($_GET['study_id'])) {
 
   .contentsmark p {
     color: #fff;
-    margin: 23px 0;
+    margin: 0;
   }
-
+  
 
   .msg-slide {
     position: absolute;
@@ -113,6 +113,11 @@ if (!empty($_GET['study_id'])) {
     color: #fff;
     margin-top: 20px;
   }
+  .icon{
+    height: 30px;
+    width: 30px;
+    margin-top: 7px;
+  }
 </style>
 <header>
   <div>
@@ -126,6 +131,7 @@ if (!empty($_GET['study_id'])) {
                     } else {
                       echo 'contents';
                     } ?>">
+          <img class='icon' src="img/home.png" alt="">
           <a href="index.php">
             <p>HOME</p>
           </a>
@@ -135,6 +141,7 @@ if (!empty($_GET['study_id'])) {
                     } else {
                       echo 'contents';
                     } ?>">
+            <img class ='icon' src="img/pen.png" alt="">
           <a href="FillOut.php">
             <p>学習を記録する</p>
           </a>
@@ -144,12 +151,18 @@ if (!empty($_GET['study_id'])) {
                     } else {
                       echo 'contents';
                     } ?>">
+                    <img class ='icon' src="img/book.png" alt="">
           <a href="ReadBack.php">
             <p>学習を振り返る</p>
           </a>
         </div>
-        <div class="contents" id="contents-last">
-          <a href="">
+        <div class="<?php if ($_SESSION['file'] === 'setting.php') {
+                      echo 'contentsmark';
+                    } else {
+                      echo 'contents';
+                    } ?>">
+                    <img class ='icon' src="img/setting.png" alt="">
+          <a href="setting.php">
             <p>その他設定</p>
           </a>
         </div>

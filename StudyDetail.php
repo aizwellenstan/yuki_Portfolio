@@ -22,7 +22,7 @@ $todaystudytime = round($gettime2/60,1);
     </div>
     <section class="today_list">
       <div class="table-title">
-        <h2><span>本日<span><?php echo date('m/d'); ?></span>の学習履歴　(計<span class="today_time"><?php echo $todaystudytime; ?></span>h)</span>
+        <h2><img class ='icon' src="img/book.png" alt=""><span>本日<span><?php echo date('m/d'); ?></span>の学習履歴 　(計<span class="today_time"><?php echo $todaystudytime; ?></span>h)</span>
 
       </div>
       <table>
@@ -57,7 +57,7 @@ $todaystudytime = round($gettime2/60,1);
   </div>
   <div class="total-study">
     <div class="table-title">
-      <h2>累計学習時間</h2>
+      <h2><img class ='icon' src="img/time.png" alt="">累計学習時間</h2>
     </div>
     <section class="data-list">
       <div class="data">
@@ -65,9 +65,10 @@ $todaystudytime = round($gettime2/60,1);
           <?php foreach ($getagtstudy as $key => $val) { ?>
             <li class="data_month">
               <div>
-                <h1 class="data-title"><?php echo (int)$val['study_month']; ?>月</h1>
-                <p class="data-title2">合計学習時間</p>
-                <p class="study-time"><span class="sum"><?php echo $val['sum_time']; ?></span>h (平均<span class="avg"><?php echo $val['avg_time']; ?></span>h)</p>
+                <h1 class="data-title"><img class ='icom' src="img/book.png" alt=""><?php echo (int)$val['study_month']; ?>月</h1>
+              
+                <p class="study-time">合計時間：<span class="sum"><?php echo $val['sum_time']; ?></span>h </p>
+                <p class="study-time">1日平均：<span class="sum"><?php echo $val['avg_time']; ?></span>h</p>
               </div>
             </li>
           <?php } ?>
@@ -85,6 +86,11 @@ $todaystudytime = round($gettime2/60,1);
   </div>
 </div>
 <style>
+  .icom{
+    height: 22px;
+    width: 22px;
+    margin-right: 7px;
+  }
 #study_id{
   display: none;
 }
@@ -144,7 +150,7 @@ thead{
   }
 
   .sum {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .avg {
@@ -185,7 +191,7 @@ thead{
     height: 300px;
     width: 300px;
     margin: 10px;
-    background-color: #fff;
+    background-color:#FFF;
     float: right;
     margin-top: 56px;
     font-size: 30px;
@@ -209,7 +215,7 @@ thead{
     height: 270px;
     width: 300px;
     margin-top: 55px;
-    background-color: #fff;
+    background-color:#FFF;
     color: #333;
     display: inline-block;
     margin-top: 30px;
@@ -231,11 +237,10 @@ thead{
 
   .data-title {
     padding: 6px;
-    font-size: 35px;
-    width: 100px;
-    border: 2px solid;
+    font-size: 25px;
+    border-bottom: 2px solid #ddd;
     margin: 0 auto;
-    margin-top: 15px;
+  
     margin-bottom: 25px;
 
   }

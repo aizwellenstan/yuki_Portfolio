@@ -78,7 +78,7 @@ if (!empty($_POST)) {
   <main>
     <div class="site-width">
       <div class="page-title">
-        <p class="page-title">学習を記録する</p>
+        <p class="page-title"><img class ='icon' src="img/pen.png" alt="">学習を記録する</p>
       </div>
       <form action="" method="post">
         <section class="time">

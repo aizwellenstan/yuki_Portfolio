@@ -64,7 +64,7 @@ if (!empty($_POST)) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <title>学習記録ページ</title>
+  <title>学習履歴編集ページ</title>
 </head>
 
 <body>
@@ -78,7 +78,7 @@ if (!empty($_POST)) {
 
     <div class="site-width2">
       <div class="page-title">
-        <h1 class="page-title">学習履歴を編集する</h1>
+        <h1 class="page-title"><img class ='icon' src="img/book.png" alt="">学習履歴を編集する</h1>
       </div>
       <form action="" method="post">
         <section class="date">
