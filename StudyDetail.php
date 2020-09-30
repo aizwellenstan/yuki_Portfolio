@@ -4,21 +4,31 @@ debug('「学習振り返りページ　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 
 $getagtstudy = getagtstudy($u_id);
-debug('$getagtstudy:'.print_r($getagtstudy,true));
+debug('$getagtstudy:' . print_r($getagtstudy, true));
 $user = getuser($u_id);
 
 
 $includecategory = '';
 $startdate = date('Y-m-d', strtotime($user['create_date']));
+$start_month = date('m', strtotime($user['create_date']));
+
 $getstudytime = getstudytime($u_id, $startdate, date('Y-m-d'), $includecategory);
 $sutdy_period = ((strtotime(date('Y-m-d')) - strtotime($startdate)) / 86400);
+$sutdy_startlastday = 2020 . '-' . sprintf('%02d', $start_month) . '-' . 31;
+$sutdy_startfirstmonthdays = (( strtotime($sutdy_startlastday)-strtotime($startdate)) / 86400);
+
+
+debug(' $startdate' . print_r($startdate, true));
+debug(' $sutdy_startlastday' . print_r($sutdy_startlastday, true));
+
+
 $getstudy = getstudy($u_id, date('Y-m-d'), date('Y-m-d'), $includecategory);
 
 $gettime1 = getstudytime($u_id, date('Y-m-d'), date('Y-m-d'), $includecategory);
 $gettime2 = array_shift($gettime1);
-$todaystudytime = round($gettime2/60,1);
-if(!empty($_GET['month_id'])){
-  $_SESSION['get_month']=$_GET['month_id'];
+$todaystudytime = round($gettime2 / 60, 1);
+if (!empty($_GET['month_id'])) {
+  $_SESSION['get_month'] = $_GET['month_id'];
   header('location:Readback.php');
 }
 ?>
@@ -28,7 +38,7 @@ if(!empty($_GET['month_id'])){
     </div>
     <section class="today_list">
       <div class="table-title">
-        <h2><img class ='icon' src="img/book.png" alt=""><span>本日<span><?php echo date('m/d'); ?></span>の学習履歴 　(計<span class="today_time"><?php echo $todaystudytime; ?></span>h)</span>
+        <h2><img class='icon' src="img/book.png" alt=""><span>本日<span><?php echo date('m/d'); ?></span>の学習履歴 　(計<span class="today_time"><?php echo $todaystudytime; ?></span>h)</span>
 
       </div>
       <table>
@@ -48,10 +58,10 @@ if(!empty($_GET['month_id'])){
               <td class="size_s"><?php echo $val['study_time']; ?></td>
               <td class="size_l"><?php echo $val['study_detail']; ?></td>
               <form method="get">
-                    <td class="size_s">
-                      <textarea name="study_id" id="study_id"><?php echo $val['id']; ?></textarea>
-                      <input class='editbtn' type="submit" value="編集">
-                  </form>
+                <td class="size_s">
+                  <textarea name="study_id" id="study_id"><?php echo $val['id']; ?></textarea>
+                  <input class='editbtn' type="submit" value="編集">
+              </form>
             </tr>
           <?php } ?>
 
@@ -63,63 +73,74 @@ if(!empty($_GET['month_id'])){
   </div>
   <div class="total-study">
     <div class="table-title">
-      <h2><img class ='icon' src="img/time.png" alt="">累計学習時間</h2>
+      <h2><img class='icon' src="img/time.png" alt="">累計学習時間</h2>
     </div>
     <section class="data-list">
       <div class="data">
         <ul class="data-ul">
-          <?php foreach ($getagtstudy as $key => $val) { ?>
+          <?php foreach ($getagtstudy as $key => $val) {
+            if ($val['study_month'] == $start_month) {
+              $study_days = $sutdy_startfirstmonthdays;
+            } else {
+              $study_days = 30;
+            }  ?>
             <li class="data_month">
               <div>
-                <h1 class="data-title"><img class ='icom' src="img/book.png" alt=""><?php echo (int)$val['study_month']; ?>月 
-                <form class='month-search'　method="get">
-                     <textarea name="month_id" id="study_id"><?php echo (int)$val['study_month']; ?></textarea>
-                      <input class='month-btn' type="submit" value="詳細 ">>
-                  </form></h1>
-               
-                  
-                <p class="study-time">合計時間：<span class="sum"><?php echo round(($val['sum_time'] / $sutdy_period)/60,1);  ?></span>h </p>
-                <p class="study-time">1日平均：<span class="sum"><?php echo $val['avg_time']; ?></span>h</p>
+                <h1 class="data-title"><img class='icom' src="img/book.png" alt=""><?php echo (int)$val['study_month']; ?>月
+                  <form class='month-search' 　method="get">
+                    <textarea name="month_id" id="study_id"><?php echo (int)$val['study_month']; ?></textarea>
+                    <input class='month-btn' type="submit" value="詳細 ">>
+                  </form>
+                </h1>
+
+                <p class="study-time">合計時間：<span class="sum"> <?php echo round(($val['sum_time'] / 60), 1); ?></span>h </p>
+                <p class="study-time">1日平均：<span class="sum"><?php echo round(($val['sum_time'] / $study_days) / 60, 1); 
+                debug('sutdydays'.print_r($study_days,true)) ?></span>h</p>
               </div>
             </li>
           <?php } ?>
         </ul>
 
       </div>
-      <div class="data_space"> 
-        <h1 class="data-title"><img class ='icom' src="img/book.png" alt="">学習情報 
-               </h1>
+      <div class="data_space">
+        <h1 class="data-title"><img class='icom' src="img/book.png" alt="">学習情報
+        </h1>
         <p>学習開始日：<?php echo date('m-d', strtotime($user['create_date'])); ?></p>
         <p>開始から　：<span><?php echo $sutdy_period; ?></span>日</p>
-        <p>総学習時間：<span><?php echo round(($getstudytime['sum(study_time)'] / $sutdy_period)/60,1);  ?></span>h</p>
-        <p>平均　　　：<span><?php echo round(($getstudytime['sum(study_time)'] / $sutdy_period)/60,1); ?>h</p>
+        <p>総学習時間：<span><?php echo round(($getstudytime['sum(study_time)'] / $sutdy_period) / 60, 1);  ?></span>h</p>
+        <p>平均　　　：<span><?php echo round(($getstudytime['sum(study_time)'] / $sutdy_period) / 60, 1); ?>h</p>
       </div>
     </section>
   </div>
 </div>
 <style>
-  .month-search{
+  .month-search {
     float: right;
     left: 20px;
     text-decoration: none;
     font-size: 22px;
   }
-  .month-btn{
+
+  .month-btn {
     background-color: #fff;
     border: none;
     color: #0000FF;
   }
-  .icom{
+
+  .icom {
     height: 22px;
     width: 22px;
     margin-right: 7px;
   }
-#study_id{
-  display: none;
-}
-td a{
-  font-size: 15px;
-}
+
+  #study_id {
+    display: none;
+  }
+
+  td a {
+    font-size: 15px;
+  }
+
   .data-list {
     margin-top: -30px;
   }
@@ -143,9 +164,11 @@ td a{
     padding-top: 10px;
 
   }
-thead{
-  display: block;
-}
+
+  thead {
+    display: block;
+  }
+
   .study_detail {
     height: 471px;
     background-color: #fff;
@@ -161,7 +184,7 @@ thead{
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .5);
   }
 
-  
+
 
   .startdate {
     font-size: 21px;
@@ -214,7 +237,7 @@ thead{
     height: 300px;
     width: 300px;
     margin: 10px;
-    background-color:#FFF;
+    background-color: #FFF;
     float: right;
     margin-top: 56px;
     font-size: 30px;
@@ -236,7 +259,7 @@ thead{
     height: 270px;
     width: 300px;
     margin-top: 55px;
-    background-color:#FFF;
+    background-color: #FFF;
     color: #333;
     display: inline-block;
     margin-top: 30px;
@@ -261,7 +284,7 @@ thead{
     font-size: 25px;
     border-bottom: 2px solid #ddd;
     margin: 0 auto;
-  
+
     margin-bottom: 25px;
 
   }
