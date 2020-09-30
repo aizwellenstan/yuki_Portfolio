@@ -330,6 +330,7 @@ function getstudytime($u_id,$from_date,$to_date,$includecategory)
     if ($stmt) {
       return $stmt->fetch();
     } else {
+      debug('失敗');
       return false;
     }
   } catch (Exception $e) {

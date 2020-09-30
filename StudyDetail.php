@@ -4,7 +4,9 @@ debug('「学習振り返りページ　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 
 $getagtstudy = getagtstudy($u_id);
+debug('$getagtstudy:'.print_r($getagtstudy,true));
 $user = getuser($u_id);
+
 
 $includecategory = '';
 $startdate = date('Y-m-d', strtotime($user['create_date']));
@@ -15,6 +17,10 @@ $getstudy = getstudy($u_id, date('Y-m-d'), date('Y-m-d'), $includecategory);
 $gettime1 = getstudytime($u_id, date('Y-m-d'), date('Y-m-d'), $includecategory);
 $gettime2 = array_shift($gettime1);
 $todaystudytime = round($gettime2/60,1);
+if(!empty($_GET['month_id'])){
+  $_SESSION['get_month']=$_GET['month_id'];
+  header('location:Readback.php');
+}
 ?>
 <div class="study_detail">
   <div class="site-width">
@@ -65,9 +71,14 @@ $todaystudytime = round($gettime2/60,1);
           <?php foreach ($getagtstudy as $key => $val) { ?>
             <li class="data_month">
               <div>
-                <h1 class="data-title"><img class ='icom' src="img/book.png" alt=""><?php echo (int)$val['study_month']; ?>月</h1>
-              
-                <p class="study-time">合計時間：<span class="sum"><?php echo $val['sum_time']; ?></span>h </p>
+                <h1 class="data-title"><img class ='icom' src="img/book.png" alt=""><?php echo (int)$val['study_month']; ?>月 
+                <form class='month-search'　method="get">
+                     <textarea name="month_id" id="study_id"><?php echo (int)$val['study_month']; ?></textarea>
+                      <input class='month-btn' type="submit" value="詳細 ">>
+                  </form></h1>
+               
+                  
+                <p class="study-time">合計時間：<span class="sum"><?php echo round(($val['sum_time'] / $sutdy_period)/60,1);  ?></span>h </p>
                 <p class="study-time">1日平均：<span class="sum"><?php echo $val['avg_time']; ?></span>h</p>
               </div>
             </li>
@@ -75,17 +86,29 @@ $todaystudytime = round($gettime2/60,1);
         </ul>
 
       </div>
-      <div class="data_space">
-        <p>学習開始日：<span class="startdate"><?php echo date('Y-m-d', strtotime($user['create_date'])); ?></span></p>
+      <div class="data_space"> 
+        <h1 class="data-title"><img class ='icom' src="img/book.png" alt="">学習情報 
+               </h1>
+        <p>学習開始日：<?php echo date('m-d', strtotime($user['create_date'])); ?></p>
         <p>開始から　：<span><?php echo $sutdy_period; ?></span>日</p>
-
-        <p>総学習時間：<span><?php echo $getstudytime['sum(study_time)']; ?></span>h</p>
+        <p>総学習時間：<span><?php echo round(($getstudytime['sum(study_time)'] / $sutdy_period)/60,1);  ?></span>h</p>
         <p>平均　　　：<span><?php echo round(($getstudytime['sum(study_time)'] / $sutdy_period)/60,1); ?>h</p>
       </div>
     </section>
   </div>
 </div>
 <style>
+  .month-search{
+    float: right;
+    left: 20px;
+    text-decoration: none;
+    font-size: 22px;
+  }
+  .month-btn{
+    background-color: #fff;
+    border: none;
+    color: #0000FF;
+  }
   .icom{
     height: 22px;
     width: 22px;
@@ -199,16 +222,14 @@ thead{
   }
 
   .data_space p {
-    font-size: 27px;
+    font-size: 28px;
     margin: 0 auto;
     margin-left: 25px;
-    margin-top: 25px;
+    margin-top: 5px;
   }
 
   .data_space h1 {
-    margin-left: 35px;
-    margin-top: 22px;
-    font-size: 30px;
+    text-align: center;
   }
 
   .data_month {

@@ -11,6 +11,11 @@ if (!empty($_GET['study_id'])) {
 }
 ?>
 <style>
+a{
+text-decoration: none;
+color: #333;
+  }
+
   img {
     height: 10px;
     width: 10px;
@@ -118,11 +123,14 @@ if (!empty($_GET['study_id'])) {
     width: 30px;
     margin-top: 7px;
   }
+  #last{
+    border-right: 1px solid #ddd;
+  }
 </style>
 <header>
   <div>
     <div class="first_header">
-      <h1>学習日誌くん</h1>
+      <a href="TopPage.php"><h1>学習日誌くん</h1></a>
     </div>
     <div class="second_header">
       <nav class="top-nav">
@@ -156,7 +164,7 @@ if (!empty($_GET['study_id'])) {
             <p>学習を振り返る</p>
           </a>
         </div>
-        <div class="<?php if ($_SESSION['file'] === 'setting.php') {
+        <div id ='last' class="<?php if ($_SESSION['file'] === 'setting.php') {
                       echo 'contentsmark';
                     } else {
                       echo 'contents';
