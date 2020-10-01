@@ -126,11 +126,20 @@ color: #333;
   #last{
     border-right: 1px solid #ddd;
   }
+  .main_icon{
+width: 30px;
+height: 30px;
+margin-right: 7px;
+float: left;
+margin-left: 30px;
+margin-top: 9px;
+  }
 </style>
 <header>
   <div>
     <div class="first_header">
-      <a href="TopPage.php"><h1>学習日誌くん</h1></a>
+
+      <a href="TopPage.php">  <img class ='main_icon' src="img/mainicon.png" alt=""> <h1> 学習日誌くん</h1></a>
     </div>
     <div class="second_header">
       <nav class="top-nav">

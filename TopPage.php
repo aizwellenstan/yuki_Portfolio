@@ -15,35 +15,47 @@
 
   </header>
   <main>
-    <section class="contents_butan">
-      <div class="contents">
+    <section id='top' class="contents_butan">
+      <div class="contents"><img class='main_icon' src="img/mainicon.png" alt="">
         <h1>学習日誌くん</h1>
         <p>学習の記録をしていくことで<br>学習の分析、進捗の管理をお手伝いするWebアプリ</p>
+        <div class="contents1">
+          <a href="login.php">
+            <p>ログイン</p>
+          </a>
+        </div>
+        <div class="contents2">
+          <a href="signup.php">
+            <p>新規登録</p>
+          </a>
+        </div>
       </div>
-      <div class="contents1">
-        <a href="login.php">
-          <p>ログイン</p>
-        </a>
-      </div>
-      <div class="contents2">
-        <a href="signup.php">
-          <p>新規登録</p>
-        </a>
-      </div>
-    </section>
-    <section class='Overview1'>
-    
     </section>
   </main>
 </body>
 
 </html>
 <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+main{
+  height: 800px;
+}
+  #top {
+
+    background-image: url('img/topimg.png');
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
+  }
+
   .contents1,
   .contents2 {
     margin: 0 auto;
     width: 180px;
     margin: 10px;
+    margin-top: 30px;
   }
 
   .contents {
@@ -55,11 +67,13 @@
   h1 {
     font-size: 80px;
     margin-bottom: 20px;
+    margin-top: 140px;
+
   }
 
   .contents p {
     font-size: 25px;
-   
+
   }
 
   a {
@@ -74,11 +88,19 @@
 
   }
 
+  .main_icon {
+    height: 80px;
+    width: 80px;
+    float: right;
+    margin-top: 155px;
+    margin-right: 20px;
+  }
+
   .contents1 p,
   .contents2 p {
     margin: 0px;
     text-align: center;
-    padding: 4px;
+    padding: 1px;
   }
 
   .contents2 {
@@ -91,7 +113,8 @@
   }
 
   section {
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
+    height: 800px;
   }
 </style>

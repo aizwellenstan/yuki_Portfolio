@@ -15,7 +15,7 @@ $start_month = date('m', strtotime($user['create_date']));
 $getstudytime = getstudytime($u_id, $startdate, date('Y-m-d'), $includecategory);
 $sutdy_period = ((strtotime(date('Y-m-d')) - strtotime($startdate)) / 86400);
 $sutdy_startlastday = 2020 . '-' . sprintf('%02d', $start_month) . '-' . 31;
-$sutdy_startfirstmonthdays = (( strtotime($sutdy_startlastday)-strtotime($startdate)) / 86400);
+$sutdy_startfirstmonthdays = ((strtotime($sutdy_startlastday) - strtotime($startdate)) / 86400);
 
 
 debug(' $startdate' . print_r($startdate, true));
@@ -94,8 +94,8 @@ if (!empty($_GET['month_id'])) {
                 </h1>
 
                 <p class="study-time">合計時間：<span class="sum"> <?php echo round(($val['sum_time'] / 60), 1); ?></span>h </p>
-                <p class="study-time">1日平均：<span class="sum"><?php echo round(($val['sum_time'] / $study_days) / 60, 1); 
-                debug('sutdydays'.print_r($study_days,true)) ?></span>h</p>
+                <p class="study-time">1日平均：<span class="sum"><?php echo round(($val['sum_time'] / 60) / $study_days, 1);
+                                                              ?></span>h</p>
               </div>
             </li>
           <?php } ?>
@@ -107,7 +107,7 @@ if (!empty($_GET['month_id'])) {
         </h1>
         <p>学習開始日：<?php echo date('m-d', strtotime($user['create_date'])); ?></p>
         <p>開始から　：<span><?php echo $sutdy_period; ?></span>日</p>
-        <p>総学習時間：<span><?php echo round(($getstudytime['sum(study_time)'] / $sutdy_period) / 60, 1);  ?></span>h</p>
+        <p>総学習時間：<span><?php echo round(($getstudytime['sum(study_time)'] / 60), 1);  ?></span>h</p>
         <p>平均　　　：<span><?php echo round(($getstudytime['sum(study_time)'] / $sutdy_period) / 60, 1); ?>h</p>
       </div>
     </section>

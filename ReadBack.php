@@ -15,6 +15,11 @@ $serchday = (!empty($_GET['day'])) ? $_GET['day'] : '';
 $serchday2 = (!empty($_GET['day2'])) ? $_GET['day2'] : '';
 $serchcategory = (!empty($_GET['category'])) ? $_GET['category'] : '';
 
+$user = getuser($u_id);
+$startdate = date('Y-m-d', strtotime($user['create_date']));
+$start_month = date('m', strtotime($user['create_date']));
+$start_day = date('d', strtotime($user['create_date']));
+
 $_SESSION['$serchyear'] = $serchyear;
 $_SESSION['$serchyear2'] = $serchyear2;
 $_SESSION['$serchmonth'] = $serchmonth;
@@ -93,6 +98,8 @@ if (!empty($_GET['study_id'])) {
                 <option value="<?php echo date('Y'); ?>"><?php echo date('Y') . '年'; ?></option>
                 <?php for ($i = date('Y') - 1; $i >= 2010; $i--) { ?>
                   <option value="<?php echo $i; ?>"><?php echo $i . '年'; ?></option><?php } ?>
+
+                  <!-- 『年』初期値の設定 -->
                 <?php if (!empty($_SESSION['$serchyear'])) { ?>
                   <option value="<?php echo $_SESSION['$serchyear'] ?>" <?php if (!empty($_SESSION['$serchyear'])) echo 'selected'; ?>>
                     <?php echo $_SESSION['$serchyear'] ?></option>
@@ -102,9 +109,11 @@ if (!empty($_GET['study_id'])) {
               <select class="month-list" name="month">
 
                 <?php for ($i = 1; $i <= 12; $i++) { ?>
-                  <option value="<?php echo $i; ?>" <?php if ($i === (int)date('n')) {echo 'selected';} ?>>
+                  <option value="<?php echo $i; ?>" <?php if ($i === (int)$start_month ) {echo 'selected';} ?>>
                     <?php echo $i . '月'; ?></option><?php } ?>
                 <?php if (!empty($_SESSION['$serchmonth'])) { ?>
+
+                 <!-- 『月』初期値の設定 -->
                   <option value="<?php echo $_SESSION['$serchmonth'] ?>" <?php if (!empty($_SESSION['$serchmonth'])) echo 'selected'; ?>>
                     <?php echo $_SESSION['$serchmonth'] ?></option>
                 <?php } ?>
@@ -112,7 +121,7 @@ if (!empty($_GET['study_id'])) {
 
               <select class="day-list" name="day" id="">
                 <?php for ($i = 1; $i <= 31; $i++) { ?>
-                  <option value="<?php echo $i; ?>" <?php if ($i === (int)date('d')) {
+                  <option value="<?php echo $i; ?>" <?php if ($i === (int)$start_day) {
                                                       echo 'selected';
                                                     } ?>>
                     <?php echo $i . '日'; ?>
