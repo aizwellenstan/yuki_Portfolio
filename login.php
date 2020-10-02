@@ -83,12 +83,12 @@ if (!empty($_POST)) {
 
           <p>メールアドレス</p>
           <div class="err_msg"><?php if (!empty($err_msg['email'])) echo $err_msg['email']; ?></div>
-          <input type="text" name="email" value="">
+          <input type="text" name="email" value="gest@icloud.com">
           </label>
           <label class="pass">
             <p>パスワード</p>
             <div class="err_msg"><?php if (!empty($err_msg['pass'])) echo $err_msg['pass']; ?></div>
-            <input type="password" name="pass" value="">
+            <input type="password" name="pass" value="gestgest">
           </label>
           <input type="submit" class="btn btn-mid" value="ログイン">
         </form>
