@@ -140,16 +140,9 @@ function validHalf($str, $key)
     $err_msg[$key] = MSG06;
   }
 }
-// 半角英数字チェック
-// function validHalfnumber($str, $key)
-// {
-//   if (!preg_match("/^[0-9]+$/", $str)) {
-//     global $err_msg;
-//     $err_msg[$key] = MSG06;
-//   }
-// }
 
-// パスワードチェック　{
+
+// パスワードチェック　
 function validpass($str, $key)
 {
   validHalf($str, $key);
@@ -167,6 +160,7 @@ function getErrMsg($key)
 
 function queryPost($dbh, $sql, $data)
 {
+  debug('DBへの命令結果を反映');
   $stmt = $dbh->prepare($sql);
 
   if (!$stmt->execute($data)) {
@@ -199,6 +193,7 @@ function getuser($u_id)
 
 function getusername($u_id)
 {
+  debug('ユーザー名を取得します。');
   global $err_msg;
   //例外処理
   try {
@@ -235,34 +230,7 @@ function getcategory()
     error_log('エラー発生:' . $e->getMessage());
   }
 }
-function sanitize($str)
-{
-  return htmlspecialchars($str, ENT_QUOTES);
-}
-
-// function getformdata($str,$method){
-//   debug('getformdataします');
-//   $dbFormData = getUser($_SESSION['user_id']);
-
-// if($method ==='post'){
-//   debug('ポスト');
-// $method=$_POST;
-// }else if($method === 'get'){
-//   debug('ゲット');
-//   $method=$_GET;
-// }else {
-//   debug('エラー');
-// }
-
-// if($dbFormData){
-//   if(!empty($err_msg[$str])){
-//     if(isset($method[$str])){
-//       return sanitize($method[$str]);
-//     }else{return sanitize($dbFormData[$str]);
-//   }
-//   }
-// }
-// }
+ 
 
 function getstudy($u_id,$from_date,$to_date,$includecategory)
 {
@@ -340,7 +308,7 @@ function getstudytime($u_id,$from_date,$to_date,$includecategory)
 
 function getagtstudy($u_id)
 {
-  debug('全ての学習内容の取得');
+  debug('月毎の学習時間の取得');
  
   try {
     $dbh = dbConnect();

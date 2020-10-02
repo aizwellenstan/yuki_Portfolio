@@ -33,7 +33,7 @@ if (!empty($_POST)) {
       debug('クエリ結果の中身：' . print_r($result, true));
 
       if (!empty($result) && password_verify($pass, array_shift($result))) {
-        $sesLimit = 60*600;
+        $sesLimit = 60*60;
         $_SESSION['login_limit'] = $sesLimit;
         $_SESSION['login_date'] = time();
         $_SESSION['user_id'] = $result['id'];

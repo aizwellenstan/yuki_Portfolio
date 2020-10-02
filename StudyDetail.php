@@ -51,19 +51,21 @@ if (!empty($_GET['month_id'])) {
           </tr>
         </thead>
         <tbody class="alltbody">
-          <?php foreach ($getstudy as $key => $val) { ?>
-            <tr>
-              <td class="size_s"><?php echo $val['study_date']; ?></td>
-              <td class='size_m'><?php echo $val['study_category']; ?></td>
-              <td class="size_s"><?php echo $val['study_time']; ?></td>
-              <td class="size_l"><?php echo $val['study_detail']; ?></td>
-              <form method="get">
-                <td class="size_s">
-                  <textarea name="study_id" id="study_id"><?php echo $val['id']; ?></textarea>
-                  <input class='editbtn' type="submit" value="編集">
-              </form>
-            </tr>
-          <?php } ?>
+            <?php foreach ($getstudy as $key => $val) { ?>
+              <tr>
+                 
+                <td class="size_s"><?php echo $val['study_date']; ?></td>
+                <td class='size_m'><?php echo $val['study_category']; ?></td>
+                <td class="size_s"><?php echo $val['study_time']; ?></td>
+                <td class="size_l"><?php if(!empty($getstudy)) { echo $val['study_detail'];}else{echo '本日は学習を行っておりません';} ?></td>
+                <form method="get">
+                  <td class="size_s">
+                    <textarea name="study_id" id="study_id"><?php echo $val['id']; ?></textarea>
+                    <input class='editbtn' type="submit" value="編集">
+                </form>
+              </tr>
+            <?php } ?>
+
 
 
         </tbody>
@@ -114,6 +116,7 @@ if (!empty($_GET['month_id'])) {
   </div>
 </div>
 <style>
+
   .month-search {
     float: right;
     left: 20px;
