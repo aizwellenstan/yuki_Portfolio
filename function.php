@@ -13,13 +13,9 @@ function debug($str)
   }
 }
 session_save_path("/var/tmp/");
-//ガーベージコレクションが削除するセッションの有効期限を設定（30日以上経っているものに対してだけ１００分の１の確率で削除）
 ini_set('session.gc_maxlifetime', 60 * 60 * 24 * 30);
-//ブラウザを閉じても削除されないようにクッキー自体の有効期限を延ばす
 ini_set('session.cookie_lifetime ', 60 * 60 * 24 * 30);
-//セッションを使う
 session_start();
-//現在のセッションIDを新しく生成したものと置き換える（なりすましのセキュリティ対策）
 session_regenerate_id();
 
 function debugLogStart()
@@ -60,7 +56,6 @@ function vaildRequired($str, $key)
 }
 
 
-// email形式チェック
 function vaildEmail($str, $key)
 {
   if (!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $str)) {
@@ -88,7 +83,7 @@ function dbConnect()
 function vaiildDup($field, $str)
 {
   global $err_msg;
-  //例外処理
+
   try {
     $dbh  = dbConnect();
     $sql = 'SELECT * FROM users WHERE :field = :st AND delete_flg = 0';
@@ -195,7 +190,7 @@ function getusername($u_id)
 {
   debug('ユーザー名を取得します。');
   global $err_msg;
-  //例外処理
+
   try {
     $dbh  = dbConnect();
     $sql = 'SELECT user_name FROM users WHERE id = :u_id AND delete_flg = 0';

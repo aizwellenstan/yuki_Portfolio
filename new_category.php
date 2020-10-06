@@ -5,7 +5,6 @@ debug('カテゴリ新規作成ページ');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 $getcategory = getcategory();
-// INSERT INTO category(category_name,createdate)VALUES('テスト','2020-09-09 00:00:00')
 $u_id = $_SESSION['user_id'];
 $new_category =$_POST['new_category'];
 

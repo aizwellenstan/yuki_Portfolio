@@ -28,25 +28,25 @@ $_SESSION['$serchday'] = $serchday;
 $_SESSION['$serchday2'] = $serchday2;
 $_SESSION['category'] = $serchcategory;
 
-$from_date = (!empty($_GET['year'])) ? $serchyear . '-' . sprintf('%02d',$serchmonth) . '-' . sprintf('%02d',$serchday): '2010-01-01';
+$from_date = (!empty($_GET['year'])) ? $serchyear . '-' . sprintf('%02d', $serchmonth) . '-' . sprintf('%02d', $serchday) : '2010-01-01';
 
 
-$to_date = (!empty($_GET['year2'])) ? $serchyear2 . '-' . sprintf('%02d',$serchmonth2) . '-' . sprintf('%02d',$serchday2) : date('Y-m-d');
+$to_date = (!empty($_GET['year2'])) ? $serchyear2 . '-' . sprintf('%02d', $serchmonth2) . '-' . sprintf('%02d', $serchday2) : date('Y-m-d');
 $includecategory = (!empty($_GET['category'])) ? "'" . $serchcategory . "'" : '';;
 
-if(!empty($_SESSION['get_month'])){
-  $month=$_SESSION['get_month'];
-  $from_date= 2020 . '-' . sprintf('%02d',$month) . '-' . sprintf('%02d',1);
-  $to_date= 2020 . '-' . sprintf('%02d',$month) . '-' . 31;
+if (!empty($_SESSION['get_month'])) {
+  $month = $_SESSION['get_month'];
+  $from_date = 2020 . '-' . sprintf('%02d', $month) . '-' . sprintf('%02d', 1);
+  $to_date = 2020 . '-' . sprintf('%02d', $month) . '-' . 31;
   unset($_SESSION['get_month']);
 }
 $getstudy = getstudy($u_id, $from_date, $to_date, $includecategory);
-debug('getsutdy'.print_r($getstudy,true));
+debug('getsutdy' . print_r($getstudy, true));
 
 $getcategory = getcategory();
 
 $getstudytime = getstudytime($u_id, $from_date, $to_date, $includecategory);
-debug('getsutdytime'.print_r($getstudytime,true));
+debug('getsutdytime' . print_r($getstudytime, true));
 $edit_study = (!empty($_GET['study_id'])) ? $_GET['study_id'] : 'データなし';
 if (!empty($_GET['study_id'])) {
   header('Location:Edit_study.php');
@@ -74,7 +74,7 @@ if (!empty($_GET['study_id'])) {
   <main>
     <div class="site-width">
       <div class="page-title">
-        <p><img class ='icon' src="img/book.png" alt="">学習の振り返り</p>
+        <p><img class='icon' src="img/book.png" alt="">学習の振り返り</p>
       </div>
       <section>
 
@@ -99,7 +99,7 @@ if (!empty($_GET['study_id'])) {
                 <?php for ($i = date('Y') - 1; $i >= 2010; $i--) { ?>
                   <option value="<?php echo $i; ?>"><?php echo $i . '年'; ?></option><?php } ?>
 
-                  <!-- 『年』初期値の設定 -->
+                <!-- 『年』初期値の設定 -->
                 <?php if (!empty($_SESSION['$serchyear'])) { ?>
                   <option value="<?php echo $_SESSION['$serchyear'] ?>" <?php if (!empty($_SESSION['$serchyear'])) echo 'selected'; ?>>
                     <?php echo $_SESSION['$serchyear'] ?></option>
@@ -109,11 +109,13 @@ if (!empty($_GET['study_id'])) {
               <select class="month-list" name="month">
 
                 <?php for ($i = 1; $i <= 12; $i++) { ?>
-                  <option value="<?php echo $i; ?>" <?php if ($i === (int)$start_month ) {echo 'selected';} ?>>
+                  <option value="<?php echo $i; ?>" <?php if ($i === (int)$start_month) {
+                                                      echo 'selected';
+                                                    } ?>>
                     <?php echo $i . '月'; ?></option><?php } ?>
                 <?php if (!empty($_SESSION['$serchmonth'])) { ?>
 
-                 <!-- 『月』初期値の設定 -->
+                  <!-- 『月』初期値の設定 -->
                   <option value="<?php echo $_SESSION['$serchmonth'] ?>" <?php if (!empty($_SESSION['$serchmonth'])) echo 'selected'; ?>>
                     <?php echo $_SESSION['$serchmonth'] ?></option>
                 <?php } ?>

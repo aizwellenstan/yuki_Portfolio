@@ -17,9 +17,6 @@ if (!empty($_POST)) {
   vaildEmail($email, 'email');
   validpass($pass, 'pass');
 
-  // vaiildDup('user_name',$user_name);
-  // vaiildDup('email',$email);
-
   if (empty($err_msg)) {
     debug('バリデーションOK');
 
@@ -73,7 +70,7 @@ if (!empty($_POST)) {
 
 <main>
   <div class="site-width">
-    <!-- Main -->
+
     <section>
 
       <div class="form-container">

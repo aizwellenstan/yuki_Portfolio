@@ -6,7 +6,7 @@ debug('「カテゴリ編集ページ　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 $getcategory = getcategory();
-// INSERT INTO category(category_name,createdate)VALUES('テスト','2020-09-09 00:00:00')
+
 $u_id = $_SESSION['user_id'];
 $postcateogry = (!empty($_POST['category-list'])) ? $_POST['category-list'] : '';
 debug('編集したいカテゴリ:' . $postcateogry);

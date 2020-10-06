@@ -48,7 +48,7 @@ if (!empty($_POST)) {
       $_SESSION['msg_succes'] = MSG13;
       debug('学習内容を変更しました。');
       session_write_close();
-      header('location:Readback.php');
+      header('location:ReadBack.php');
     } else {
       return false;
     }

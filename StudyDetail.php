@@ -29,7 +29,7 @@ $gettime2 = array_shift($gettime1);
 $todaystudytime = round($gettime2 / 60, 1);
 if (!empty($_GET['month_id'])) {
   $_SESSION['get_month'] = $_GET['month_id'];
-  header('location:Readback.php');
+  header('location:ReadBack.php');
 }
 ?>
 <div class="study_detail">

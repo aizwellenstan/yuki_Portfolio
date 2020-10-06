@@ -13,7 +13,7 @@ $sutdy_period = ((strtotime(date('Y-m-d')) - strtotime($startdate)) / 86400);
 $getstudy = getstudy($u_id, date('Y-m-d'), date('Y-m-d'), $includecategory);
 $gettime1 = getstudytime($u_id, date('Y-m-d'), date('Y-m-d'), $includecategory);
 $gettime2 = array_shift($gettime1);
-$todaystudytime = round($gettime2/60,1);
+$todaystudytime = round($gettime2 / 60, 1);
 ?>
 <div class="study_detail">
   <div class="site-width">
@@ -22,12 +22,6 @@ $todaystudytime = round($gettime2/60,1);
     <section class="today_list">
       <div class="table-title">
         <h2><span>本日<span><?php echo date('m/d'); ?></span>の学習履歴　(計<span class="today_time"><?php echo $todaystudytime; ?></span>h)</span>
-
-
-
-        
-
-
       </div>
       <table>
         <thead>
@@ -45,11 +39,11 @@ $todaystudytime = round($gettime2/60,1);
               <td class='size_m'><?php echo $val['study_category']; ?></td>
               <td class="size_s"><?php echo $val['study_time']; ?></td>
               <td class="size_l"><?php echo $val['study_detail']; ?></td>
-              <form method="get" >
-                    <td class="size_s">
-                      <textarea name="study_id" id="study_id"><?php echo $val['id']; ?></textarea>
-                      <input class='editbtn' type="submit" value="編集">
-                  </form>
+              <form method="get">
+                <td class="size_s">
+                  <textarea name="study_id" id="study_id"><?php echo $val['id']; ?></textarea>
+                  <input class='editbtn' type="submit" value="編集">
+              </form>
             </tr>
           <?php } ?>
 
@@ -61,14 +55,13 @@ $todaystudytime = round($gettime2/60,1);
   </div>
 </div>
 <style>
+  td a {
+    font-size: 15px;
+  }
 
-td a{
-  font-size: 15px;
-}
-
-#study_id{
-  display: none;
-}
+  #study_id {
+    display: none;
+  }
 
   .today_list {
     height: 450px;
@@ -89,9 +82,11 @@ td a{
     padding-top: 10px;
 
   }
-thead{
-  display: block;
-}
+
+  thead {
+    display: block;
+  }
+
   .study_detail {
     height: 471px;
     background-color: #fff;
@@ -108,7 +103,7 @@ thead{
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .5);
   }
 
-  
+
 
   .startdate {
     font-size: 21px;
@@ -142,7 +137,6 @@ thead{
     width: 80px;
     text-align: center;
   }
-
   .size_m {
     width: 130px;
   }
@@ -150,10 +144,4 @@ thead{
   .size_l {
     width: 700px;
   }
-
-  
-
-
- 
- 
 </style>
