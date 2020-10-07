@@ -51,19 +51,6 @@ if (!empty($_GET['month_id'])) {
           </tr>
         </thead>
         <tbody class="alltbody">
-          <!-- ゲストデータ -->
-          <tr>
-            <td class="size_s"><?php echo date('Y-m-d'); ?></td>
-            <td class='size_m'>PHP</td>
-            <td class="size_s">60</td>
-            <td class="size_l">ゲストデータゲストデータゲストデータゲストデータ</td>
-            <form method="get">
-              <td class="size_s">
-                <textarea name="study_id" id="study_id"><?php echo $val['id']; ?></textarea>
-                <input class='editbtn' type="submit" value="編集">
-            </form>
-          </tr>
-          <!-- 通常データ -->
           <?php foreach ($getstudy as $key => $val) { ?>
             <tr>
 
